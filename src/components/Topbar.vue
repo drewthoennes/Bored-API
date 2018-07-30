@@ -1,0 +1,96 @@
+<template>
+  <div class="topbar" v-bind:class="{ absolute: absolute }">
+    <div class="title">
+      <router-link :to="{name: 'Home'}">Bored API</router-link>
+    </div>
+    <div class="information" v-if="!hide">
+      <div>
+        <router-link :to="{name: 'About'}">About</router-link>
+      </div>
+      <div>
+        <router-link :to="{name: 'Documentation'}">Documentation</router-link>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'Topbar',
+    props: {
+      hide: Boolean,
+      absolute: Boolean
+    },
+    data () {
+      return {
+      }
+    },
+    methods: {
+    },
+    mounted() {
+    }
+  }
+</script>
+
+<style scoped>
+  h1, h2 {
+    font-weight: normal;
+  }
+  a {
+    font-style: none;
+    font-size: 16px;
+    color: #000000;
+    margin: 0;
+  }
+  a:hover:not(.current) {
+    text-decoration: none;
+  }
+  .topbar {
+    background: #6ba3ff;
+    position: relative;
+    width: 100%;
+    padding: 2% 5% 2% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title a {
+    color: #ffffff;
+  }
+  .topbar div:not(.information) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .information div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+  }
+  .information div a {
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .information div a:hover {
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .current {
+    text-decoration: underline;
+  }
+</style>
