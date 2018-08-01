@@ -10,10 +10,16 @@
 
     <div class="content">
       <div class="navigation">
-        Navigation
+        <div class="navigation-version">
+          <button @click="$router.push('/documentation')">V1</button>
+        </div>
+        <div class="navigation-links">
+          <a href="/documentation#endpoints">Endpoints</a>
+          <a href="/documentation#events">Events</a>
+        </div>
       </div>
       <div class="documents">
-        <p class="document-header">Endpoints</p>
+        <p class="document-header" id="endpoints">Endpoints</p>
         <div class="hill">
           <p>
             The Bored API exists to find things to fight boredom, so there are two endpoints: one for random events and one for querying for a specific events.
@@ -21,13 +27,11 @@
           <p><b>Add more</b></p>
         </div>
 
-        <div class="hill-box">
+        <div class="hill-box" id="events">
           <div class="hill-box-header">
             <p>Events</p>
           </div>
           <div class="hill-box-body">
-            <p class="hill-box-body-header"><b>Random Event</b></p>
-            <p>Get a random event</p>
             <div class="endpoint">
               <div class="endpoint-type">
                 <p><b>GET</b></p>
@@ -36,6 +40,7 @@
                 <p>/api/random</p>
               </div>
             </div>
+            <p>Get a random event</p>
             <p>Sample Response:</p>
             <div class="well">
               <pre>
@@ -52,8 +57,6 @@
             </div>
 
             <br>
-            <p class="hill-box-body-header"><b>Query for Event</b></p>
-            <p>Get an specific event by the event id</p>
             <div class="endpoint">
               <div class="endpoint-type">
                 <p><b>GET</b></p>
@@ -62,6 +65,7 @@
                 <p>/api/:id</p>
               </div>
             </div>
+            <p>Get an specific event by the event id</p>
             <p>Sample Response:</p>
 
             <div class="well">
@@ -80,18 +84,23 @@
         </div>
       </div>
     </div>
+    <div class="bottombar-div">
+      <Bottombar/>
+    </div>
   </div>
 </template>
 
 <script>
   import Topbar from '@/components/Topbar'
   import Intro from '@/components/Intro'
+  import Bottombar from '@/components/Bottombar'
 
   export default {
     name: 'Documentation',
     components: {
       Topbar,
-      Intro
+      Intro,
+      Bottombar
     },
     data () {
       return {
@@ -129,8 +138,47 @@
   }
   .navigation {
     width: 25%;
+    height: 25%;
     text-align: left;
-    margin: 30px 5px 0px 5px;
+    margin: 30px 5px 0px 15px;
+    padding: 10px;
+    position: sticky;
+    top: 30px;
+  }
+  .navigation * {
+    margin: 0;
+  }
+  .navigation-version {
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .navigation-version button {
+    background: #6ba3ff;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    color: white;
+    padding: 10px;
+  }
+  .navigation-version button:hover {
+    cursor: pointer;
+  }
+  .navigation-version button:focus {
+    /* background: #5b8ad8; */
+    outline: none;
+  }
+  .navigation-links {
+    background: white;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px -1px 1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .navigation-links a {
+    color: black;
   }
   .documents {
     width: 75%;
@@ -151,7 +199,16 @@
   .hill p b {
     margin: 0;
   }
+  .hill {
+    margin-bottom: 20px;
+  }
+  .hill-box {
+    margin-bottom: 20px;
+  }
   .hill-box div * {
     margin: 0;
+  }
+  .bottombar-div {
+    height: 25%;
   }
 </style>

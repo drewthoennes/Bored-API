@@ -74,9 +74,6 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  .hill-box-body-header {
-    font-size: 18px;
-  }
   .endpoint {
     display: flex;
     flex-direction: row;
