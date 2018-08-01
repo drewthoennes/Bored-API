@@ -9,7 +9,8 @@
     </div>
 
     <div class="content">
-      About
+      <h2>Introduction</h2>
+      <h5>The Bored API serves to find activities to do. It has various fields that help determine anything from the price of the activity to the number of participants.</h5>
     </div>
   </div>
 </template>
@@ -43,6 +44,7 @@
     height: 100%;
     padding: 0;
     margin: 0;
+    background: #f8f8f8;
   }
   .topbar-div {
     height: 10%;
@@ -52,5 +54,6 @@
   }
   .content {
     /* height: 90%; */
+    background: #f8f8f8;
   }
 </style>

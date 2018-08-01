@@ -13,10 +13,8 @@
     </div>
 
     <div class="content">
+      <h1>Try it out</h1>
       <div class="well">
-        <p>
-          Some general information
-        </p>
       </div>
     </div>
   </div>

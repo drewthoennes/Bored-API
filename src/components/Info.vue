@@ -30,7 +30,7 @@
   }
   .info {
     height: 100%;
-    background: #f2f2f2;
+    background: #f8f8f8;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
