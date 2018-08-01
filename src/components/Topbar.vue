@@ -5,10 +5,12 @@
     </div>
     <div class="information" v-if="!hide">
       <div>
-        <router-link :to="{name: 'About'}">About</router-link>
+        <router-link v-if="boldAbout" :to="{name: 'About'}"><b>About</b></router-link>
+        <router-link v-else :to="{name: 'About'}">About</router-link>
       </div>
       <div>
-        <router-link :to="{name: 'Documentation'}">Documentation</router-link>
+        <router-link v-if="boldDocumentation" :to="{name: 'Documentation'}"><b>Documentation</b></router-link>
+        <router-link v-else :to="{name: 'Documentation'}">Documentation</router-link>
       </div>
     </div>
   </div>
@@ -19,7 +21,9 @@
     name: 'Topbar',
     props: {
       hide: Boolean,
-      absolute: Boolean
+      absolute: Boolean,
+      boldAbout: Boolean,
+      boldDocumentation: Boolean
     },
     data () {
       return {
@@ -54,6 +58,8 @@
     flex-direction: row;
     justify-content: space-between;
     height: 100%;
+    box-shadow: 0px 2px 2px #3f4349;
+    z-index: 1;
   }
   .absolute {
     position: absolute;

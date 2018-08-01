@@ -1,7 +1,11 @@
 <template>
   <div class="about container-fluid">
-    <div class="topbarDiv">
-      <Topbar/>
+    <div class="topbar-div">
+      <Topbar boldAbout/>
+    </div>
+
+    <div class="intro-div">
+      <Intro about/>
     </div>
 
     <div class="content">
@@ -12,11 +16,13 @@
 
 <script>
   import Topbar from '@/components/Topbar'
+  import Intro from '@/components/Intro'
 
   export default {
     name: 'About',
     components: {
-      Topbar
+      Topbar,
+      Intro
     },
     data () {
       return {
@@ -38,7 +44,13 @@
     padding: 0;
     margin: 0;
   }
-  .topbarDiv {
+  .topbar-div {
     height: 10%;
+  }
+  .intro-div {
+    height: 25%;
+  }
+  .content {
+    /* height: 90%; */
   }
 </style>

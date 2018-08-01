@@ -4,15 +4,15 @@
       <Topbar/>
     </div>
 
+    <div class="intro-div">
+      <Intro home/>
+    </div>
+
+    <div class="info-div">
+      <Info/>
+    </div>
+
     <div class="content">
-      <div class="intro-div">
-        <Intro/>
-      </div>
-
-      <div class="info-div">
-        <Info/>
-      </div>
-
       <div class="well">
         <p>
           Some general information
@@ -57,13 +57,16 @@
   .topbar-div {
     height: 10%;
   }
-  .content {
-    height: 90%;
-  }
   .intro-div {
-    height: 30%;
+    height: 25%;
   }
   .info-div {
     height: 25%;
+  }
+  .content {
+    /* height: 90%; */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
   }
 </style>

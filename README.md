@@ -1,2 +1,2 @@
-# QSkip
-Skips lines faster for less
+# Bored API
+Find something to do faster

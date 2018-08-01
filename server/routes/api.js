@@ -26,7 +26,13 @@ module.exports = function(app) {
         let formatted = {};
 
         formatted['activity'] = activity['activity'];
+        formatted['accessibility'] = activity['accessibility'];
+        formatted['type'] = activity['type'];
+        formatted['participants'] = activity['participants'];
+        formatted['price'] = activity['price'];
+        formatted['link'] = activity['link'];
         formatted['key'] = activity['key'];
+        formatted['enabled'] = activity['enabled'];
 
         res.json(formatted);
       });

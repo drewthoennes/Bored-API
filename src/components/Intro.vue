@@ -1,13 +1,27 @@
 <template>
   <div class="intro">
-    <h1>The Bored API</h1>
-    <h3>Let's find you something to do</h3>
+    <div v-if="home">
+      <h1>The Bored API</h1>
+      <h3>Let's find you something to do</h3>
+    </div>
+    <div v-else-if="about">
+      <h1>The Bored API</h1>
+      <h3>Facts and information</h3>
+    </div>
+    <div v-else-if="documentation">
+      <h1>Bored API Documentation</h1>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'Intro',
+    props: {
+      home: Boolean,
+      about: Boolean,
+      documentation: Boolean
+    },
     data () {
       return {
       }
