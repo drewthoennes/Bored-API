@@ -32,7 +32,6 @@ module.exports = function(app) {
         formatted['price'] = activity['price'];
         formatted['link'] = activity['link'];
         formatted['key'] = activity['key'];
-        formatted['enabled'] = activity['enabled'];
 
         res.json(formatted);
       });
@@ -55,7 +54,6 @@ module.exports = function(app) {
       formatted['price'] = activity['price'];
       formatted['link'] = activity['link'];
       formatted['key'] = activity['key'];
-      formatted['enabled'] = activity['enabled'];
 
       res.json(formatted);
     });

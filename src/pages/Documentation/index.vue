@@ -140,7 +140,7 @@
     width: 25%;
     height: 25%;
     text-align: left;
-    margin: 30px 5px 0px 15px;
+    margin: 30px 5px 0px 5px;
     padding: 10px;
     position: sticky;
     top: 30px;
