@@ -45,7 +45,7 @@
     },
     data () {
       return {
-        endpoint: "activity/random",
+        endpoint: "activity/",
         response: ""
       }
     },

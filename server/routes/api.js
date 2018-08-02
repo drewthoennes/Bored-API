@@ -22,8 +22,13 @@ module.exports = function(app) {
     }
 
     Activities.count(params, function(err, count) {
-      if (err || !count) {
+      if (err) {
         res.json({'error': err});
+        return;
+      }
+      else if (!count || count === 0)
+      {
+        res.json({'error': 'No activities found with the specified parameters'});
         return;
       }
 
