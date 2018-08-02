@@ -5,11 +5,19 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	favicon = require('serve-favicon'),
 	mongoose = require('mongoose'),
-	fs = require('fs');
+	fs = require('fs'),
+	enforce = require('express-sslify');
+
+require('dotenv').config();
 
 app = express();
 
 //	app.use(favicon(__dirname + '/src/assets/favicon.ico'));
+console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV !== 'dev') {
+	console.log('Enforcing HTTPS');
+	app.use(enforce.HTTPS());
+}
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 

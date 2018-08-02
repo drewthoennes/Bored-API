@@ -15,7 +15,7 @@
     <div class="content">
       <h1>Try it out</h1>
       <div class="search">
-        <span>https://boredapi.com/api/</span>
+        <span>http://boredapi.com/api/</span>
         <input type="text" v-model="endpoint" ></input>
         <button @click="query(endpoint)">Submit</button>
       </div>

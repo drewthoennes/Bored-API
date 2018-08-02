@@ -24,7 +24,7 @@
           <p>
             The Bored API exists to find things to fight boredom, so there are two endpoints: one for random events and one for querying for a specific events.
           </p>
-          <p><b>Add more</b></p>
+          <!-- <p><b>Add more</b></p> -->
         </div>
 
         <div class="hill-box" id="events">
@@ -32,7 +32,7 @@
             <p>Events</p>
           </div>
           <div class="hill-box-body">
-            <DocumentationEndpoint type="GET" endpoint="/api/activity/" description="Get a random event" query="https://boredapi.com/api/activity/" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity/" description="Get a random event" query="http://boredapi.com/api/activity/" response='{
   "activity": "Learn Express.js",
   "accessibility": 0.25,
   "type": "education",
@@ -44,7 +44,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?key=:key" description="Find an activity by its key" query="https://boredapi.com/api/activity?key=5881028" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?key=:key" description="Find an activity by its key" query="http://boredapi.com/api/activity?key=5881028" response='{
   "activity": "Learn a new programming language",
   "accessibility": 0.25,
   "type": "education",
@@ -55,7 +55,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="https://boredapi.com/api/activity?type=sports" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="http://boredapi.com/api/activity?type=sports" response='{
   "activity": "Learn how to play a new sport",
   "accessibility": 0.2,
   "type": "sports",
@@ -66,7 +66,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?participants=:participants" description="Find a random activity with a given number of participants" query="https://boredapi.com/api/activity?participants=1" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?participants=:participants" description="Find a random activity with a given number of participants" query="http://boredapi.com/api/activity?participants=1" response='{
   "activity": "Learn how to fold a paper crane",
   "accessibility": 0.05,
   "type": "education",
