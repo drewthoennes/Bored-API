@@ -31,7 +31,7 @@ app.use(express.static(__dirname + "/dist"));
 app.use('/', express.static(__dirname + "/dist"));
 // Catch all for frontend
 app.all('/*', function(req, res) {
-		res.sendFile(path.join(__dirname, '/dist', '/index.html'));
+	res.sendFile(path.join(__dirname, '/dist', '/index.html'));
 });
 
 var port = process.env.PORT || 8080;

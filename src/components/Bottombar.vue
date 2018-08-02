@@ -3,8 +3,8 @@
     <div class="title">
       <h2>Bored API</h2>
       <div class="icons">
-        <a href="https://github.com/drewthoennes/Bored-API"><i class="fab fa-github"></i></a>
-        <a href="https://github.com/drewthoennes/Bored-API/issues"><i class="fas fa-bug"></i></a>
+        <a class="icon-left" href="https://github.com/drewthoennes/Bored-API"><i class="fab fa-github"></i></a>
+        <a class="icon-right" href="https://github.com/drewthoennes/Bored-API/issues"><i class="fas fa-bug"></i></a>
       </div>
     </div>
     <div class="information" v-if="!hide">
@@ -77,9 +77,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 40%;
-    margin-right: 40%;
   }
+  .icons > * {
+    width: 50%;
+  }
+  .icon-left {
+    text-align: right;
+    padding-right: 10px;
+  }
+  .icon-right {
+    text-align: left;
+    padding-left: 10px;
+  }
+  /* .icons:nth-child(2n - 1) {
+    text-align: left;
+  } */
   .bottombar div:not(.information) {
     padding-top: 10px;
     padding-bottom: 10px;
