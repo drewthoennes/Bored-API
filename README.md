@@ -1,8 +1,8 @@
 # Bored API
-Find something to do faster
+Find something better to do faster
 
 ## About
-This project is a server-side rendered Express.js app for the Bored API. The goal behind the API was to create a simple way to find things to do.
+This project is a server-side rendered Express.js app that has a goal of creating a simple way to find things to do.
 
 ## Endpoints
 The full documentation can be found [here](https://www.boredapi.com/documentation), but listed below are a few of the endpoints

@@ -12,8 +12,8 @@ require('dotenv').config();
 
 app = express();
 
-//	app.use(favicon(__dirname + '/src/assets/favicon.ico'));
-console.log(process.env.NODE_ENV);
+app.use(favicon(__dirname + '/favicon/favicon.ico'));
+
 if (process.env.NODE_ENV !== 'dev') {
 	// console.log('Enforcing HTTPS');
 	// app.use(enforce.HTTPS());

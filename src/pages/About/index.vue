@@ -70,7 +70,7 @@
           <i v-else="accordian5 === 1" class="fas fa-minus" @click="accordian5 = 0"></i>
         </div>
         <div class="accordian-body" v-bind:class="{ expanded5: accordian5 === 1 }">
-          <p>I'm so delighted you asked! We're currently paying for the costs to run this application with no backing. Any donations would be very appreciated and would help keep this project running.</p>
+          <p>Thank you for asking! We're currently paying for the costs to run this application with no backing. Any donations would be very appreciated and would help keep this project running.</p>
         </div>
       </div>
     </div>
