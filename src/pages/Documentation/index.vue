@@ -57,10 +57,10 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="http://boredapi.com/api/activity?type=sports" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="http://boredapi.com/api/activity?type=recreational" response='{
   "activity": "Learn how to play a new sport",
   "accessibility": 0.2,
-  "type": "sports",
+  "type": "recreational",
   "participants": 1,
   "price": 0.1,
   "key": "5808228"
@@ -80,7 +80,7 @@
           <br/>
           <ResponseDescription field="activity" type="String" description="Description of the queried activity"/>
           <ResponseDescription field="accessibility" type="Number" description="A factor describing how possible an event is to do with zero being the most accessible" value="[0.0, 1.0]"/>
-          <ResponseDescription field="type" type="String" description="Type of the activity" value='["education", "sports", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]'/>
+          <ResponseDescription field="type" type="String" description="Type of the activity" value='["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]'/>
           <ResponseDescription field="participants" type="Number" description="The number of people that this activity could involve" value="[0, n]"/>
           <ResponseDescription field="price" type="String" description="A factor describing the cost of the event with zero being free" value="[0, 1]"/>
           <ResponseDescription field="key" type="String" description="A unique numeric id" value="[1000000, 9999999]"/>

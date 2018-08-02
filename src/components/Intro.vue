@@ -49,4 +49,12 @@
   .intro * {
     color: white;
   }
+  @media only screen and (max-width: 500px) {
+    .intro > div h1 {
+      font-size: 28px;
+    }
+    .intro > div h3 {
+      font-size: 22px;
+    }
+  }
 </style>
