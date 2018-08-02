@@ -37,47 +37,110 @@
                 <p><b>GET</b></p>
               </div>
               <div class="endpoint-text">
-                <p>/api/random</p>
+                <p>/api/activity/</p>
               </div>
             </div>
             <p>Get a random event</p>
-            <p>Sample Response:</p>
+            <p>Sample Query:</p>
+            <div class="well">
+              <p>https://boredapi.com/api/activity/</p>
+            </div>
+            <p>Response:</p>
             <div class="well">
               <pre>
 {
   "activity": "Learn Express.js",
   "accessibility": 0.25,
-  "type": "Education",
+  "type": "education",
   "participants": 1,
   "price": 0.1,
   "link": "https://expressjs.com/",
-  "key": "3943506",
-  "enabled": true
+  "key": "3943506"
 }</pre>
             </div>
 
             <br>
+
             <div class="endpoint">
               <div class="endpoint-type">
                 <p><b>GET</b></p>
               </div>
               <div class="endpoint-text">
-                <p>/api/:id</p>
+                <p>/api/activity?key=:key</p>
               </div>
             </div>
-            <p>Get an specific event by the event id</p>
-            <p>Sample Response:</p>
-
+            <p>Find an activity by its key</p>
+            <p>Sample Query:</p>
+            <div class="well">
+              <p>https://boredapi.com/api/activity?key=5881028</p>
+            </div>
+            <p>Response:</p>
             <div class="well">
               <pre>
 {
-  "activity": "Learn to greet someone in a new language",
-  "accessibility": 0.2,
-  "type": "Education",
+  "activity": "Learn a new programming language",
+  "accessibility": 0.25,
+  "type": "education",
   "participants": 1,
   "price": 0.1,
-  "key": "4704256",
-  "enabled": true
+  "key": "5881028"
+}
+</pre>
+            </div>
+
+            <br>
+
+            <div class="endpoint">
+              <div class="endpoint-type">
+                <p><b>GET</b></p>
+              </div>
+              <div class="endpoint-text">
+                <p>/api/activity?type=:type</p>
+              </div>
+            </div>
+            <p>Find a random activity with a given type</p>
+            <p>Sample Query:</p>
+            <div class="well">
+              <p>https://boredapi.com/api/activity?type=sports</p>
+            </div>
+            <p>Response:</p>
+            <div class="well">
+              <pre>
+{
+  "activity": "Learn how to play a new sport",
+  "accessibility": 0.2,
+  "type": "sports",
+  "participants": 1,
+  "price": 0.1,
+  "key": "5808228"
+}</pre>
+            </div>
+
+            <br>
+
+            <div class="endpoint">
+              <div class="endpoint-type">
+                <p><b>GET</b></p>
+              </div>
+              <div class="endpoint-text">
+                <p>/api/activity?participants=:participants</p>
+              </div>
+            </div>
+            <p>Find a random activity with a given number of participants</p>
+            <p>Sample Query:</p>
+            <div class="well">
+              <p>https://boredapi.com/api/activity?participants=1</p>
+            </div>
+            <p>Response:</p>
+            <div class="well">
+              <pre>
+{
+  "activity": "Learn how to fold a paper crane",
+  "accessibility": 0.05,
+  "type": "education",
+  "participants": 1,
+  "price": 0.1,
+  "key": "3136036"
 }</pre>
             </div>
           </div>

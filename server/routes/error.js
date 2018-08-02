@@ -4,6 +4,6 @@ const express = require('express'),
 
 module.exports = function(app) {
   app.get('/api/*', (req, res) => {
-    res.json({message: 'Endpoint not found'});
+    res.json({'error': 'Endpoint not found'});
   })
 }
