@@ -32,23 +32,7 @@
             <p>Events</p>
           </div>
           <div class="hill-box-body">
-            <div class="endpoint">
-              <div class="endpoint-type">
-                <p><b>GET</b></p>
-              </div>
-              <div class="endpoint-text">
-                <p>/api/activity/</p>
-              </div>
-            </div>
-            <p>Get a random event</p>
-            <p>Sample Query:</p>
-            <div class="well">
-              <p>https://boredapi.com/api/activity/</p>
-            </div>
-            <p>Response:</p>
-            <div class="well">
-              <pre>
-{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity/" description="Get a random event" query="https://boredapi.com/api/activity/" response='{
   "activity": "Learn Express.js",
   "accessibility": 0.25,
   "type": "education",
@@ -56,97 +40,46 @@
   "price": 0.1,
   "link": "https://expressjs.com/",
   "key": "3943506"
-}</pre>
-            </div>
+} '/>
 
             <br>
 
-            <div class="endpoint">
-              <div class="endpoint-type">
-                <p><b>GET</b></p>
-              </div>
-              <div class="endpoint-text">
-                <p>/api/activity?key=:key</p>
-              </div>
-            </div>
-            <p>Find an activity by its key</p>
-            <p>Sample Query:</p>
-            <div class="well">
-              <p>https://boredapi.com/api/activity?key=5881028</p>
-            </div>
-            <p>Response:</p>
-            <div class="well">
-              <pre>
-{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?key=:key" description="Find an activity by its key" query="https://boredapi.com/api/activity?key=5881028" response='{
   "activity": "Learn a new programming language",
   "accessibility": 0.25,
   "type": "education",
   "participants": 1,
   "price": 0.1,
   "key": "5881028"
-}
-</pre>
-            </div>
+}' />
 
             <br>
 
-            <div class="endpoint">
-              <div class="endpoint-type">
-                <p><b>GET</b></p>
-              </div>
-              <div class="endpoint-text">
-                <p>/api/activity?type=:type</p>
-              </div>
-            </div>
-            <p>Find a random activity with a given type</p>
-            <p>Sample Query:</p>
-            <div class="well">
-              <p>https://boredapi.com/api/activity?type=sports</p>
-            </div>
-            <p>Response:</p>
-            <div class="well">
-              <pre>
-{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="https://boredapi.com/api/activity?type=sports" response='{
   "activity": "Learn how to play a new sport",
   "accessibility": 0.2,
   "type": "sports",
   "participants": 1,
   "price": 0.1,
   "key": "5808228"
-}</pre>
-            </div>
+}' />
 
             <br>
 
-            <div class="endpoint">
-              <div class="endpoint-type">
-                <p><b>GET</b></p>
-              </div>
-              <div class="endpoint-text">
-                <p>/api/activity?participants=:participants</p>
-              </div>
-            </div>
-            <p>Find a random activity with a given number of participants</p>
-            <p>Sample Query:</p>
-            <div class="well">
-              <p>https://boredapi.com/api/activity?participants=1</p>
-            </div>
-            <p>Response:</p>
-            <div class="well">
-              <pre>
-{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?participants=:participants" description="Find a random activity with a given number of participants" query="https://boredapi.com/api/activity?participants=1" response='{
   "activity": "Learn how to fold a paper crane",
   "accessibility": 0.05,
   "type": "education",
   "participants": 1,
   "price": 0.1,
   "key": "3136036"
-}</pre>
-            </div>
+}' />
+
           </div>
         </div>
       </div>
     </div>
+    
     <div class="bottombar-div">
       <Bottombar/>
     </div>
@@ -157,13 +90,15 @@
   import Topbar from '@/components/Topbar'
   import Intro from '@/components/Intro'
   import Bottombar from '@/components/Bottombar'
+  import DocumentationEndpoint from '@/components/DocumentationEndpoint'
 
   export default {
     name: 'Documentation',
     components: {
       Topbar,
       Intro,
-      Bottombar
+      Bottombar,
+      DocumentationEndpoint
     },
     data () {
       return {

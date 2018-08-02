@@ -86,6 +86,7 @@
     height: 100%;
     text-align: center;
     line-height: 30px;
+    max-width: 60px;
   }
   .endpoint-type p {
     padding: 5px;

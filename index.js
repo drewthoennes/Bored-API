@@ -34,8 +34,6 @@ console.log("Started on port " + port);
 //  Connection to MongoDB
 console.log('Starting API');
 
-// var config = require('./config'),
-// 	database = process.env.MONGODB_URI || config.database;
 var database = process.env.MONGODB_URI || "mongodb://localhost:27017/boredapi";
 
 mongoose.Promise = global.Promise;
