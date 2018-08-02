@@ -21,6 +21,9 @@ require('./server/routes/error.js')(app);
 // Frontend endpoints
 app.use(express.static(__dirname + "/dist"));
 app.use('/', express.static(__dirname + "/dist"));
+//app.use('/documentation', express.static(__dirname + "/dist"));
+//app.use('/about', express.static(__dirname + "/dist"));
+
 // Catch all for frontend
 app.all('/*', function(req, res) {
 		res.sendFile(path.join(__dirname, '/dist', '/index.html'));
