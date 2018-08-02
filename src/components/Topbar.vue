@@ -1,5 +1,5 @@
 <template>
-  <div class="topbar" v-bind:class="{ absolute: absolute }">
+  <div class="topbar" v-bind:class="{ absolute: absolute, noborder: !border }">
     <div class="title">
       <router-link :to="{name: 'Home'}">Bored API</router-link>
     </div>
@@ -20,6 +20,7 @@
   export default {
     name: 'Topbar',
     props: {
+      border: Boolean,
       hide: Boolean,
       absolute: Boolean,
       boldAbout: Boolean,
@@ -60,6 +61,9 @@
     height: 100%;
     box-shadow: 0px 2px 2px #3f4349;
     z-index: 1;
+  }
+  .noborder {
+    box-shadow: 2px 1px rgba(0, 0, 0, 0.1);
   }
   .absolute {
     position: absolute;

@@ -42,5 +42,14 @@ Response:
 }
 ```
 
+## Using
+To set up your own Bored API, clone the app and run:
+```bash
+npm install
+# Start MongoDB
+npm run prod
+# App started on port 8080
+```
+
 ## Contributing
 All help is welcome! A pull request or a new issue respectively would be very appreciated.

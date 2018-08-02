@@ -11,6 +11,9 @@
     <div v-else-if="documentation">
       <h1>Bored API Documentation</h1>
     </div>
+    <div v-else-if="error">
+      <h1>Error</h1>
+    </div>
   </div>
 </template>
 
@@ -20,7 +23,8 @@
     props: {
       home: Boolean,
       about: Boolean,
-      documentation: Boolean
+      documentation: Boolean,
+      error: Boolean
     },
     data () {
       return {

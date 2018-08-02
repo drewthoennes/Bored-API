@@ -19,10 +19,12 @@
         </div>
       </div>
       <div class="documents">
-        <p class="document-header" id="endpoints">Endpoints</p>
+        <p class="document-header" id="endpoints">About Endpoints</p>
         <div class="hill">
           <p>
-            The Bored API exists to find things to fight boredom, so there are two endpoints: one for random events and one for querying for a specific events.
+            The Bored API returns random or specified activities based on user-defined parameters.
+            Responses come with multiple fields to help determine the price, participants, and
+            other factors.
           </p>
           <!-- <p><b>Add more</b></p> -->
         </div>
@@ -75,6 +77,14 @@
   "key": "3136036"
 }' />
 
+          <br/>
+          <ResponseDescription field="activity" type="String" description="Description of the queried activity"/>
+          <ResponseDescription field="accessibility" type="Number" description="A factor describing how possible an event is to do with zero being the most accessible" value="[0.0, 1.0]"/>
+          <ResponseDescription field="type" type="String" description="Type of the activity" value='["education", "sports", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]'/>
+          <ResponseDescription field="participants" type="Number" description="The number of people that this activity could involve" value="[0, n]"/>
+          <ResponseDescription field="price" type="String" description="A factor describing the cost of the event with zero being free" value="[0, 1]"/>
+          <ResponseDescription field="key" type="String" description="A unique numeric id" value="[1000000, 9999999]"/>
+
           </div>
         </div>
       </div>
@@ -91,6 +101,7 @@
   import Intro from '@/components/Intro'
   import Bottombar from '@/components/Bottombar'
   import DocumentationEndpoint from '@/components/DocumentationEndpoint'
+  import ResponseDescription from '@/components/ResponseDescription'
 
   export default {
     name: 'Documentation',
@@ -98,7 +109,8 @@
       Topbar,
       Intro,
       Bottombar,
-      DocumentationEndpoint
+      DocumentationEndpoint,
+      ResponseDescription
     },
     data () {
       return {

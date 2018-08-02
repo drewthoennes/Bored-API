@@ -31,12 +31,13 @@
           <p>Frontend</p>
           <ul>
             <li>Vue.js</li>
+            <li>vue-router</li>
+            <li>vue-resource</li>
           </ul>
           <p>Backend</p>
           <ul>
             <li>Node.js</li>
             <li>MongoDB and Mongoose</li>
-            <li>Morgan</li>
           </ul>
         </div>
       </div>

@@ -3,11 +3,9 @@ import App from './App'
 import router from './router'
 
 import vueResource from 'vue-resource'
-import vueCookie from 'vue-cookie'
 
 Vue.config.productionTip = false
-Vue.use(vueResource)
-Vue.use(vueCookie)
+Vue.use(vueResource);
 
 document.title = 'Bored API'
 
