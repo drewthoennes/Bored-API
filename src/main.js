@@ -7,8 +7,6 @@ import vueResource from 'vue-resource'
 Vue.config.productionTip = false
 Vue.use(vueResource);
 
-document.title = 'Bored API'
-
 new Vue({
   el: '#app',
   router,
