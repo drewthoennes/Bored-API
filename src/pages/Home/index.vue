@@ -103,6 +103,8 @@
     line-height: 46px;
     border-radius: 4px 0px 0px 4px;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: width .7s;
   }
   .search input {
     width: calc(100% - 260px);
@@ -120,5 +122,15 @@
   }
   .bottombar-div {
     height: 25%;
+  }
+  @media only screen and (max-width: 500px) {
+    .search span {
+      width: 0px;
+      border: 0px;
+    }
+    .search input {
+      width: calc(100% - 60px);
+      border-radius: 4px 0px 0px 4px;
+    }
   }
 </style>

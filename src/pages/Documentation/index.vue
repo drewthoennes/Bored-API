@@ -79,7 +79,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="bottombar-div">
       <Bottombar/>
     </div>
@@ -208,5 +208,21 @@
   }
   .bottombar-div {
     height: 25%;
+  }
+  @media only screen and (max-width: 500px) {
+    .content {
+      flex-direction: column;
+    }
+    .navigation {
+      width: 100%;
+      position: inherit;
+    }
+    .documents {
+      width: 100%;
+    }
+    .well p {
+      white-space: nowrap;
+      overflow: scroll;
+    }
   }
 </style>

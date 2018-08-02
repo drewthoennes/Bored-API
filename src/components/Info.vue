@@ -2,7 +2,7 @@
   <div class="info">
     <div class="info-about">
       <i class="fas fa-info-circle"></i>
-      <h6>Find out <router-link :to="{ name: 'About', params: {} }">more</router-link> about this project</h6>
+      <h6>Find out more <router-link :to="{ name: 'About', params: {} }">about</router-link> this project</h6>
     </div>
 
     <div class="info-documentation">

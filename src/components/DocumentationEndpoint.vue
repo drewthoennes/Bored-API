@@ -38,4 +38,8 @@
   .documentation-endpoint > *:not(.endpoint) {
     margin-left: 30px;
   }
+  .endpoint-text {
+    white-space: nowrap;
+    overflow: scroll;
+  }
 </style>

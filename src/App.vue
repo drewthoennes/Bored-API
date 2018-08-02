@@ -38,6 +38,10 @@
   .well * {
     margin: 0;
   }
+  .well p {
+    white-space: nowrap;
+    overflow: scroll;
+  }
   .hill {
     margin: 10px;
     padding: 20px;
