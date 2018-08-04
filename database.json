@@ -48,3 +48,30 @@
 {"_id":{"$oid":"5b632a8ee7179a073344e0a0"},"activity":"Create a compost pile","accessibility":0.15,"type":"diy","participants":1,"price":0.0,"link":"","key":"8631548","enabled":true}
 {"_id":{"$oid":"5b632ae4e7179a073344e0b8"},"activity":"Volunteer at your local food shelter","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"2055368","enabled":true}
 {"_id":{"$oid":"5b632b99e7179a073344e11c"},"activity":"Create or update your resume","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9364041","enabled":true}
+{"_id":{"$oid":"5b63a0d3e7179a0733453ee4"},"activity":"Paint the first thing you see","accessibility":0.2,"type":"recreational","participants":1,"price":0.25,"link":"","key":"1162360","enabled":true}
+{"_id":{"$oid":"5b63a117e7179a0733453eeb"},"activity":"Start a blog for something you're passionate about","accessibility":0.1,"type":"recreational","participants":1,"price":0.05,"link":"","key":"8364626","enabled":true}
+{"_id":{"$oid":"5b63a14fe7179a0733453ef0"},"activity":"Start a garden","accessibility":0.35,"type":"recreational","participants":1,"price":0.3,"link":"","key":"1934228","enabled":true}
+{"_id":{"$oid":"5b63a22ee7179a0733453fce"},"activity":"Clean out your closet and donate the clothes you've outgrown","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"9026787","enabled":true}
+{"_id":{"$oid":"5b63a30ce7179a073345406c"},"activity":"Catch up on world news","accessibility":0.07,"type":"recreational","participants":1,"price":0.05,"link":"","key":"6596257","enabled":true}
+{"_id":{"$oid":"5b63a376e7179a07334540c3"},"activity":"Create a personal website","accessibility":0.12,"type":"recreational","participants":1,"price":0.1,"link":"","key":"3141417","enabled":true}
+{"_id":{"$oid":"5b63a4b7e7179a0733454128"},"activity":"Listen to a new podcast","accessibility":0.12,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"4124860","enabled":true}
+{"_id":{"$oid":"5b63a4f9e7179a073345413c"},"activity":"Have a paper airplane contest with some friends","accessibility":0.05,"type":"social","participants":4,"price":0.02,"link":"","key":"8557562","enabled":true}
+{"_id":{"$oid":"5b63a579e7179a073345414a"},"activity":"Learn calligraphy","accessibility":0.1,"type":"education","participants":1,"price":0.1,"link":"","key":"4565537","enabled":true}
+{"_id":{"$oid":"5b63a5b3e7179a0733454152"},"activity":"Start a collection","accessibility":0.5,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1718657","enabled":true}
+{"_id":{"$oid":"5b63a621e7179a0733454170"},"activity":"Go to a local thrift shop","accessibility":0.2,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8503795","enabled":true}
+{"_id":{"$oid":"5b63a64ee7179a073345423f"},"activity":"Make a couch fort","accessibility":0.08,"type":"recreational","participants":1,"price":0.0,"link":"","key":"2352669","enabled":true}
+{"_id":{"$oid":"5b63a686e7179a073345427f"},"activity":"Pick up litter around your favorite park","accessibility":0.05,"type":"charity","participants":1,"price":0.0,"link":"","key":"4894697","enabled":true}
+{"_id":{"$oid":"5b63a718e7179a07334542b2"},"activity":"Buy a new house decoration","accessibility":0.3,"type":"recreational","participants":1,"price":0.4,"link":"","key":"3456114","enabled":true}
+{"_id":{"$oid":"5b63a7efe7179a073345432f"},"activity":"Write a thank you letter to an influential person in your life","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4101229","enabled":true}
+{"_id":{"$oid":"5b63a80de7179a0733454340"},"activity":"Clean out your car","accessibility":0.08,"type":"recreational","participants":1,"price":0.0,"link":"","key":"2896176","enabled":true}
+{"_id":{"$oid":"5b63a9ece7179a07334543d7"},"activity":"Write a short story","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6301585","enabled":true}
+{"_id":{"$oid":"5b63b297e7179a07334545f6"},"activity":"Do something nice for someone you care about","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8321894","enabled":true}
+{"_id":{"$oid":"5b63b2c5e7179a0733454602"},"activity":"Think of a new business idea","accessibility":0.05,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6808057","enabled":true}
+{"_id":{"$oid":"5b63b31de7179a0733454612"},"activity":"Clean out your garage","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"7023703","enabled":true}
+{"_id":{"$oid":"5b63b40ae7179a073345462d"},"activity":"Learn to sew on a button","accessibility":0.1,"type":"education","participants":1,"price":0.05,"link":"","key":"8731971","enabled":true}
+{"_id":{"$oid":"5b63b477e7179a0733454676"},"activity":"Learn how to french braid hair","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"8926492","enabled":true}
+{"_id":{"$oid":"5b63b592e7179a07334546f7"},"activity":"Learn how to whistle with your fingers","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"2790297","enabled":true}
+{"_id":{"$oid":"5b63b5ebe7179a0733454707"},"activity":"Learn to write with your nondominant hand","accessibility":0.02,"type":"busywork","participants":1,"price":0.0,"link":"","key":"1645485","enabled":true}
+{"_id":{"$oid":"5b63b624e7179a073345470c"},"activity":"Make bread from scratch","accessibility":0.2,"type":"cooking","participants":1,"price":0.2,"link":"","key":"4809815","enabled":true}
+{"_id":{"$oid":"5b63b653e7179a0733454711"},"activity":"Make a budget","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4379552","enabled":true}
+{"_id":{"$oid":"5b63b68ae7179a0733454714"},"activity":"Learn how to write in shorthand","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6778219","enabled":true}

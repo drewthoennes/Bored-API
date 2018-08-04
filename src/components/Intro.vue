@@ -6,7 +6,7 @@
     </div>
     <div v-else-if="about">
       <h1>The Bored API</h1>
-      <h3>Facts and information</h3>
+      <h3>Facts and Information</h3>
     </div>
     <div v-else-if="documentation">
       <h1>Bored API Documentation</h1>
