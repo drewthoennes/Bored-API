@@ -75,3 +75,27 @@
 {"_id":{"$oid":"5b63b624e7179a073345470c"},"activity":"Make bread from scratch","accessibility":0.2,"type":"cooking","participants":1,"price":0.2,"link":"","key":"4809815","enabled":true}
 {"_id":{"$oid":"5b63b653e7179a0733454711"},"activity":"Make a budget","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4379552","enabled":true}
 {"_id":{"$oid":"5b63b68ae7179a0733454714"},"activity":"Learn how to write in shorthand","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6778219","enabled":true}
+{"_id":{"$oid":"5b64fa62e7179a4c6138a81b"},"activity":"Make a simple musical instrument","accessibility":0.25,"type":"recreational","participants":1,"price":0.4,"link":"","key":"7091374","enabled":true}
+{"_id":{"$oid":"5b64fac4e7179a4c6138a82d"},"activity":"Go to the gym","accessibility":0.1,"type":"recreational","participants":1,"price":0.2,"link":"","key":"4387026","enabled":true}
+{"_id":{"$oid":"5b64fb95e7179a4c6138a84e"},"activity":"Try a food you don't like","accessibility":0.05,"type":"recreational","participants":1,"price":0.1,"link":"","key":"6693574","enabled":true}
+{"_id":{"$oid":"5b64fc54e7179a4c6138a855"},"activity":"Conquer one of your fears","accessibility":0.1,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8344539","enabled":true}
+{"_id":{"$oid":"5b66029fe7179a4c6138f1a4"},"activity":"Go to a concert with some friends","accessibility":0.4,"type":"social","participants":4,"price":0.6,"link":"","key":"4558850","enabled":true}
+{"_id":{"$oid":"5b6602bfe7179a4c6138f1a6"},"activity":"Go to the library and find an interesting book","accessibility":0.2,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"8253550","enabled":true}
+{"_id":{"$oid":"5b660300e7179a4c6138f1ad"},"activity":"Go to an escape room","accessibility":0.3,"type":"social","participants":4,"price":0.5,"link":"","key":"5585829","enabled":true}
+{"_id":{"$oid":"5b660341e7179a4c6138f1b9"},"activity":"Go to a karaoke bar with some friends","accessibility":0.35,"type":"social","participants":4,"price":0.5,"link":"","key":"9072906","enabled":true}
+{"_id":{"$oid":"5b66036fe7179a4c6138f1bc"},"activity":"Repaint a room in your house","accessibility":0.4,"type":"recreational","participants":1,"price":0.3,"link":"","key":"4877086","enabled":true}
+{"_id":{"$oid":"5b66065ce7179a4c6138f21d"},"activity":"Pull a harmless prank on one of your friends","accessibility":0.2,"type":"recreational","participants":1,"price":0.1,"link":"","key":"1288934","enabled":true}
+{"_id":{"$oid":"5b6606a1e7179a4c6138f21e"},"activity":"Take a spontaneous road trip with some friends","accessibility":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"2085321","enabled":true}
+{"_id":{"$oid":"5b6606dce7179a4c6138f224"},"activity":"Go stargazing","accessibility":0.1,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"8832605","enabled":true}
+{"_id":{"$oid":"5b660708e7179a4c6138f22b"},"activity":"Invite some friends over for a game night","accessibility":0.2,"type":"social","participants":4,"price":0.0,"link":"","key":"6613428","enabled":true}
+{"_id":{"$oid":"5b660732e7179a4c6138f22f"},"activity":"Make homemade ice cream","accessibility":0.2,"type":"cooking","participants":1,"price":0.2,"link":"","key":"3818400","enabled":true}
+{"_id":{"$oid":"5b660782e7179a4c6138f236"},"activity":"Start a daily journal","accessibility":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"8779876","enabled":true}
+{"_id":{"$oid":"5b6607e6e7179a4c6138f246"},"activity":"Go to a music festival with some friends","accessibility":0.2,"type":"recreational","participants":4,"price":0.4,"link":"","key":"6482790","enabled":true}
+{"_id":{"$oid":"5b660822e7179a4c6138f24d"},"activity":"Make a bucket list","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2735499","enabled":true}
+{"_id":{"$oid":"5b660867e7179a4c6138f262"},"activity":"Binge watch a trending series","accessibility":0.2,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5881647","enabled":true}
+{"_id":{"$oid":"5b66096fe7179a4c6138f29c"},"activity":"Learn how to make a website","accessibility":0.3,"type":"recreational","participants":1,"price":0.1,"link":"","key":"9924423","enabled":true}
+{"_id":{"$oid":"5b660adae7179a4c6138f2cd"},"activity":"Create and follow a savings plan","accessibility":0.2,"type":"recreational","participants":1,"price":0.0,"link":"","key":"9366464","enabled":true}
+{"_id":{"$oid":"5b660b26e7179a4c6138f2d8"},"activity":"Watch a classic movie","accessibility":0.1,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8081693","enabled":true}
+{"_id":{"$oid":"5b660b69e7179a4c6138f2e8"},"activity":"Plan a trip to another country","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"5554727","enabled":true}
+{"_id":{"$oid":"5b660b95e7179a4c6138f2f8"},"activity":"Learn how the internet works","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"9414706","enabled":true}
+{"_id":{"$oid":"5b660cfae7179a4c6138f369"},"activity":"Take a hike at a local park","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8724324","enabled":true}

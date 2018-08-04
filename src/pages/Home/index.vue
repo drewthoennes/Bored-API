@@ -19,6 +19,9 @@
         <input type="text" v-model="endpoint" ></input>
         <button @click="query(endpoint)">Submit</button>
       </div>
+      <div class="hint">
+        <p>Try a few others: <a @click="changeAndQuery('activity?type=recreational')">activity?type=recreational</a> <a @click="changeAndQuery('activity?participants=1')">activity?participants=1</a></p>
+      </div>
       <div class="well">
         <pre>{{ response }}</pre>
       </div>
@@ -54,6 +57,10 @@
         this.$http.get('/api/' + endpoint).then(response => {
           this.response = response.body;
         });
+      },
+      changeAndQuery: function(endpoint) {
+        this.endpoint = endpoint;
+        this.query(this.endpoint);
       }
     },
     mounted() {
@@ -119,6 +126,23 @@
     border: 0px;
     color: white;
     border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+  }
+  .hint {
+    margin: 0px 10px 0px 10px;
+    display: flex;
+  }
+  .hint > * {
+    margin: 0;
+    font-size: 12px;
+  }
+  .hint p a {
+    color: #6ba3ff;
+  }
+  .hint p a:hover {
+    color: #6ba3ff;
+    text-decoration: underline;
+    cursor: pointer;
   }
   .bottombar-div {
     height: 25%;
