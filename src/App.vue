@@ -108,29 +108,30 @@
   .endpoint-text p {
     padding: 5px 10px 5px 10px;
   }
-  .accordian {
+  .accordion {
     margin: 25px 10px 0px 10px;
     background-color: white;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px -1px 1px rgba(0, 0, 0, 0.05);
     text-align: left;
     overflow: hidden;
   }
-  .accordian * {
+  .accordion * {
     margin: 0;
   }
-  .accordian-header {
+  .accordion-header {
     margin: 0px !important;
     width: 100%;
     padding: 15px;
+    cursor: pointer;
   }
-  .accordian-header p {
+  .accordion-header p {
     font-size: 22px;
   }
-  .accordian-body {
+  .accordion-body {
     margin: 0 !important;
     padding: 20px 20px 20px 20px;
   }
-  .accordian-body p {
+  .accordion-body p {
     padding-top: 5px;
     padding-bottom: 5px;
   }

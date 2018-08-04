@@ -99,3 +99,7 @@
 {"_id":{"$oid":"5b660b69e7179a4c6138f2e8"},"activity":"Plan a trip to another country","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"5554727","enabled":true}
 {"_id":{"$oid":"5b660b95e7179a4c6138f2f8"},"activity":"Learn how the internet works","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"9414706","enabled":true}
 {"_id":{"$oid":"5b660cfae7179a4c6138f369"},"activity":"Take a hike at a local park","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8724324","enabled":true}
+{"_id":{"$oid":"5b661a03e7179a4c6138f57b"},"activity":"Make tie dye shirts","accessibility":0.2,"type":"diy","participants":1,"price":0.2,"link":"","key":"8092359","enabled":true}
+{"_id":{"$oid":"5b661a44e7179a4c6138f58d"},"activity":"Make a scrapbook with pictures of your favorite memories","accessibility":0.1,"type":"diy","participants":1,"price":0.1,"link":"","key":"5554174","enabled":true}
+{"_id":{"$oid":"5b661a6de7179a4c6138f591"},"activity":"Have a picnic with some friends","accessibility":0.1,"type":"recreational","participants":3,"price":0.1,"link":"","key":"6813070","enabled":true}
+{"_id":{"$oid":"5b661a95e7179a4c6138f5d0"},"activity":"Have a bonfire with your close friends","accessibility":0.1,"type":"recreational","participants":4,"price":0.1,"link":"","key":"8442249","enabled":true}

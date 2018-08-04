@@ -9,24 +9,24 @@
     </div>
 
     <div class="content">
-      <div class="accordian">
-        <div class="accordian-header">
+      <div class="accordion">
+        <div class="accordion-header" @click="accordion1 = accordion1 ? 0 : 1">
           <p>What's the purpose behind this API?</p>
-          <i v-if="accordian1 === 0" class="fas fa-plus" @click="accordian1 = 1"></i>
-          <i v-else="accordian1 === 1" class="fas fa-minus" @click="accordian1 = 0"></i>
+          <i v-if="accordion1 === 0" class="fas fa-plus"></i>
+          <i v-else="accordion1 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordian-body" v-bind:class="{ expanded: accordian1 === 1, closed: accordian1 !== 1 }">
+        <div class="accordion-body" v-bind:class="{ expanded: accordion1 === 1, closed: accordion1 !== 1 }">
           <p>The Bored API serves to find activities to do. It has various fields that help determine anything from the price of the activity to the number of participants.</p>
         </div>
       </div>
 
-      <div class="accordian">
-        <div class="accordian-header">
+      <div class="accordion">
+        <div class="accordion-header" @click="accordion2 = accordion2 ? 0 : 1">
           <p>What did you build the API with?</p>
-          <i v-if="accordian2 === 0" class="fas fa-plus" @click="accordian2 = 1"></i>
-          <i v-else="accordian2 === 1" class="fas fa-minus" @click="accordian2 = 0"></i>
+          <i v-if="accordion2 === 0" class="fas fa-plus"></i>
+          <i v-else="accordion2 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordian-body" v-bind:class="{ expanded: accordian2 === 1, closed: accordian2 !== 1 }">
+        <div class="accordion-body" v-bind:class="{ expanded: accordion2 === 1, closed: accordion2 !== 1 }">
           <p>This whole application is a server-side rendered Express.js program. The tech stacks are listed below:</p>
           <p>Frontend</p>
           <ul>
@@ -42,35 +42,35 @@
         </div>
       </div>
 
-      <div class="accordian">
-        <div class="accordian-header">
+      <div class="accordion">
+        <div class="accordion-header" @click="accordion3 = accordion3 ? 0 : 1">
           <p>How do I use the this?</p>
-          <i v-if="accordian3 === 0" class="fas fa-plus" @click="accordian3 = 1"></i>
-          <i v-else="accordian3 === 1" class="fas fa-minus" @click="accordian3 = 0"></i>
+          <i v-if="accordion3 === 0" class="fas fa-plus"></i>
+          <i v-else="accordion3 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordian-body" v-bind:class="{ expanded: accordian3 === 1, closed: accordian3 !== 1 }">
+        <div class="accordion-body" v-bind:class="{ expanded: accordion3 === 1, closed: accordion3 !== 1 }">
           <p>Please check out the <router-link :to="{ name: 'Documentation'}">documentation</router-link> for examples. If you still can't figure it out, feel free to submit a ticket on the <a href="https://github.com/drewthoennes/Bored-API/issues">GitHub</a></p>
         </div>
       </div>
 
-      <div class="accordian">
-        <div class="accordian-header">
+      <div class="accordion">
+        <div class="accordion-header" @click="accordion4 = accordion4 ? 0 : 1">
           <p>This is awesome! How can I contribute?</p>
-          <i v-if="accordian4 === 0" class="fas fa-plus" @click="accordian4 = 1"></i>
-          <i v-else="accordian4 === 1" class="fas fa-minus" @click="accordian4 = 0"></i>
+          <i v-if="accordion4 === 0" class="fas fa-plus"></i>
+          <i v-else="accordion4 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordian-body" v-bind:class="{ expanded: accordian4 === 1, closed: accordian4 !== 1 }">
+        <div class="accordion4-body" v-bind:class="{ expanded: accordion4 === 1, closed: accordion4 !== 1 }">
           <p>Any new suggestions or features would be very helpful! Feel free to submit a <a href="https://github.com/drewthoennes/Bored-API/pulls"> pull request</a> or submit a <a href="https://github.com/drewthoennes/Bored-API/issues">feature request</a></p>
         </div>
       </div>
 
-      <div class="accordian">
-        <div class="accordian-header">
+      <div class="accordion">
+        <div class="accordion-header" @click="accordion5 = accordion5 ? 0 : 1">
           <p>Is there any way I can support this project?</p>
-          <i v-if="accordian5 === 0" class="fas fa-plus" @click="accordian5 = 1"></i>
-          <i v-else="accordian5 === 1" class="fas fa-minus" @click="accordian5 = 0"></i>
+          <i v-if="accordion5 === 0" class="fas fa-plus"></i>
+          <i v-else="accordion5 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordian-body" v-bind:class="{ expanded: accordian5 === 1, closed: accordian5 !== 1 }">
+        <div class="accordion-body" v-bind:class="{ expanded: accordion5 === 1, closed: accordion5 !== 1 }">
           <p>Thank you for asking! We're currently paying for the costs to run this application with no backing. Any donations would be very appreciated and would help keep this project running.</p>
         </div>
       </div>
@@ -100,11 +100,11 @@
     },
     data () {
       return {
-        accordian1: 0,
-        accordian2: 0,
-        accordian3: 0,
-        accordian4: 0,
-        accordian5: 0
+        accordion1: 0,
+        accordion2: 0,
+        accordion3: 0,
+        accordion4: 0,
+        accordion5: 0
       }
     },
     methods: {
@@ -135,20 +135,16 @@
     padding-right: 10%;
     padding-bottom: 25px;
   }
-  .accordian {
-    /* margin-bottom: 15px; */
-  }
-  .accordian-header {
+  .accordion-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .accordian-header i {
+  .accordion-header i {
     line-height: 33px;
   }
-  .accordian-body {
+  .accordion-body {
     padding: 0px 20px 0px 20px;
-    /* transition: min-height .5s, max-height .5s, padding-top .5s, padding-bottom .5s; */
   }
   .closed {
     min-height: 0px;
