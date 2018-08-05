@@ -1,6 +1,6 @@
 <template>
   <div class="documentation-endpoint">
-    <div class="endpoint">
+    <div class="endpoint" :id="id">
       <div class="endpoint-type">
         <p><b>{{ type }}</b></p>
       </div>
@@ -29,7 +29,8 @@
       endpoint: String,
       description: String,
       query: String,
-      response: String
+      response: String,
+      id: String
     }
   }
 </script>

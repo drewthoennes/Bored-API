@@ -1,5 +1,6 @@
 <template>
   <div class="documentation container-fluid">
+
     <div class="topbar-div">
       <Topbar boldDocumentation/>
     </div>
@@ -10,31 +11,36 @@
 
     <div class="content">
       <div class="navigation">
-        <div class="navigation-version">
-          <button @click="$router.push('/documentation')">V1</button>
+        <div class="navigation-menu">
+          <div class="navigation-version">
+            <button @click="$router.push('/documentation')">V1</button>
+          </div>
+          <div class="navigation-links">
+            <a href="/documentation#events"><b>Activities</b></a>
+            <ul>
+              <li><a href="/documentation#endpoints-random">Random</a></li>
+              <li><a href="/documentation#endpoints-key">Key</a></li>
+              <li><a href="/documentation#endpoints-type">Type</a></li>
+              <li><a href="/documentation#endpoints-participants">Participants</a></li>
+              <li><a href="/documentation#endpoints-price">Price</a></li>
+              <li><a href="/documentation#endpoints-price-range">Price Range</a></li>
+              <li><a href="/documentation#endpoints-accessibility">Accessibility</a></li>
+              <li><a href="/documentation#endpoints-accessibility-range">Accessibility Range</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="navigation-links">
-          <a href="/documentation#endpoints">Endpoints</a>
-          <a href="/documentation#events">Events</a>
+
+        <div class="back-to-top">
+          <button @click="scrollTop()">Back to top</button>
         </div>
       </div>
       <div class="documents">
-        <p class="document-header" id="endpoints">About Endpoints</p>
-        <div class="hill">
-          <p>
-            The Bored API returns random or specified activities based on user-defined parameters.
-            Responses come with multiple fields to help determine the price, participants, and
-            other factors.
-          </p>
-          <!-- <p><b>Add more</b></p> -->
-        </div>
-
         <div class="hill-box" id="events">
           <div class="hill-box-header">
-            <p>Events</p>
+            <p>Activities</p>
           </div>
           <div class="hill-box-body">
-            <DocumentationEndpoint type="GET" endpoint="/api/activity/" description="Get a random event" query="http://boredapi.com/api/activity/" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity/" description="Get a random event" query="http://boredapi.com/api/activity/" :id="'endpoints-random'" response='{
   "activity": "Learn Express.js",
   "accessibility": 0.25,
   "type": "education",
@@ -46,7 +52,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?key=:key" description="Find an activity by its key" query="http://boredapi.com/api/activity?key=5881028" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?key=:key" description="Find an activity by its key" query="http://boredapi.com/api/activity?key=5881028" :id="'endpoints-key'" response='{
   "activity": "Learn a new programming language",
   "accessibility": 0.25,
   "type": "education",
@@ -57,7 +63,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="http://boredapi.com/api/activity?type=recreational" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="http://boredapi.com/api/activity?type=recreational" :id="'endpoints-type'" response='{
   "activity": "Learn how to play a new sport",
   "accessibility": 0.2,
   "type": "recreational",
@@ -68,7 +74,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?participants=:participants" description="Find a random activity with a given number of participants" query="http://boredapi.com/api/activity?participants=1" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?participants=:participants" description="Find a random activity with a given number of participants" query="http://boredapi.com/api/activity?participants=1" :id="'endpoints-participants'" response='{
   "activity": "Learn how to fold a paper crane",
   "accessibility": 0.05,
   "type": "education",
@@ -77,13 +83,54 @@
   "key": "3136036"
 }' />
 
-          <br/>
-          <ResponseDescription field="activity" type="String" description="Description of the queried activity"/>
-          <ResponseDescription field="accessibility" type="Number" description="A factor describing how possible an event is to do with zero being the most accessible" value="[0.0, 1.0]"/>
-          <ResponseDescription field="type" type="String" description="Type of the activity" value='["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]'/>
-          <ResponseDescription field="participants" type="Number" description="The number of people that this activity could involve" value="[0, n]"/>
-          <ResponseDescription field="price" type="String" description="A factor describing the cost of the event with zero being free" value="[0, 1]"/>
-          <ResponseDescription field="key" type="String" description="A unique numeric id" value="[1000000, 9999999]"/>
+            <br/>
+
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?price=:price" description="Find an activity with a specified price" query="http://boredapi.com/api/activity?price=0.0" :id="'endpoints-price'" response='{
+  "activity": "Hold a yard sale",
+  "accessibility": 0.1,
+  "type": "social",
+  "participants": 1,
+  "price": 0.0,
+}' />
+
+            <br/>
+
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?minprice=:minprice&maxprice=:maxprice" description="Find an event with a specified price in an inclusively constrained range" query="http://boredapi.com/api/activity?minprice=0&maxprice=0.1" :id="'endpoints-price-range'" response='{
+  "activity": "Teach your dog a new trick",
+  "accessibility": 0.15,
+  "type": "relaxation",
+  "participants": 1,
+  "price":0.05
+}' />
+
+            <br/>
+
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?accessibility=:accessibility" description="Find a price in an inclusively constrained range" query="http://boredapi.com/api/activity?accessibility=1" :id="'endpoints-accessibility'" response='{
+  "activity": "Take a bubble bath",
+  "accessibility": 0.1,
+  "type": "relaxation",
+  "participants": 1,
+  "price": 0.15,
+}' />
+
+            <br/>
+
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?minaccessibility=:minaccessibility&maxaccessibility=:maxaccessibility" description="Find an event with a specified accessibility in an inclusively constrained range" query="http://boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1" :id="'endpoints-accessibility-range'" response='{
+  "activity":"Learn a new recipe",
+  "accessibility":0.05,
+  "type":"cooking",
+  "participants":1,
+  "price":0
+}' />
+
+            <br/>
+
+            <ResponseDescription field="activity" type="String" description="Description of the queried activity"/>
+            <ResponseDescription field="accessibility" type="Number" description="A factor describing how possible an event is to do with zero being the most accessible" value="[0.0, 1.0]"/>
+            <ResponseDescription field="type" type="String" description="Type of the activity" value='["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]'/>
+            <ResponseDescription field="participants" type="Number" description="The number of people that this activity could involve" value="[0, n]"/>
+            <ResponseDescription field="price" type="String" description="A factor describing the cost of the event with zero being free" value="[0, 1]"/>
+            <ResponseDescription field="key" type="String" description="A unique numeric id" value="[1000000, 9999999]"/>
 
           </div>
         </div>
@@ -117,8 +164,19 @@
       }
     },
     methods: {
+      scrollTop: function() {
+        // https://github.com/caiofsouza/vue-backtotop/blob/master/src/BackToTop.vue
+        window.smoothscroll()
+      }
     },
     mounted() {
+      window.smoothscroll = () => {
+        let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
+        if (currentScroll > 0) {
+          window.requestAnimationFrame(window.smoothscroll)
+          window.scrollTo(0, Math.floor(currentScroll - (currentScroll / 5)))
+        }
+      }
     }
   }
 </script>
@@ -148,14 +206,19 @@
   }
   .navigation {
     width: 25%;
-    height: 25%;
+    margin: 30px 5px 20px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .navigation-menu {
+    width: 100%;
     text-align: left;
-    margin: 30px 5px 0px 5px;
     padding: 10px;
     position: sticky;
     top: 30px;
   }
-  .navigation * {
+  .navigation-menu * {
     margin: 0;
   }
   .navigation-version {
@@ -190,6 +253,23 @@
   .navigation-links a {
     color: black;
   }
+  .navigation-links ul li {
+    color: #6ba3ff
+  }
+  .navigation-links ul li a {
+    color: black;
+  }
+  .back-to-top button {
+    background: #4a4e56;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  .back-to-top button:hover {
+    cursor: pointer;
+  }
   .documents {
     width: 75%;
     text-align: left;
@@ -221,20 +301,34 @@
   .bottombar-div {
     height: 25%;
   }
-  @media only screen and (max-width: 500px) {
+
+  .back-to-top {
+  }
+
+  @media only screen and (max-width: 670px) {
     .content {
       flex-direction: column;
     }
     .navigation {
       width: 100%;
+      margin: 0;
+    }
+    .navigation-menu {
+      width: 100%;
       position: inherit;
     }
     .documents {
       width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
     }
     .well p {
       white-space: nowrap;
       overflow: scroll;
+    }
+    .back-to-top {
+      display: none;
     }
   }
 </style>

@@ -18,6 +18,7 @@
     "express-sslify": "^1.2.0",
     "inherits": "^2.0.3",
     "ip": "^1.1.5",
+    "keen-tracking": "^3.1.1",
     "mongoose": "^5.1.5",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
