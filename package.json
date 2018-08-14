@@ -11,6 +11,7 @@
     "prod": "npm run build && node index.js"
   },
   "dependencies": {
+    "await": "^0.2.6",
     "babel-runtime": "^6.26.0",
     "body-parser": "^1.18.2",
     "dotenv": "^6.0.0",
@@ -23,6 +24,7 @@
     "mongoose": "^5.1.5",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
+    "promise": "^8.0.1",
     "request": "^2.87.0",
     "serve-favicon": "^2.4.5",
     "serve-static": "^1.13.2",

@@ -133,6 +133,9 @@
       }
     },
     methods: {
+      wait: function(ms) {
+        return new Promise((r, j) => setTimeout(r, ms));
+      },
       resetForm: function() {
         this.activity = '';
         this.accessibility = '';
@@ -182,6 +185,7 @@
 
         // Submit to backend
         this.submitting = true;
+        let startTime = Date.now();
         this.$http.post('/api/suggestion', {
           activity: this.activity,
           accessibility: this.accessibility,
@@ -189,17 +193,25 @@
           participants: this.participants,
           price: this.price
         }).then(response => {
-          // Wait a minimum amount of time for spinner to show
-
-          if (response.body.error) {
-            this.showErrorAlert();
-          }
-          else {
-            this.showSuccessAlert();
-            this.resetForm();
+          let self = this;
+          let endTime = Date.now();
+          // Forces alerts to wait 500 ms
+          let waitTime = 500 - (endTime - startTime);
+          if (waitTime < 0) {
+            waitTime = 0;
           }
 
-          this.submitting = false;
+          this.wait(waitTime).then(function() {
+            if (response.body.error) {
+              self.showErrorAlert();
+            }
+            else {
+              self.showSuccessAlert();
+              self.resetForm();
+            }
+
+            self.submitting = false;
+          });
         });
       },
       showSuccessAlert: function() {
