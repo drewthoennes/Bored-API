@@ -52,4 +52,4 @@ npm run prod
 ```
 
 ## Contributing
-All help is welcome! A pull request or a new issue would be very appreciated. If you want to add more activities, add them to database.json and make a pull request.
+All help is welcome! A pull request or a new issue would be very appreciated. If you want to add more activities, we've created a UI on the [website](https://www.boredapi.com/contributing) to make suggesting easy.
