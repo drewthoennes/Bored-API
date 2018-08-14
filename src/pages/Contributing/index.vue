@@ -188,10 +188,10 @@
         let startTime = Date.now();
         this.$http.post('/api/suggestion', {
           activity: this.activity,
-          accessibility: this.accessibility,
+          accessibility: parseFloat(this.accessibility),
           type: this.type,
-          participants: this.participants,
-          price: this.price
+          participants: parseInt(this.participants),
+          price: parseFloat(this.price)
         }).then(response => {
           let self = this;
           let endTime = Date.now();
@@ -203,6 +203,7 @@
 
           this.wait(waitTime).then(function() {
             if (response.body.error) {
+              console.log(response.body.error);
               self.showErrorAlert();
             }
             else {
