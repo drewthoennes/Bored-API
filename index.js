@@ -1,32 +1,35 @@
-var express = require('express'),
-	morgan = require('morgan'),
-	path = require('path'),
-	serveStatic = require('serve-static'),
-	bodyParser = require('body-parser'),
-	favicon = require('serve-favicon'),
-	mongoose = require('mongoose'),
-	fs = require('fs');
-	// enforce = require('express-sslify');
+var express = require('express');
+var morgan = require('morgan');
+var path = require('path');
+var serveStatic = require('serve-static');
+var bodyParser = require('body-parser');
+var favicon = require('serve-favicon');
+var mongoose = require('mongoose');
+var fs = require('fs');
+var sitemap = require('express-sitemap')();
 
 require('dotenv').config();
 
 app = express();
 
 app.use(favicon(__dirname + '/favicon/favicon.ico'));
-
-if (process.env.NODE_ENV !== 'dev') {
-	// console.log('Enforcing HTTPS');
-	// app.use(enforce.HTTPS());
-}
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-// CORS
+// Allow CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+// Create sitemap.xml
+// sitemap.generate(app);
+
+// Expose the sitemap
+// app.get('/sitemap.xml', (req, res) => {
+// 	sitemap.XMLtoWeb(res);
+// });
 
 // Backend API routes
 require('./server/routes/api.js')(app);
@@ -36,7 +39,7 @@ require('./server/routes/error.js')(app);
 // Frontend endpoints
 app.use(express.static(__dirname + "/dist"));
 app.use('/', express.static(__dirname + "/dist"));
-// Catch all for frontend
+// Catch all for frontend routes
 app.all('/*', function(req, res) {
 	res.sendFile(path.join(__dirname, '/dist', '/index.html'));
 });

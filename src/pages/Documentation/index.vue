@@ -193,9 +193,11 @@
   }
   .topbar-div {
     height: 10%;
+    min-height: 75px;
   }
   .intro-div {
     height: 25%;
+    min-height: 187.5px;
   }
   .content {
     background: #f8f8f8;
@@ -300,6 +302,7 @@
   }
   .bottombar-div {
     height: 25%;
+    min-height: 187.5px;
   }
 
   .back-to-top {

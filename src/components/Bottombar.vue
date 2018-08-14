@@ -99,18 +99,13 @@
   .information {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 50%;
-  }
-  .information div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 30px;
   }
   .information a {
     color: #ffffff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
   }
   .information a:hover {
     color: #ffffff;

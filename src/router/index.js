@@ -28,6 +28,11 @@ const router = new Router({
       component: loadView('Documentation')
     },
     {
+      path: '/contributing',
+      name: 'Contributing',
+      component: loadView('Contributing')
+    },
+    {
       path: '/*',
       name: 'Error',
       component: loadView('Error')

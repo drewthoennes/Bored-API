@@ -11,6 +11,9 @@
     <div v-else-if="documentation">
       <h1>Bored API Documentation</h1>
     </div>
+    <div v-else-if="contributing">
+      <h1>Contributing</h1>
+    </div>
     <div v-else-if="error">
       <h1>Error</h1>
     </div>
@@ -24,6 +27,7 @@
       home: Boolean,
       about: Boolean,
       documentation: Boolean,
+      contributing: Boolean,
       error: Boolean
     },
     data () {

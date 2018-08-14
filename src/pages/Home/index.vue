@@ -80,12 +80,15 @@
   }
   .topbar-div {
     height: 10%;
+    min-height: 75px;
   }
   .intro-div {
     height: 25%;
+    min-height: 187.5px;
   }
   .info-div {
     height: 25%;
+    min-height: 187.5px;
   }
   .content {
     margin-left: 10%;
@@ -146,6 +149,7 @@
   }
   .bottombar-div {
     height: 25%;
+    min-height: 187.5px;
   }
   @media only screen and (max-width: 500px) {
     .search span {

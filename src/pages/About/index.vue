@@ -49,7 +49,7 @@
           <i v-else="accordion3 === 1" class="fas fa-minus"></i>
         </div>
         <div class="accordion-body" v-bind:class="{ expanded: accordion3 === 1, closed: accordion3 !== 1 }">
-          <p>Please check out the <router-link :to="{ name: 'Documentation'}">documentation</router-link> for examples. If you still can't figure it out, feel free to submit a ticket on the <a href="https://github.com/drewthoennes/Bored-API/issues">GitHub</a></p>
+          <p>Please check out the <router-link :to="{ name: 'Documentation'}">documentation</router-link> for examples. If you still can't figure it out, feel free to submit a ticket on the <a href="https://github.com/drewthoennes/Bored-API/issues">GitHub</a>.</p>
         </div>
       </div>
 
@@ -60,7 +60,7 @@
           <i v-else="accordion4 === 1" class="fas fa-minus"></i>
         </div>
         <div class="accordion4-body" v-bind:class="{ expanded: accordion4 === 1, closed: accordion4 !== 1 }">
-          <p>Any new suggestions or features would be very helpful! Feel free to submit a <a href="https://github.com/drewthoennes/Bored-API/pulls"> pull request</a> or submit a <a href="https://github.com/drewthoennes/Bored-API/issues">feature request</a></p>
+          <p>Any new suggestions or features would be very helpful! Feel free to submit a <a href="https://github.com/drewthoennes/Bored-API/pulls"> pull request</a> or submit a <a href="https://github.com/drewthoennes/Bored-API/issues">feature request</a>.</p>
         </div>
       </div>
 
@@ -124,9 +124,11 @@
   }
   .topbar-div {
     height: 10%;
+    min-height: 75px;
   }
   .intro-div {
     height: 25%;
+    min-height: 187.5px;
   }
   .content {
     min-height: 33.5%;
@@ -157,5 +159,6 @@
   }
   .bottombar-div {
     height: 25%;
+    min-height: 187.5px;
   }
 </style>

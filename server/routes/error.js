@@ -1,6 +1,5 @@
-const express = require('express'),
-  bodyParser = require('body-parser'),
-  configFile = require('../config')
+const express = require('express');
+const bodyParser = require('body-parser');
 
 module.exports = function(app) {
   app.get('/api/*', (req, res) => {

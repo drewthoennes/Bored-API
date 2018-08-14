@@ -2,10 +2,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import vueResource from 'vue-resource'
+import VueResource from 'vue-resource'
+import VueNotification from 'vue-notification'
 
 Vue.config.productionTip = false
-Vue.use(vueResource);
+Vue.use(VueResource);
+Vue.use(VueNotification);
 
 new Vue({
   el: '#app',

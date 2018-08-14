@@ -12,6 +12,10 @@
         <router-link v-if="boldDocumentation" :to="{name: 'Documentation'}"><b>Documentation</b></router-link>
         <router-link v-else :to="{name: 'Documentation'}">Documentation</router-link>
       </div>
+      <div>
+        <router-link v-if="boldContributing" :to="{name: 'Contributing'}"><b>Contributing</b></router-link>
+        <router-link v-else :to="{name: 'Contributing'}">Contributing</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -24,7 +28,8 @@
       hide: Boolean,
       absolute: Boolean,
       boldAbout: Boolean,
-      boldDocumentation: Boolean
+      boldDocumentation: Boolean,
+      boldContributing: Boolean
     },
     data () {
       return {
