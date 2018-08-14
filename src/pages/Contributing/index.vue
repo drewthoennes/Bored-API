@@ -203,7 +203,6 @@
 
           this.wait(waitTime).then(function() {
             if (response.body.error) {
-              console.log(response.body.error);
               self.showErrorAlert();
             }
             else {

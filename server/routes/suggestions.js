@@ -72,8 +72,6 @@ module.exports = function(app) {
     params.participants = parseInt(req.body.participants);
     params.price = parseFloat(req.body.price);
 
-    console.log(params);
-
     Suggestions.create(params, function(err, suggestion) {
       if (err) {
         res.send({'error': err});
