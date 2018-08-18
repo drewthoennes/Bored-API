@@ -4,12 +4,8 @@
       <Topbar v-bind:border="border"/>
     </div>
 
-    <!-- <div class="intro-div">
-      <Intro error/>
-    </div> -->
-
     <div class="content">
-      <h4>The page you were looking for was not found</h4>
+      <h4>Hm looks like your lost... Maybe try heading <router-link :to="{ name: 'Home' }">home</router-link>?</h4>
     </div>
 
     <div class="bottombar-div">
@@ -52,8 +48,14 @@
     height: 25%;
   }
   .content {
-    min-height: 59.5%;
-    margin-top: 30px;
+    margin: 0;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content > h4 {
+    margin: 0;
   }
   .bottombar-div {
     height: 25%;

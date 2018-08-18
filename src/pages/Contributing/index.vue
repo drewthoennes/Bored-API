@@ -14,13 +14,14 @@
           <p>How to Contribute</p>
         </div>
         <div class="hill-box-body">
-          <p>The Bored API makes use of a database of activities and other data to fulfill API queries. Although the database is already decently sized, we would like to grow it even further. We've already covered many common activities but we need <b>your help</b> to expand.</p>
+          <p>The Bored API makes use of a database of activities and other data to fulfill API queries. Although the database is already decently sized, we want to grow it even further. We've already covered many common activities but we need <b>your help</b> to expand.</p>
           <p>Listed here are some guidelines to help with your submission:</p>
           <ul>
-            <li>Activities should start with a verb in the form of a command</li>
+            <li>Activities should start with a verb in the form of a command (ex. "Research ...", "Invite ...", "Create ...")</li>
             <li>Try to keep the activities general and without references to companies or name brand products</li>
           </ul>
-          <p>Thank you again so much for your contribution! Contributors like you make this project possible.</p>
+          <br>
+          <p>Thank you again so much for your contribution! Contributors like <b>you</b> make this project possible.</p>
         </div>
       </div>
 
@@ -336,7 +337,8 @@
     min-height: 187.5px;
   }
 
-  /* https://codepen.io/danielmorosan/pen/XmYBVx */
+  /* https://codepen.io/danielmorosan/pen/XmYBVx
+  CSS Start */
   .spinner {
     margin: 0;
     width: 100%;
@@ -346,28 +348,23 @@
     width: 14px;
     height: 14px;
     background-color: white;
-
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   }
-
   .spinner .bounce1 {
     -webkit-animation-delay: -0.32s;
     animation-delay: -0.32s;
   }
-
   .spinner .bounce2 {
     -webkit-animation-delay: -0.16s;
     animation-delay: -0.16s;
   }
-
   @-webkit-keyframes sk-bouncedelay {
     0%, 80%, 100% { -webkit-transform: scale(0) }
     40% { -webkit-transform: scale(1.0) }
   }
-
   @keyframes sk-bouncedelay {
     0%, 80%, 100% {
       -webkit-transform: scale(0);
@@ -377,7 +374,21 @@
       transform: scale(1.0);
     }
   }
+  /* CSS End */
 
   @media only screen and (max-width: 670px) {
+    .form-body {
+      flex-direction: column;
+    }
+    .form-body .input-fields {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    .form-body .submission {
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+    }
   }
 </style>

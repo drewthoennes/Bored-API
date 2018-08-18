@@ -59,7 +59,7 @@
           <i v-if="accordion4 === 0" class="fas fa-plus"></i>
           <i v-else="accordion4 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordion4-body" v-bind:class="{ expanded: accordion4 === 1, closed: accordion4 !== 1 }">
+        <div class="accordion-body" v-bind:class="{ expanded: accordion4 === 1, closed: accordion4 !== 1 }">
           <p>Any new suggestions or features would be very helpful! Feel free to submit a <a href="https://github.com/drewthoennes/Bored-API/pulls"> pull request</a> or submit a <a href="https://github.com/drewthoennes/Bored-API/issues">feature request</a>.</p>
         </div>
       </div>
@@ -71,7 +71,7 @@
           <i v-else="accordion5 === 1" class="fas fa-minus"></i>
         </div>
         <div class="accordion-body" v-bind:class="{ expanded: accordion5 === 1, closed: accordion5 !== 1 }">
-          <p>Thank you for asking! We're currently paying for the costs to run this application with no backing. Any donations would be very appreciated and would help keep this project running.</p>
+          <p>Thanks for asking! The Bored API doesn't cost too much to run, so the best way you can support the project is by suggesting new activities. We have an easy to use interface in the <router-link :to="{ name: 'Contributing' }">Contributing</router-link> page that you can use to suggest new ideas.</p>
         </div>
       </div>
     </div>
@@ -145,17 +145,9 @@
   .accordion-header i {
     line-height: 33px;
   }
-  .accordion-body {
-    padding: 0px 20px 0px 20px;
-  }
   .closed {
     min-height: 0px;
     max-height: 0px;
-  }
-  .expanded {
-    min-height: 100%;
-    max-height: 100%;
-    padding: 20px;
   }
   .bottombar-div {
     height: 25%;

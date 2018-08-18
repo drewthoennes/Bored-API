@@ -261,6 +261,10 @@
   .navigation-links ul li a {
     color: black;
   }
+  .back-to-top {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .back-to-top button {
     background: #4a4e56;
     color: white;

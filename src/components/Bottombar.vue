@@ -89,9 +89,6 @@
     text-align: left;
     padding-left: 10px;
   }
-  /* .icons:nth-child(2n - 1) {
-    text-align: left;
-  } */
   .bottombar div:not(.information) {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -101,6 +98,8 @@
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .information a {
     color: #ffffff;

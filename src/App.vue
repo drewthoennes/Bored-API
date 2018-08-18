@@ -130,7 +130,7 @@
   }
   .accordion-body {
     margin: 0 !important;
-    padding: 20px 20px 20px 20px;
+    padding: 0px 20px 10px 20px;
   }
   .accordion-body p {
     padding-top: 5px;
