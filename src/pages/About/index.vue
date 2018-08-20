@@ -148,6 +148,7 @@
   .closed {
     min-height: 0px;
     max-height: 0px;
+    padding-bottom: 0px;
   }
   .bottombar-div {
     height: 25%;

@@ -103,3 +103,7 @@
 {"_id":{"$oid":"5b661a44e7179a4c6138f58d"},"activity":"Make a scrapbook with pictures of your favorite memories","accessibility":0.1,"type":"diy","participants":1,"price":0.1,"link":"","key":"5554174","enabled":true}
 {"_id":{"$oid":"5b661a6de7179a4c6138f591"},"activity":"Have a picnic with some friends","accessibility":0.1,"type":"recreational","participants":3,"price":0.1,"link":"","key":"6813070","enabled":true}
 {"_id":{"$oid":"5b661a95e7179a4c6138f5d0"},"activity":"Have a bonfire with your close friends","accessibility":0.1,"type":"recreational","participants":4,"price":0.1,"link":"","key":"8442249","enabled":true}
+{"_id":{"$oid":"5b7079b5e7179a7016f400e2"},"activity":"Memorize the fifty states and their capitals","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4179309","enabled":true}
+{"_id":{"$oid":"5b78d843e7179a69ea612f01"},"activity":"Take a class at your local community center that interests you","accessibility":0.15,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8750692","enabled":true}
+{"_id":{"$oid":"5b79adc0e7179a69ea614df9"},"activity":"Resolve a problem you've been putting off","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9999999","enabled":true}
+{"_id":{"$oid":"5b79adede7179a69ea614e00"},"activity":"Make a new friend","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1000000","enabled":true}
