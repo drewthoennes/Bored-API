@@ -15,7 +15,7 @@
     <div class="content">
       <h1>Try it out</h1>
       <div class="search">
-        <span>http://boredapi.com/api/</span>
+        <span>http://www.boredapi.com/api/</span>
         <input type="text" v-model="endpoint" ></input>
         <button @click="query(endpoint)">Submit</button>
       </div>
@@ -107,7 +107,7 @@
     justify-content: space-between;
   }
   .search span {
-    width: 200px;
+    width: 270px;
     text-align: center;
     background: #f8f8f8;
     line-height: 46px;
@@ -151,7 +151,7 @@
     height: 25%;
     min-height: 187.5px;
   }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 670px) {
     .search span {
       width: 0px;
       border: 0px;
