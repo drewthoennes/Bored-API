@@ -21,6 +21,9 @@ var SuggestionsSchema = new Schema({
 	enabled: {
 		type: Boolean,
 		required: true
+	},
+	name: {
+		type: String
 	}
 }, {collection: 'suggestions'});
 

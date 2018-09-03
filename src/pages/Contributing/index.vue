@@ -64,6 +64,10 @@
               <p>Price:</p>
               <input type="number" min="0" max="1" step=".1" v-model="price"/>
             </div>
+            <div>
+              <p>Your name:</p>
+              <input type="text"v-model="name"/>
+            </div>
           </div>
 
           <div class="submission">
@@ -119,6 +123,7 @@
         type: '',
         participants: '',
         price: '',
+        name: '',
         submitting: false,
         defaultTypes: [
           'education',
@@ -143,6 +148,7 @@
         this.type = '';
         this.participants = '';
         this.price = '';
+        this.name = '';
       },
       submitForm: function() {
         // If already submitting, don't submit twice
@@ -192,7 +198,8 @@
           accessibility: parseFloat(this.accessibility),
           type: this.type,
           participants: parseInt(this.participants),
-          price: parseFloat(this.price)
+          price: parseFloat(this.price),
+          name: this.name
         }).then(response => {
           let self = this;
           let endTime = Date.now();
@@ -290,6 +297,7 @@
   }
   .input-fields > div p {
     padding-top: 5px;
+    white-space: nowrap;
   }
   .input-fields > div input, select {
     width: 100%;

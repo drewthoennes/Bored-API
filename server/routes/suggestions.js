@@ -29,7 +29,7 @@ module.exports = function(app) {
     let params = {enabled: true};
     let defaultTypes = ['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork'];
 
-    if (!req.body.activity || (!req.body.accessibility && req.body.accessibility !== 0) || !req.body.type || !req.body.participants || (!req.body.price && req.body.price !== 0)) {
+    if (!req.body.activity || (!req.body.accessibility && req.body.accessibility !== 0) || !req.body.type || !req.body.participants || (!req.body.price && req.body.price !== 0) || !req.body.name) {
       res.send({'error': 'Missing fields'});
       return;
     }
@@ -71,6 +71,7 @@ module.exports = function(app) {
     params.type = req.body.type;
     params.participants = parseInt(req.body.participants);
     params.price = parseFloat(req.body.price);
+    params.name = methods.stringSanitize(String(req.body.name));
 
     Suggestions.create(params, function(err, suggestion) {
       if (err) {
