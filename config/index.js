@@ -19,8 +19,9 @@ module.exports = {
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
+    database: 'mongodb://localhost:27017/boredapi',
 
-    
+
     /**
      * Source Maps
      */

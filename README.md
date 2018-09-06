@@ -2,7 +2,7 @@
 Find something better to do faster
 
 ## About
-This project is a server-side rendered Express.js app that has a goal of creating a simple way to find things to do.
+This project is an MEVN (MongoDB, Express.js, Vue.js, and Node.js) app that has a goal of creating a simple way to find things to do.
 
 ## Endpoints
 The full documentation can be found [here](https://www.boredapi.com/documentation), but listed below are a few of the endpoints
@@ -46,10 +46,15 @@ Response:
 To set up your own Bored API, clone the app and run:
 ```bash
 npm install
-# Start MongoDB
-npm run prod
-# App started on port 8080
+npm start
+# Started on port 8080
 ```
 
 ## Contributing
 All help is welcome! A pull request or a new issue would be very appreciated. If you want to add more activities, we've created a UI on the [website](https://www.boredapi.com/contributing) to make suggesting easy.
+
+## Usage
+The Bored API has been used in a few other applications listed below.
+
+* [I'm Bored Alexa skill](https://www.amazon.com/gp/product/B07GDL9MP4?ie=UTF8&ref-suffix=ss_rw)
+* [Python wrapper](https://pypi.org/project/bored/)

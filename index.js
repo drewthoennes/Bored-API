@@ -7,6 +7,8 @@ var favicon = require('serve-favicon');
 var mongoose = require('mongoose');
 var fs = require('fs');
 var sitemap = require('express-sitemap')();
+var chalk = require('chalk');
+var config = require('./config');
 
 require('dotenv').config();
 
@@ -23,18 +25,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-// Create sitemap.xml
-// sitemap.generate(app);
-
-// Expose the sitemap
-// app.get('/sitemap.xml', (req, res) => {
-// 	sitemap.XMLtoWeb(res);
-// });
-
 // Backend API routes
-require('./server/routes/api.js')(app);
-// Catch all for API routes that don't exist
-require('./server/routes/error.js')(app);
+require('./src/server/routes/api.js')(app);
 
 // Frontend endpoints
 app.use(express.static(__dirname + "/dist"));
@@ -44,22 +36,19 @@ app.all('/*', function(req, res) {
 	res.sendFile(path.join(__dirname, '/dist', '/index.html'));
 });
 
-var port = process.env.PORT || 8080;
-app.listen(port);
+const PORT = process.env.PORT || config.dev.port;
+app.listen(PORT);
 
-console.log("Started on port " + port);
+console.log(chalk.green("Started on port " + PORT));
 
 //  Connection to MongoDB
-console.log('Starting API');
-
-var database = process.env.MONGODB_URI || "mongodb://localhost:27017/boredapi";
+const DATABAES = process.env.MONGODB_URI || config.dev.database;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(database, function(err, res) {
-	if(err) {
-		console.log('Error connecting to MongoDB: ' + err);
+mongoose.connect(DATABAES, { useNewUrlParser: true })
+	.then(res => {
+		console.log(chalk.green('Connected to MongoDB: ' + DATABAES));
+	}).catch(err => {
+		console.log(chalk.red('Error connecting to MongoDB: ' + err));
 	}
-	else {
-		console.log('Connected to MongoDB: ' + database);
-	}
-});
+);
