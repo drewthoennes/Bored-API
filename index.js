@@ -26,7 +26,7 @@ app.use(function(req, res, next) {
 });
 
 // Backend API routes
-require('./src/server/routes/api.js')(app);
+app.use(require('./src/server/routes/api.js')());
 
 // Frontend endpoints
 app.use(express.static(__dirname + "/dist"));

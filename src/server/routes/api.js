@@ -1,12 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-module.exports = function(app) {
-  app.get('/api', (req, res) => {
+module.exports = function() {
+  let router = express.Router();
+
+  router.get('/api', (req, res) => {
     res.json({message: 'Bored API'});
   });
 
-  require('./activities.js')(app);
-  require('./suggestions.js')(app);
-  require('./error.js')(app);
+  require('./activities.js')(router);
+  require('./suggestions.js')(router);
+  require('./error.js')(router);
+
+  return router;
 }

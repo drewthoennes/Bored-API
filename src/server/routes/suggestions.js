@@ -24,8 +24,8 @@ function logData(req, params) {
   });
 }
 
-module.exports = function(app) {
-  app.post('/api/suggestion', (req, res) => {
+module.exports = function(router) {
+  router.post('/api/suggestion', (req, res) => {
     let params = {enabled: true};
     let defaultTypes = ['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork'];
 

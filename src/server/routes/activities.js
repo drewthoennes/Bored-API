@@ -28,8 +28,8 @@ function logData(req, params) {
   });
 }
 
-module.exports = function(app) {
-  app.get('/api/activity/', (req, res) => {
+module.exports = function(router) {
+  router.get('/api/activity/', (req, res) => {
     let params = {'enabled': true};
     let price = {};
     let accessibility = {};
