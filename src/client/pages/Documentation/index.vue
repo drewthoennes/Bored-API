@@ -40,7 +40,7 @@
             <p>Activities</p>
           </div>
           <div class="hill-box-body">
-            <DocumentationEndpoint type="GET" endpoint="/api/activity/" description="Get a random event" query="http://boredapi.com/api/activity/" :id="'endpoints-random'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity/" description="Get a random event" query="http://www.boredapi.com/api/activity/" :id="'endpoints-random'" response='{
   "activity": "Learn Express.js",
   "accessibility": 0.25,
   "type": "education",
@@ -52,7 +52,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?key=:key" description="Find an activity by its key" query="http://boredapi.com/api/activity?key=5881028" :id="'endpoints-key'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?key=:key" description="Find an activity by its key" query="http://www.boredapi.com/api/activity?key=5881028" :id="'endpoints-key'" response='{
   "activity": "Learn a new programming language",
   "accessibility": 0.25,
   "type": "education",
@@ -63,7 +63,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="http://boredapi.com/api/activity?type=recreational" :id="'endpoints-type'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?type=:type" description="Find a random activity with a given type" query="http://www.boredapi.com/api/activity?type=recreational" :id="'endpoints-type'" response='{
   "activity": "Learn how to play a new sport",
   "accessibility": 0.2,
   "type": "recreational",
@@ -74,7 +74,7 @@
 
             <br>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?participants=:participants" description="Find a random activity with a given number of participants" query="http://boredapi.com/api/activity?participants=1" :id="'endpoints-participants'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?participants=:participants" description="Find a random activity with a given number of participants" query="http://www.boredapi.com/api/activity?participants=1" :id="'endpoints-participants'" response='{
   "activity": "Learn how to fold a paper crane",
   "accessibility": 0.05,
   "type": "education",
@@ -85,7 +85,7 @@
 
             <br/>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?price=:price" description="Find an activity with a specified price" query="http://boredapi.com/api/activity?price=0.0" :id="'endpoints-price'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?price=:price" description="Find an activity with a specified price" query="http://www.boredapi.com/api/activity?price=0.0" :id="'endpoints-price'" response='{
   "activity": "Hold a yard sale",
   "accessibility": 0.1,
   "type": "social",
@@ -95,7 +95,7 @@
 
             <br/>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?minprice=:minprice&maxprice=:maxprice" description="Find an event with a specified price in an inclusively constrained range" query="http://boredapi.com/api/activity?minprice=0&maxprice=0.1" :id="'endpoints-price-range'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?minprice=:minprice&maxprice=:maxprice" description="Find an event with a specified price in an inclusively constrained range" query="http://www.boredapi.com/api/activity?minprice=0&maxprice=0.1" :id="'endpoints-price-range'" response='{
   "activity": "Teach your dog a new trick",
   "accessibility": 0.15,
   "type": "relaxation",
@@ -105,7 +105,7 @@
 
             <br/>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?accessibility=:accessibility" description="Find a price in an inclusively constrained range" query="http://boredapi.com/api/activity?accessibility=1" :id="'endpoints-accessibility'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?accessibility=:accessibility" description="Find a price in an inclusively constrained range" query="http://www.boredapi.com/api/activity?accessibility=1" :id="'endpoints-accessibility'" response='{
   "activity": "Take a bubble bath",
   "accessibility": 0.1,
   "type": "relaxation",
@@ -115,7 +115,7 @@
 
             <br/>
 
-            <DocumentationEndpoint type="GET" endpoint="/api/activity?minaccessibility=:minaccessibility&maxaccessibility=:maxaccessibility" description="Find an event with a specified accessibility in an inclusively constrained range" query="http://boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1" :id="'endpoints-accessibility-range'" response='{
+            <DocumentationEndpoint type="GET" endpoint="/api/activity?minaccessibility=:minaccessibility&maxaccessibility=:maxaccessibility" description="Find an event with a specified accessibility in an inclusively constrained range" query="http://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1" :id="'endpoints-accessibility-range'" response='{
   "activity":"Learn a new recipe",
   "accessibility":0.05,
   "type":"cooking",
@@ -165,11 +165,11 @@
     },
     methods: {
       scrollTop: function() {
-        // https://github.com/caiofsouza/vue-backtotop/blob/master/src/BackToTop.vue
         window.smoothscroll()
       }
     },
     mounted() {
+      // This function is from https://github.com/caiofsouza/vue-backtotop/blob/master/src/BackToTop.vue
       window.smoothscroll = () => {
         let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
         if (currentScroll > 0) {

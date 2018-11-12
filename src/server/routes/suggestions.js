@@ -29,20 +29,12 @@ module.exports = function(app) {
     let params = {enabled: true};
     let defaultTypes = ['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork'];
 
-    if (!req.body.activity || (!req.body.accessibility && req.body.accessibility !== 0) || !req.body.type || !req.body.participants || (!req.body.price && req.body.price !== 0) || !req.body.name) {
+    if (!req.body.activity || !req.body.type || !req.body.participants) {
       res.send({'error': 'Missing fields'});
       return;
     }
     if (typeof req.body.activity !== 'string') {
       res.send({'error': 'Activity must be a string'});
-      return;
-    }
-    if (isNaN(req.body.accessibility)) {
-      res.send({'error': 'Accessibility must be a number'});
-      return;
-    }
-    if (req.body.accessibility < 0 || req.body.accessibility > 1) {
-      res.send({'error': 'Accessibility must be between 0 and 1 inclusive'});
       return;
     }
     if (!defaultTypes.includes(req.body.type)) {
@@ -57,21 +49,10 @@ module.exports = function(app) {
       res.send({'error': 'There must be at least one participant'});
       return;
     }
-    if (isNaN(req.body.price)) {
-      res.send({'error': 'Price must be a number'});
-      return;
-    }
-    if (req.body.price < 0 || req.body.price > 1) {
-      res.send({'error': 'Price must be between 0 and 1 inclusive'});
-      return;
-    }
 
     params.activity = methods.stringSanitize(String(req.body.activity));
-    params.accessibility = parseFloat(req.body.accessibility);
     params.type = req.body.type;
     params.participants = parseInt(req.body.participants);
-    params.price = parseFloat(req.body.price);
-    params.name = methods.stringSanitize(String(req.body.name));
 
     Suggestions.create(params, function(err, suggestion) {
       if (err) {

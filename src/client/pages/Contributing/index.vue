@@ -38,10 +38,6 @@
               <input type="text" v-model="activity"/>
             </div>
             <div>
-              <p>Accessibility:</p>
-              <input type="number" min="0" max="1" step=".1" v-model="accessibility"/>
-            </div>
-            <div>
               <p>Type:</p>
               <select v-model="type">
                 <option value=""></option>
@@ -60,13 +56,19 @@
               <p>Participants:</p>
               <input type="number" min="1" v-model="participants"/>
             </div>
-            <div>
-              <p>Price:</p>
-              <input type="number" min="0" max="1" step=".1" v-model="price"/>
-            </div>
-            <div>
-              <p>Your name:</p>
-              <input type="text"v-model="name"/>
+
+            <div class="submit-buttons">
+              <button class="submit-button-reset" @click="resetForm()">
+                <p>Reset</p>
+              </button>
+              <button class="submit-button-submit" @click="submitForm()">
+                <p v-if="!submitting">Submit</p>
+                <div v-else class="spinner">
+                  <div class="bounce1"></div>
+                  <div class="bounce2"></div>
+                  <div class="bounce3"></div>
+                </div>
+              </button>
             </div>
           </div>
 
@@ -74,13 +76,12 @@
             <div class="well">
               <pre>{
   "activity": "{{ activity }}",
-  "accessibility": {{ accessibility }},
   "type": "{{ type }}",
-  "participants": {{ participants }},
-  "price": {{ price }}
+  "participants": {{ participants }}
 }</pre>
             </div>
-            <div class="submit-buttons">
+
+            <div class="submit-buttons submit-buttons-minimized">
               <button class="submit-button-reset" @click="resetForm()">
                 <p>Reset</p>
               </button>
@@ -119,11 +120,8 @@
     data () {
       return {
         activity: '',
-        accessibility: '',
         type: '',
         participants: '',
-        price: '',
-        name: '',
         submitting: false,
         defaultTypes: [
           'education',
@@ -144,11 +142,8 @@
       },
       resetForm: function() {
         this.activity = '';
-        this.accessibility = '';
         this.type = '';
         this.participants = '';
-        this.price = '';
-        this.name = '';
       },
       submitForm: function() {
         // If already submitting, don't submit twice
@@ -159,14 +154,6 @@
         // Check form for completeness to prevent unnecessary submission
         if (this.activity === '') {
           this.showFieldErrorAlert('Activity field cannot be empty');
-          return;
-        }
-        if (isNaN(this.accessibility)) {
-          this.showFieldErrorAlert('Accessibility must be a number');
-          return;
-        }
-        if (this.accessibility < 0 || this.accessibility > 1) {
-          this.showFieldErrorAlert('Accessibility must be between 0 and 1 inclusive');
           return;
         }
         if (!this.defaultTypes.includes(this.type)) {
@@ -181,25 +168,14 @@
           this.showFieldErrorAlert('There must be at least one participant');
           return;
         }
-        if (isNaN(this.price)) {
-          this.showFieldErrorAlert('Price must be a number');
-          return;
-        }
-        if (this.price < 0 || this.price > 1) {
-          this.showFieldErrorAlert('Price must be between 0 and 1 inclusive');
-          return;
-        }
 
         // Submit to backend
         this.submitting = true;
         let startTime = Date.now();
         this.$http.post('/api/suggestion', {
           activity: this.activity,
-          accessibility: parseFloat(this.accessibility),
           type: this.type,
-          participants: parseInt(this.participants),
-          price: parseFloat(this.price),
-          name: this.name
+          participants: parseInt(this.participants)
         }).then(response => {
           let self = this;
           let endTime = Date.now();
@@ -287,7 +263,7 @@
   .input-fields {
     margin-right: 10px;
   }
-  .input-fields > div {
+  .input-fields > div:not(.submit-buttons) {
     display: flex;
     flex-direction: row;
     padding-top: 10px;
@@ -312,6 +288,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .form-body .submission .well {
+    height: 100%;
   }
   .submit-buttons {
     display: flex;
@@ -339,6 +318,9 @@
   }
   .submit-button-submit {
     margin-left: 5px;
+  }
+  .submit-buttons-minimized {
+    display: none;
   }
   .bottombar-div {
     height: 25%;
@@ -397,6 +379,13 @@
       margin-left: 0;
       margin-top: 10px;
       width: 100%;
+    }
+    .submit-buttons {
+      /* visibility: hidden; */
+      display: none;
+    }
+    .submit-buttons-minimized {
+      display: flex;
     }
   }
 </style>

@@ -9,30 +9,25 @@
     </div>
 
     <div class="content">
-      <div class="accordion">
-        <div class="accordion-header" @click="accordion1 = accordion1 ? 0 : 1">
+      <div class="hill-box">
+        <div class="hill-box-header">
           <p>What's the purpose behind this API?</p>
-          <i v-if="accordion1 === 0" class="fas fa-plus"></i>
-          <i v-else="accordion1 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordion-body" v-bind:class="{ expanded: accordion1 === 1, closed: accordion1 !== 1 }">
-          <p>The Bored API serves to find activities to do. It has various fields that help determine anything from the price of the activity to the number of participants.</p>
+        <div class="hill-box-body expanded">
+          <p>The Bored API helps you find things to do when you're bored! There are fields like the number of participants, activity type, and more that help you narrow down your results.</p>
         </div>
       </div>
 
-      <div class="accordion">
-        <div class="accordion-header" @click="accordion2 = accordion2 ? 0 : 1">
+      <div class="hill-box">
+        <div class="hill-box-header">
           <p>What did you build the API with?</p>
-          <i v-if="accordion2 === 0" class="fas fa-plus"></i>
-          <i v-else="accordion2 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordion-body" v-bind:class="{ expanded: accordion2 === 1, closed: accordion2 !== 1 }">
-          <p>This whole application is a server-side rendered Express.js program. The tech stacks are listed below:</p>
+        <div class="hill-box-body expanded">
+          <p>This whole application is a MEVN web application hosted on Heroku. The tech stack is listed below:</p>
           <p>Frontend</p>
           <ul>
             <li>Vue.js</li>
-            <li>vue-router</li>
-            <li>vue-resource</li>
+            <li>Webpack</li>
           </ul>
           <p>Backend</p>
           <ul>
@@ -42,40 +37,24 @@
         </div>
       </div>
 
-      <div class="accordion">
-        <div class="accordion-header" @click="accordion3 = accordion3 ? 0 : 1">
+      <div class="hill-box">
+        <div class="hill-box-header">
           <p>How do I use the this?</p>
-          <i v-if="accordion3 === 0" class="fas fa-plus"></i>
-          <i v-else="accordion3 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordion-body" v-bind:class="{ expanded: accordion3 === 1, closed: accordion3 !== 1 }">
-          <p>Please check out the <router-link :to="{ name: 'Documentation'}">documentation</router-link> for examples. If you still can't figure it out, feel free to submit a ticket on the <a href="https://github.com/drewthoennes/Bored-API/issues">GitHub</a>.</p>
+        <div class="hill-box-body expanded">
+          <p>Please check out the <router-link :to="{ name: 'Documentation'}">documentation</router-link> for examples. If you still can't figure it out, feel free to <a href="https://github.com/drewthoennes/Bored-API/issues">submit a help ticket</a>.</p>
         </div>
       </div>
 
-      <div class="accordion">
-        <div class="accordion-header" @click="accordion4 = accordion4 ? 0 : 1">
+      <div class="hill-box">
+        <div class="hill-box-header">
           <p>This is awesome! How can I contribute?</p>
-          <i v-if="accordion4 === 0" class="fas fa-plus"></i>
-          <i v-else="accordion4 === 1" class="fas fa-minus"></i>
         </div>
-        <div class="accordion-body" v-bind:class="{ expanded: accordion4 === 1, closed: accordion4 !== 1 }">
-          <p>Any new suggestions or features would be very helpful! Feel free to submit a <a href="https://github.com/drewthoennes/Bored-API/pulls"> pull request</a> or submit a <a href="https://github.com/drewthoennes/Bored-API/issues">feature request</a>.</p>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <div class="accordion-header" @click="accordion5 = accordion5 ? 0 : 1">
-          <p>Is there any way I can support this project?</p>
-          <i v-if="accordion5 === 0" class="fas fa-plus"></i>
-          <i v-else="accordion5 === 1" class="fas fa-minus"></i>
-        </div>
-        <div class="accordion-body" v-bind:class="{ expanded: accordion5 === 1, closed: accordion5 !== 1 }">
-          <p>Thanks for asking! The Bored API doesn't cost too much to run, so the best way you can support the project is by suggesting new activities. We have an easy to use interface in the <router-link :to="{ name: 'Contributing' }">Contributing</router-link> page that you can use to suggest new ideas.</p>
+        <div class="hill-box-body expanded">
+          <p>Any new suggestions or features would be very helpful! If you have an idea for an activity, we have a suggestion form on the <router-link :to="{ name: 'Contributing' }">contributing</router-link> page. Otherwise, feel free to submit a <a href="https://github.com/drewthoennes/Bored-API/pulls"> pull request</a> or a <a href="https://github.com/drewthoennes/Bored-API/issues">feature request</a>.</p>
         </div>
       </div>
     </div>
-
     <!--
       https://pokeapi.co/docsv2/
       https://api.pandascore.co/doc
@@ -100,11 +79,6 @@
     },
     data () {
       return {
-        accordion1: 0,
-        accordion2: 0,
-        accordion3: 0,
-        accordion4: 0,
-        accordion5: 0
       }
     },
     methods: {
@@ -137,13 +111,8 @@
     padding-right: 10%;
     padding-bottom: 25px;
   }
-  .accordion-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .accordion-header i {
-    line-height: 33px;
+  .hill-box {
+    margin-top: 25px;
   }
   .closed {
     min-height: 0px;

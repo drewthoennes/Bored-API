@@ -42,12 +42,12 @@ app.listen(PORT);
 console.log(chalk.green("Started on port " + PORT));
 
 //  Connection to MongoDB
-const DATABAES = process.env.MONGODB_URI || config.dev.database;
+const DATABASE = process.env.MONGODB_URI || config.dev.database;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(DATABAES, { useNewUrlParser: true })
+mongoose.connect(DATABASE, { useNewUrlParser: true })
 	.then(res => {
-		console.log(chalk.green('Connected to MongoDB: ' + DATABAES));
+		console.log(chalk.green('Connected to MongoDB: ' + DATABASE));
 	}).catch(err => {
 		console.log(chalk.red('Error connecting to MongoDB: ' + err));
 	}
