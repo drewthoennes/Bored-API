@@ -107,3 +107,26 @@
 {"_id":{"$oid":"5b78d843e7179a69ea612f01"},"activity":"Take a class at your local community center that interests you","accessibility":0.15,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8750692","enabled":true}
 {"_id":{"$oid":"5b79adc0e7179a69ea614df9"},"activity":"Resolve a problem you've been putting off","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9999999","enabled":true}
 {"_id":{"$oid":"5b79adede7179a69ea614e00"},"activity":"Make a new friend","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1000000","enabled":true}
+{"_id":{"$oid":"5b8d9a7ee7179a4027667548"},"activity":"Learn origami","accessibility":0.3,"type":"diy","participants":1,"price":0.2,"key":"8394738","enabled":true}
+{"_id":{"$oid":"5b92e230e7179a73d4901cac"},"activity":"Learn how to use a french press","accessibility":0.3,"type":"recreational","participants":1,"price":0.3,"link":"","key":"4522866","enabled":true}
+{"_id":{"$oid":"5b92e25ee7179a73d4901d04"},"activity":"Read a formal research paper on an interesting subject","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"3352474","enabled":true}
+{"_id":{"$oid":"5b92e2ebe7179a73d4901d16"},"activity":"Listen to a new music genre","accessibility":0,"type":"music","participants":1,"price":0,"link":"","key":"4708863","enabled":true}
+{"_id":{"$oid":"5b92e310e7179a73d4901d3d"},"activity":"Volunteer at your local food pantry","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"1878070","enabled":true}
+{"_id":{"$oid":"5b92e34ae7179a73d4901d7f"},"activity":"Learn how to make an Alexa skill","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"1592381","enabled":true}
+{"_id":{"$oid":"5b92e3cde7179a73d4901d91"},"activity":"Surprise your significant other with something considerate","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6204657","enabled":true}
+{"_id":{"$oid":"5c5c7172fb6fc06f4f57fc29"},"activity":"Make origami","accessibility":0.6,"type":"diy","participants":1,"price":0.2,"link":"","key":"9266212","enabled":true}
+{"_id":{"$oid":"5c5c71a4fb6fc06f4f57fc38"},"activity":"Learn Kotlin","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"","key":"3950821","enabled":true}
+{"_id":{"$oid":"5c5c71e0fb6fc06f4f57fc8d"},"activity":"Go for a run","accessibility":0.9,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6852505","enabled":true}
+{"_id":{"$oid":"5c5c722ffb6fc06f4f57fca7"},"activity":"Learn woodworking","accessibility":0.3,"type":"diy","participants":1,"price":0.3,"link":"","key":"9216391","enabled":true}
+{"_id":{"$oid":"5c5c7265fb6fc06f4f57fccd"},"activity":"Start a band","accessibility":0.8,"type":"music","participants":4,"price":0.3,"link":"","key":"5675880","enabled":true}
+{"_id":{"$oid":"5c5c72a1fb6fc06f4f57fcf4"},"activity":"Cook something together with someone","accessibility":0.8,"type":"cooking","participants":2,"price":0.3,"link":"","key":"1799120","enabled":true}
+{"_id":{"$oid":"5c5c72ccfb6fc06f4f57fd2a"},"activity":"Have a jam session with your friends","accessibility":0.3,"type":"music","participants":5,"price":0.1,"link":"","key":"2715253","enabled":true}
+{"_id":{"$oid":"5c5c72f8fb6fc06f4f57fd55"},"activity":"Learn GraphQL","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"","key":"2167064","enabled":true}
+{"_id":{"$oid":"5c5c7336fb6fc06f4f57fd88"},"activity":"Play basketball with a group of friends","accessibility":0.7,"type":"recreational","participants":5,"price":0.0,"link":"","key":"8683473","enabled":true}
+{"_id":{"$oid":"5c5c739cfb6fc06f4f57fdd6"},"activity":"Learn the Chinese erhu","accessibility":0.4,"type":"music","participants":1,"price":0.6,"link":"","key":"2742452","enabled":true}
+{"_id":{"$oid":"5c5c73d7fb6fc06f4f57fddf"},"activity":"Start a webinar on a topic of your choice","accessibility":0.9,"type":"social","participants":1,"price":0.0,"link":"","key":"6826029","enabled":true}
+{"_id":{"$oid":"5c5c740efb6fc06f4f57fe8a"},"activity":"Learn how to use an Arduino","accessibility":0.7,"type":"education","participants":1,"price":0.1,"link":"","key":"8264223","enabled":true}
+{"_id":{"$oid":"5c5c743ffb6fc06f4f57fe9d"},"activity":"Go see a Broadway production","accessibility":0.3,"type":"recreational","participants":4,"price":0.8,"link":"","key":"4448913","enabled":true}
+{"_id":{"$oid":"5c5c747ffb6fc06f4f57fed6"},"activity":"Come up with some business ideas","accessibility":1,"type":"recreational","participants":1,"price":0,"link":"","key":"8570429","enabled":true}
+{"_id":{"$oid":"5c5c74b4fb6fc06f4f57ff53"},"activity":"Learn Javascript","accessibility":0.9,"type":"education","participants":1,"price":0,"link":"","key":"3469378","enabled":true}
+{"_id":{"$oid":"5c5c74fcfb6fc06f4f57ffbc"},"activity":"Visit your past teachers","accessibility":0.7,"type":"social","participants":1,"price":0,"link":"","key":"8238918","enabled":true}
