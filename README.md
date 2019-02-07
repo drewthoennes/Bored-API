@@ -54,7 +54,8 @@ npm start
 All help is welcome! A pull request or a new issue would be very appreciated. If you want to add more activities, we've created a UI on the [website](https://www.boredapi.com/contributing) to make suggesting easy.
 
 ## Usage
-The Bored API has been used in a few other applications listed below.
+The Bored API has been used in a few other applications:
 
 * [I'm Bored Alexa skill](https://www.amazon.com/gp/product/B07GDL9MP4?ie=UTF8&ref-suffix=ss_rw)
 * [Python wrapper](https://pypi.org/project/bored/)
+* [React app](https://github.com/CDAracena/Im-Bored)
