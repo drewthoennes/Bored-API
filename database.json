@@ -130,3 +130,11 @@
 {"_id":{"$oid":"5c5c747ffb6fc06f4f57fed6"},"activity":"Come up with some business ideas","accessibility":1,"type":"recreational","participants":1,"price":0,"link":"","key":"8570429","enabled":true}
 {"_id":{"$oid":"5c5c74b4fb6fc06f4f57ff53"},"activity":"Learn Javascript","accessibility":0.9,"type":"education","participants":1,"price":0,"link":"","key":"3469378","enabled":true}
 {"_id":{"$oid":"5c5c74fcfb6fc06f4f57ffbc"},"activity":"Visit your past teachers","accessibility":0.7,"type":"social","participants":1,"price":0,"link":"","key":"8238918","enabled":true}
+{"_id":{"$oid":"5ccfa8cbfb6fc00ed5a15061"},"activity":"Research a topic you're interested in","accessibility":0.9,"type":"education","participants":1,"price":0.0,"key":"3561421","enabled":true}
+{"_id":{"$oid":"5ccfa911fb6fc00ed5a15072"},"activity":"Listen to music you haven't heard in a while","accessibility":0.9,"type":"music","participants":1,"price":0.05,"key":"4296813","enabled":true}
+{"_id":{"$oid":"5ccfa981fb6fc00ed5a15098"},"activity":"Go on a fishing trip with some friends","accessibility":0.4,"type":"recreational","participants":3,"price":0.4,"key":"3149232","enabled":true}
+{"_id":{"$oid":"5ccfa9a9fb6fc00ed5a150ac"},"activity":"Bake a pie with some friends","accessibility":0.3,"type":"cooking","participants":3,"price":0.3,"key":"3141592","enabled":true}
+{"_id":{"$oid":"5ccfaa22fb6fc00ed5a150d5"},"activity":"Do yoga","accessibility":0.9,"type":"recreational","participants":1,"price":0.0,"key":"4688012","enabled":true}
+{"_id":{"$oid":"5ccfaa96fb6fc00ed5a150ec"},"activity":"Visit a nearby museum","accessibility":0.7,"type":"recreational","participants":1,"price":0.2,"key":"5490351","enabled":true}
+{"_id":{"$oid":"5ccfab38fb6fc00ed5a150fb"},"activity":"Have a photo session with some friends","accessibility":0.8,"type":"social","participants":4,"price":0.05,"key":"3305912","enabled":true}
+{"_id":{"$oid":"5ccfac00fb6fc00ed5a1518f"},"activity":"Watch the sunset or the sunrise","accessibility":1.0,"type":"recreational","participants":1,"price":0.0,"key":"0019413","enabled":true}
