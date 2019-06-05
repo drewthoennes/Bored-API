@@ -32,6 +32,7 @@ module.exports = function(router) {
   router.get('/api/activity/', (req, res) => {
     let params = {'enabled': true};
     let price = {};
+    let participants = {};
     let accessibility = {};
 
     if (req.query.key) {
@@ -42,6 +43,14 @@ module.exports = function(router) {
     }
     if (req.query.participants) {
       params.participants = req.query.participants;
+    }
+    if (req.query.maxparticipants) {
+      participants['$lte'] = req.query.maxparticipants;
+      params.participants = participants;
+    }
+    if (req.query.minparticipants) {
+      participants['$gte'] = req.query.minparticipants;
+      params.participants = participants;
     }
     if (req.query.price) {
       params.price = req.query.price;
@@ -65,6 +74,8 @@ module.exports = function(router) {
       accessibility['$gte'] = req.query.minaccessibility;
       params.accessibility = accessibility;
     }
+
+    console.log(params);
 
     logData(req, params);
 
@@ -97,17 +108,15 @@ module.exports = function(router) {
           return;
         }
 
-        let formatted = {};
-
-        formatted['activity'] = activity['activity'];
-        formatted['accessibility'] = activity['accessibility'];
-        formatted['type'] = activity['type'];
-        formatted['participants'] = activity['participants'];
-        formatted['price'] = activity['price'];
-        if (activity['link'] !== "") {
-          formatted['link'] = activity['link'];
-        }
-        formatted['key'] = activity['key'];
+        let formatted = {
+          activity: activity.activity,
+          accessibility: activity.accessibility,
+          type: activity.type,
+          participants: activity.participants,
+          price: activity.price,
+          link: activity.link || '',
+          key: activity.key
+        };
 
         res.json(formatted);
       });
