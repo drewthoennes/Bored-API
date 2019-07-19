@@ -59,3 +59,4 @@ The Bored API has been used in a few other applications:
 * [I'm Bored Alexa skill](https://www.amazon.com/gp/product/B07GDL9MP4?ie=UTF8&ref-suffix=ss_rw)
 * [Python wrapper](https://pypi.org/project/bored/)
 * [React app](https://github.com/CDAracena/Im-Bored)
+* [Vue app](https://github.com/emilsgulbis/BoredApp)
