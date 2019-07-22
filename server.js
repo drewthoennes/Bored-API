@@ -1,12 +1,7 @@
 var express = require('express');
-var morgan = require('morgan');
 var path = require('path');
-var serveStatic = require('serve-static');
 var bodyParser = require('body-parser');
-var favicon = require('serve-favicon');
 var mongoose = require('mongoose');
-var fs = require('fs');
-var sitemap = require('express-sitemap')();
 var chalk = require('chalk');
 var config = require('./config');
 
@@ -14,7 +9,6 @@ require('dotenv').config();
 
 app = express();
 
-app.use(favicon(__dirname + '/favicon/favicon.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -25,12 +19,17 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/favicon.ico', (req, res) => {
+	res.sendFile(`${__dirname}/static/favicon.ico`);
+});
+
 // Backend API routes
-app.use(require('./src/server/routes/api.js')());
+app.use(require('./src/backend/routes/api.js')());
 
 // Frontend endpoints
 app.use(express.static(__dirname + "/dist"));
 app.use('/', express.static(__dirname + "/dist"));
+
 // Catch all for frontend routes
 app.all('/*', function(req, res) {
 	res.sendFile(path.join(__dirname, '/dist', '/index.html'));
@@ -41,7 +40,7 @@ app.listen(PORT);
 
 console.log(chalk.green("Started on port " + PORT));
 
-//  Connection to MongoDB
+//  Connect to MongoDB
 const DATABASE = process.env.MONGODB_URI || config.dev.database;
 
 mongoose.Promise = global.Promise;

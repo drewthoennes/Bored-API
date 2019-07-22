@@ -18,7 +18,6 @@ function logData(req, params) {
 
   client.recordEvent('suggestions', values, (err, res) => {
     if (err) {
-      console.log({'error': err});
       return;
     }
   });

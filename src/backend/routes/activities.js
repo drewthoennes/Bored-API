@@ -22,7 +22,6 @@ function logData(req, params) {
 
   client.recordEvent('endpoints', values, (err, res) => {
     if (err) {
-      console.log({'error': err});
       return;
     }
   });
@@ -74,8 +73,6 @@ module.exports = function(router) {
       accessibility['$gte'] = req.query.minaccessibility;
       params.accessibility = accessibility;
     }
-
-    console.log(params);
 
     logData(req, params);
 
