@@ -1,3 +1,4 @@
+require('module-alias/register');
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -14,9 +15,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Allow CORS
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	next();
 });
 
 app.get('/favicon.ico', (req, res) => {
@@ -24,11 +25,11 @@ app.get('/favicon.ico', (req, res) => {
 });
 
 // Backend API routes
-app.use(require('./src/backend/routes/api.js')());
+app.use(require('./src/backend/routes')());
 
 // Frontend endpoints
-app.use(express.static(__dirname + "/dist"));
-app.use('/', express.static(__dirname + "/dist"));
+app.use(express.static(__dirname + '/dist'));
+app.use('/', express.static(__dirname + '/dist'));
 
 // Catch all for frontend routes
 app.all('/*', function(req, res) {
@@ -38,13 +39,13 @@ app.all('/*', function(req, res) {
 const PORT = process.env.PORT || config.dev.port;
 app.listen(PORT);
 
-console.log(chalk.green("Started on port " + PORT));
+console.log(chalk.green('Started on port ' + PORT));
 
 //  Connect to MongoDB
 const DATABASE = process.env.MONGODB_URI || config.dev.database;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(DATABASE, { useNewUrlParser: true })
+mongoose.connect(DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(res => {
 		console.log(chalk.green('Connected to MongoDB: ' + DATABASE));
 	}).catch(err => {

@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-var ActivitiesSchema = new Schema({
+var ActivitySchema = new mongoose.Schema({
 	activity: {
-    type: String,
-    required: true
-  },
+		type: String,
+		required: true
+	},
 	accessibility: { // 0.0 - 1.0
 		type: Number
 	},
@@ -21,14 +20,16 @@ var ActivitiesSchema = new Schema({
 	link: { // URL to resource
 		type: String
 	},
-  key: {
-    type: String,
-    required: true
-  },
+	key: {
+		type: String,
+		required: true
+	},
 	enabled: {
 		type: Boolean,
 		required: true
 	}
-}, {collection: 'activities'});
+}, {
+	collection: 'activities'
+});
 
-module.exports = mongoose.model('Activities', ActivitiesSchema);
+module.exports = mongoose.model('Activity', ActivitySchema);

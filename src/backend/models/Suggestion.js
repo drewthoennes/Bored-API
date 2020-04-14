@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-var SuggestionsSchema = new Schema({
+var SuggestionSchema = new mongoose.Schema({
 	activity: {
-    type: String,
-    required: true
-  },
+		type: String,
+		required: true
+	},
 	accessibility: {
 		type: Number
 	},
@@ -25,6 +24,8 @@ var SuggestionsSchema = new Schema({
 	name: {
 		type: String
 	}
-}, {collection: 'suggestions'});
+}, {
+	collection: 'suggestions'
+});
 
-module.exports = mongoose.model('Suggestions', SuggestionsSchema);
+module.exports = mongoose.model('Suggestions', SuggestionSchema);

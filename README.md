@@ -1,11 +1,14 @@
 # Bored API
-Find something better to do faster
+A free and simple API to help you find something better to do
+
+![Bored API Website](./.docs/website.png)
 
 ## About
-This project is an MEVN (MongoDB, Express.js, Vue.js, and Node.js) app that has a goal of creating a simple way to find things to do.
+This project is an MEVN (MongoDB, Express.js, Vue.js, and Node.js) web app that has a goal of creating a simple way to find things to do. You <u>do not need an API key</u> to use this API, just query the endpoint to get data. All activities served by the API can be found [here](./activities.json).
 
+---
 ## Endpoints
-The full documentation can be found [here](https://www.boredapi.com/documentation), but listed below are a few of the endpoints
+The full documentation can be found [here](https://www.boredapi.com/documentation), but listed below are a few of the endpoints.
 
 #### Random event
 Gets a random event
@@ -42,19 +45,22 @@ Response:
 }
 ```
 
+---
 ## Using
-To set up your own Bored API, clone the app and run:
+To set up your own Bored API, clone the app, start your MongoDB instance, and run:
 ```bash
 npm install
 npm start
 # Started on port 8080
 ```
 
+---
 ## Contributing
-All help is welcome! A pull request or a new issue would be very appreciated. If you want to add more activities, we've created a UI on the [website](https://www.boredapi.com/contributing) to make suggesting easy.
+All help is welcome! A pull request or a new issue would be very appreciated. If you want to add more activities, I've created a UI on the [website](https://www.boredapi.com/contributing) to make suggesting easy.
 
+---
 ## Usage
-The Bored API has been used in a few other applications:
+The Bored API has been used in many other applications and projects:
 
 * [I'm Bored Alexa skill](https://www.amazon.com/gp/product/B07GDL9MP4?ie=UTF8&ref-suffix=ss_rw)
 * [Python wrapper](https://pypi.org/project/bored/)
