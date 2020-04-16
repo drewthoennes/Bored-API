@@ -24,7 +24,7 @@
 {"activity":"Go on a long drive with no music","accessibility":0.2,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"4290333","enabled":true}
 {"activity":"Watch a movie you'd never usually watch","accessibility":0.15,"type":"relaxation","participants":1,"price":0.15,"link":"","key":"9212950","enabled":true}
 {"activity":"Go see a movie in theaters with a few friends","accessibility":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"5262759","enabled":true}
-{"activity":"Draw and color a Mandala","accessibility":0.1,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"4614092","enabled":true}
+{"activity":"Draw and color a Mandala","accessibility":0.1,"type":"relaxation","participants":1,"price":0.05,"link":"https://en.wikipedia.org/wiki/Mandala","key":"4614092","enabled":true}
 {"activity":"Rearrange and organize your room","accessibility":0.15,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"6197243","enabled":true}
 {"activity":"Pot some plants and put them around your house","accessibility":0.3,"type":"relaxation","participants":1,"price":0.4,"link":"","key":"6613330","enabled":true}
 {"activity":"Plan a vacation you've always wanted to take","accessibility":0.05,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"7265395","enabled":true}
@@ -112,20 +112,20 @@
 {"activity":"Read a formal research paper on an interesting subject","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"3352474","enabled":true}
 {"activity":"Listen to a new music genre","accessibility":0,"type":"music","participants":1,"price":0,"link":"","key":"4708863","enabled":true}
 {"activity":"Volunteer at your local food pantry","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"1878070","enabled":true}
-{"activity":"Learn how to make an Alexa skill","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"1592381","enabled":true}
+{"activity":"Learn how to make an Alexa skill","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"https://www.amazon.com/alexa-skills/b?node=13727921011","key":"1592381","enabled":true}
 {"activity":"Surprise your significant other with something considerate","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6204657","enabled":true}
 {"activity":"Make origami","accessibility":0.6,"type":"diy","participants":1,"price":0.2,"link":"","key":"9266212","enabled":true}
-{"activity":"Learn Kotlin","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"","key":"3950821","enabled":true}
+{"activity":"Learn Kotlin","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"https://kotlinlang.org/","key":"3950821","enabled":true}
 {"activity":"Go for a run","accessibility":0.9,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6852505","enabled":true}
 {"activity":"Learn woodworking","accessibility":0.3,"type":"diy","participants":1,"price":0.3,"link":"","key":"9216391","enabled":true}
 {"activity":"Start a band","accessibility":0.8,"type":"music","participants":4,"price":0.3,"link":"","key":"5675880","enabled":true}
 {"activity":"Cook something together with someone","accessibility":0.8,"type":"cooking","participants":2,"price":0.3,"link":"","key":"1799120","enabled":true}
 {"activity":"Have a jam session with your friends","accessibility":0.3,"type":"music","participants":5,"price":0.1,"link":"","key":"2715253","enabled":true}
-{"activity":"Learn GraphQL","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"","key":"2167064","enabled":true}
+{"activity":"Learn GraphQL","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"https://graphql.org/","key":"2167064","enabled":true}
 {"activity":"Play basketball with a group of friends","accessibility":0.7,"type":"recreational","participants":5,"price":0.0,"link":"","key":"8683473","enabled":true}
 {"activity":"Learn the Chinese erhu","accessibility":0.4,"type":"music","participants":1,"price":0.6,"link":"","key":"2742452","enabled":true}
 {"activity":"Start a webinar on a topic of your choice","accessibility":0.9,"type":"social","participants":1,"price":0.0,"link":"","key":"6826029","enabled":true}
-{"activity":"Learn how to use an Arduino","accessibility":0.7,"type":"education","participants":1,"price":0.1,"link":"","key":"8264223","enabled":true}
+{"activity":"Learn how to use an Arduino","accessibility":0.7,"type":"education","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Arduino","key":"8264223","enabled":true}
 {"activity":"Go see a Broadway production","accessibility":0.3,"type":"recreational","participants":4,"price":0.8,"link":"","key":"4448913","enabled":true}
 {"activity":"Come up with some business ideas","accessibility":1,"type":"recreational","participants":1,"price":0,"link":"","key":"8570429","enabled":true}
 {"activity":"Learn Javascript","accessibility":0.9,"type":"education","participants":1,"price":0,"link":"","key":"3469378","enabled":true}
@@ -149,7 +149,7 @@
 {"activity":"Play a video game","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"5534113","enabled":true}
 {"activity":"Clean out your refrigerator","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9324336","enabled":true}
 {"activity":"Study a foreign language","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"9765530","enabled":true}
-{"activity":"Learn the NATO phonetic alphabet","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"","key":"6706598","enabled":true}
+{"activity":"Learn the NATO phonetic alphabet","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/NATO_phonetic_alphabet","key":"6706598","enabled":true}
 {"activity":"Solve a Rubik's cube","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4151544","enabled":true}
 {"activity":"Make your own LEGO creation","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1129748","enabled":true}
 {"activity":"Plant a tree","accessibility":0.3,"type":"recreational","participants":1,"price":0.3,"link":"","key":"1942393","enabled":true}
@@ -161,8 +161,8 @@
 {"activity":"Explore a park you have never been to before","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8159356","enabled":true}
 {"activity":"Configure two-factor authentication on your accounts","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"1572120","enabled":true}
 {"activity":"Create a meal plan for the coming week","accessibility":0.0,"type":"cooking","participants":1,"price":0.0,"link":"","key":"3491470","enabled":true}
-{"activity":"Watch a Khan Academy lecture on a subject of your choosing","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"","key":"7154873","enabled":true}
+{"activity":"Watch a Khan Academy lecture on a subject of your choosing","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://www.khanacademy.org/","key":"7154873","enabled":true}
 {"activity":"Shred old documents you don't need anymore","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2430066","enabled":true}
-{"activity":"Learn about a distributed version control system such as Git","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"","key":"9303608","enabled":true}
+{"activity":"Learn about a distributed version control system such as Git","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Distributed_version_control","key":"9303608","enabled":true}
 {"activity":"Write a note of appreciation to someone","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1770521","enabled":true}
 {"activity":"Draw something interesting","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8033599","enabled":true}
