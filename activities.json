@@ -108,7 +108,7 @@
 {"activity":"Resolve a problem you've been putting off","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9999999","enabled":true}
 {"activity":"Make a new friend","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1000000","enabled":true}
 {"activity":"Learn origami","accessibility":0.3,"type":"diy","participants":1,"price":0.2,"key":"8394738","enabled":true}
-{"activity":"Learn how to use a french press","accessibility":0.3,"type":"recreational","participants":1,"price":0.3,"link":"","key":"4522866","enabled":true}
+{"activity":"Learn how to use a french press","accessibility":0.3,"type":"recreational","participants":1,"price":0.3,"link":"https://en.wikipedia.org/wiki/French_press","key":"4522866","enabled":true}
 {"activity":"Read a formal research paper on an interesting subject","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"3352474","enabled":true}
 {"activity":"Listen to a new music genre","accessibility":0,"type":"music","participants":1,"price":0,"link":"","key":"4708863","enabled":true}
 {"activity":"Volunteer at your local food pantry","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"1878070","enabled":true}
