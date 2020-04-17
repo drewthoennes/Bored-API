@@ -176,3 +176,5 @@
 {"activity":"Draft your living will","accessibility":0.5,"type":"busywork","participants":1,"price":0.0,"link":"https://www.investopedia.com/terms/l/livingwill.asp","key":"2360432","enabled":true}
 {"activity":"Prepare a 72-hour kit","accessibility":0.5,"type":"busywork","participants":1,"price":0.5,"link":"https://www.ready.gov/kit","key":"4266522","enabled":true}
 {"activity":"Color","accessibility":0.0,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"5322987","enabled":true}
+{"activity":"Organize your pantry","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"3954882","enabled":true}
+{"activity":"Back up important computer files","accessibility":0.2,"type":"busywork","participants":1,"price":0.2,"link":"","key":"9081214","enabled":true}
