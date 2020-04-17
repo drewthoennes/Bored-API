@@ -19,7 +19,7 @@
 {"activity":"Listen to your favorite album","accessibility":0.2,"type":"music","participants":1,"price":0.08,"link":"","key":"3136729","enabled":true}
 {"activity":"Learn to play a new instrument","accessibility":0.6,"type":"music","participants":1,"price":0.55,"link":"","key":"3192099","enabled":true}
 {"activity":"Teach your dog a new trick","accessibility":0.15,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"1668223","enabled":true}
-{"activity":"Make a to-do list for your week","accessibility":0.05,"type":"busywork","participants":1,"price":0.0,"link":"","key":"1668223","enabled":true}
+{"activity":"Make a to-do list for your week","accessibility":0.05,"type":"busywork","participants":1,"price":0.0,"link":"","key":"5920481","enabled":true}
 {"activity":"Go swimming with a friend","accessibility":0.1,"type":"social","participants":2,"price":0.1,"link":"","key":"1505028","enabled":true}
 {"activity":"Go on a long drive with no music","accessibility":0.2,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"4290333","enabled":true}
 {"activity":"Watch a movie you'd never usually watch","accessibility":0.15,"type":"relaxation","participants":1,"price":0.15,"link":"","key":"9212950","enabled":true}
@@ -112,9 +112,8 @@
 {"activity":"Read a formal research paper on an interesting subject","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"3352474","enabled":true}
 {"activity":"Listen to a new music genre","accessibility":0,"type":"music","participants":1,"price":0,"link":"","key":"4708863","enabled":true}
 {"activity":"Volunteer at your local food pantry","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"1878070","enabled":true}
-{"activity":"Learn how to make an Alexa skill","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"https://developer.amazon.com/en-US/docs/alexa/custom-skills/steps-to-build-a-custom-skill.html","key":"1592381","enabled":true}
+{"activity":"Learn how to make an Alexa skill","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"https://developer.amazon.com/en-US/docs/alexa/custom-skills/steps-to-build-a-custom-skill.html","key":"1592381","enabled":true}
 {"activity":"Surprise your significant other with something considerate","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"6204657","enabled":true}
-{"activity":"Make origami","accessibility":0.6,"type":"diy","participants":1,"price":0.2,"link":"","key":"9266212","enabled":true}
 {"activity":"Learn Kotlin","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"https://kotlinlang.org/","key":"3950821","enabled":true}
 {"activity":"Go for a run","accessibility":0.9,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6852505","enabled":true}
 {"activity":"Learn woodworking","accessibility":0.3,"type":"diy","participants":1,"price":0.3,"link":"","key":"9216391","enabled":true}
