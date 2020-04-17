@@ -46,7 +46,7 @@
 {"activity":"Learn a new recipe","accessibility":0.05,"type":"cooking","participants":1,"price":0.0,"link":"","key":"6553978","enabled":true}
 {"activity":"Create a cookbook with your favorite recipes","accessibility":0.05,"type":"cooking","participants":1,"price":0.0,"link":"","key":"1947449","enabled":true}
 {"activity":"Create a compost pile","accessibility":0.15,"type":"diy","participants":1,"price":0.0,"link":"","key":"8631548","enabled":true}
-{"activity":"Volunteer at your local food shelter","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"2055368","enabled":true}
+{"activity":"Volunteer at your local food bank","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"2055368","enabled":true}
 {"activity":"Create or update your resume","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9364041","enabled":true}
 {"activity":"Paint the first thing you see","accessibility":0.2,"type":"recreational","participants":1,"price":0.25,"link":"","key":"1162360","enabled":true}
 {"activity":"Start a blog for something you're passionate about","accessibility":0.1,"type":"recreational","participants":1,"price":0.05,"link":"","key":"8364626","enabled":true}
@@ -182,3 +182,15 @@
 {"activity":"Do something you used to do as a kid","accessibility":0.8,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"8827573","enabled":true}
 {"activity":"Organize your basement","accessibility":0.9,"type":"busywork","participants":1,"price":0.0,"link":"","key":"8203595","enabled":true}
 {"activity":"Write a todo list for the coming weekend","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9487940","enabled":true}
+{"activity":"Sit in the dark and listen to your favourite music with no distractions","accessibility":1.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9908721","enabled":true}
+{"activity":"Do a jigsaw puzzle","accessibility":1.0,"type":"recreational","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Jigsaw_puzzle","key":"8550768","enabled":true}
+{"activity":"Look at pictures and videos of cute animals","accessibility":1.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"2565076","enabled":true}
+{"activity":"Write a handwritten letter to somebody","accessibility":0.8,"type":"social","participants":1,"price":0.1,"link":"","key":"2277801","enabled":true}
+{"activity":"Match your storage containers with their lids","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4940907","enabled":true}
+{"activity":"Start a family tree","accessibility":1.0,"type":"social","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Family_tree","key":"6825484","enabled":true}
+{"activity":"Look at your finances and find one way to save money","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"5977626","enabled":true}
+{"activity":"Organize your dresser","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"7556665","enabled":true}
+{"activity":"Learn the periodic table","accessibility":0.6,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Periodic_table","key":"3621244","enabled":true}
+{"activity":"Learn how or improve your touch typing","accessibility":0.8,"type":"busywork","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Touch_typing","key":"2526437","enabled":true}
+{"activity":"Donate to your local food bank","accessibility":0.8,"type":"charity","participants":1,"price":0.5,"link":"","key":"4150284","enabled":true}
+{"activity":"Learn how to beatbox","accessibility":1.0,"type":"recreational","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Beatboxing","key":"8731710","enabled":true}
