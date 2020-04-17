@@ -170,3 +170,7 @@
 {"activity":"Write a list of things you are grateful for","accessibility":0.0,"type":"relaxing","participants":1,"price":0.0,"link":"","key":"2062010","enabled":true}
 {"activity":"Organize one of your collections","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6098037","enabled":true}
 {"activity":"Learn Morse code","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Morse_code","key":"3646173","enabled":true}
+{"activity":"Go for a walk","accessibility":0.1,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"4286250","enabled":true}
+{"activity":"Mow your neighbour's lawn","accessibility":0.2,"type":"charity","participants":1,"price":0.0,"link":"","key":"1303906","enabled":true}
+{"activity":"Compliment someone","accessibility":0.0,"type":"social","participants":2,"price":0.0,"link":"","key":"9149470","enabled":true}
+{"activity":"Draft your living will","accessibility":0.5,"type":"busywork","participants":1,"price":0.0,"link":"https://www.investopedia.com/terms/l/livingwill.asp","key":"2360432","enabled":true}
