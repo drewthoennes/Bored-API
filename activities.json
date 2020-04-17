@@ -174,3 +174,5 @@
 {"activity":"Mow your neighbour's lawn","accessibility":0.2,"type":"charity","participants":1,"price":0.0,"link":"","key":"1303906","enabled":true}
 {"activity":"Compliment someone","accessibility":0.0,"type":"social","participants":2,"price":0.0,"link":"","key":"9149470","enabled":true}
 {"activity":"Draft your living will","accessibility":0.5,"type":"busywork","participants":1,"price":0.0,"link":"https://www.investopedia.com/terms/l/livingwill.asp","key":"2360432","enabled":true}
+{"activity":"Prepare a 72-hour kit","accessibility":0.5,"type":"busywork","participants":1,"price":0.5,"link":"https://www.ready.gov/kit","key":"4266522","enabled":true}
+{"activity":"Color","accessibility":0.0,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"5322987","enabled":true}
