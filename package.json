@@ -4,13 +4,13 @@
   "description": "A simple and free API to find things to do when you're bored",
   "scripts": {
     "build-dev": "webpack  --inline --progress --color --config build/webpack.dev.conf.js",
-    "build": "npm run clean; webpack  --inline --progress --color --config build/webpack.prod.conf.js",
-    "start-dev": "npm run dev && node server.js",
-    "start": "npm run build; node server.js",
+    "build": "npm run clean && webpack  --inline --progress --color --config build/webpack.prod.conf.js",
+    "start-dev": "npm run build-dev && node server.js",
+    "start": "npm run build && node server.js",
     "clean": "rm -r dist/*",
-    "update-db": "mongoimport --db boredapi --collection activities --file activities.json --mode merge",
+    "update-db": "mongoimport --db boredapi --collection activities --file activities.json --mode merge --upsertFields=key",
     "test-i": "mocha test/backend/integration --timeout 60000",
-    "test": "npm run test-i;"
+    "test": "npm run test-i"
   },
   "license": "MIT",
   "_moduleAliases": {
@@ -43,6 +43,7 @@
     "css-loader": "^3.5.2",
     "faker": "^4.1.0",
     "html-webpack-plugin": "^4.2.0",
+    "mocha": "^7.1.1",
     "mongodb-memory-server": "^6.5.2",
     "sinon": "^9.0.2",
     "vue-loader": "^15.9.1",
