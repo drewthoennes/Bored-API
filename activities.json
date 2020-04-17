@@ -159,7 +159,7 @@
 {"activity":"Patronize a local independent restaurant","accessibility":0.1,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5319204","enabled":true}
 {"activity":"Give your pet ten minutes of focused attention","accessibility":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9937387","enabled":true}
 {"activity":"Explore a park you have never been to before","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8159356","enabled":true}
-{"activity":"Configure two-factor authentication on your accounts","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"1572120","enabled":true}
+{"activity":"Configure two-factor authentication on your accounts","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Multi-factor_authentication","key":"1572120","enabled":true}
 {"activity":"Create a meal plan for the coming week","accessibility":0.0,"type":"cooking","participants":1,"price":0.0,"link":"","key":"3491470","enabled":true}
 {"activity":"Watch a Khan Academy lecture on a subject of your choosing","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://www.khanacademy.org/","key":"7154873","enabled":true}
 {"activity":"Shred old documents you don't need anymore","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2430066","enabled":true}
