@@ -178,3 +178,7 @@
 {"activity":"Color","accessibility":0.0,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"5322987","enabled":true}
 {"activity":"Organize your pantry","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"3954882","enabled":true}
 {"activity":"Back up important computer files","accessibility":0.2,"type":"busywork","participants":1,"price":0.2,"link":"","key":"9081214","enabled":true}
+{"activity":"Memorize a favourite quote or poem","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"","key":"9008639","enabled":true}
+{"activity":"Do something you used to do as a kid","accessibility":0.8,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"8827573","enabled":true}
+{"activity":"Organize your basement","accessibility":0.9,"type":"busywork","participants":1,"price":0.0,"link":"","key":"8203595","enabled":true}
+{"activity":"Write a todo list for the coming weekend","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9487940","enabled":true}
