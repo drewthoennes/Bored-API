@@ -36,13 +36,13 @@ app.all('/*', function(req, res) {
 	res.sendFile(path.join(__dirname, '/dist', '/index.html'));
 });
 
-const PORT = process.env.PORT || config.dev.port;
+const PORT = process.env.PORT || config.port;
 app.listen(PORT);
 
 console.log(chalk.green('Started on port ' + PORT));
 
 //  Connect to MongoDB
-const DATABASE = process.env.MONGODB_URI || config.dev.database;
+const DATABASE = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URI : config.database;
 
 mongoose.Promise = global.Promise;
 mongoose.connect(DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })

@@ -3,12 +3,11 @@
   "version": "1.1.0",
   "description": "A simple and free API to find things to do when you're bored",
   "scripts": {
-    "build-dev": "webpack  --inline --progress --color --config build/webpack.dev.conf.js",
+    "build-dev": "npm run clean; webpack  --inline --progress --color --config build/webpack.dev.conf.js",
     "build": "npm run clean; webpack  --inline --progress --color --config build/webpack.prod.conf.js",
-    "start-dev": "npm run dev && node server.js",
-    "start": "npm run build; node server.js",
+    "start-dev": "export NODE_ENV=development; npm run build-dev && node server.js",
+    "start": "export NODE_ENV=production; npm run build && node server.js",
     "clean": "rm -r dist/*",
-    "update-db": "mongoimport --db boredapi --collection activities --file activities.json --mode merge",
     "test-i": "mocha test/backend/integration --timeout 60000",
     "test": "npm run test-i;"
   },
@@ -17,7 +16,8 @@
     "@": "./",
     "@b": "./src/backend",
     "@f": "./src/frontend",
-    "@t": "./test"
+    "@t": "./test",
+    "@s": "./scripts"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
