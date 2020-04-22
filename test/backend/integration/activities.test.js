@@ -4,9 +4,6 @@ const chaiAsPromised = require('chai-as-promised');
 const chaiHttp = require('chai-http');
 const expect = chai.expect;
 const faker = require('faker');
-const fs = require('fs');
-const readline = require('readline');
-const Ajv = require('ajv');
 
 const server = require('../utils/server');
 const mongo = require('../utils/mongo');
@@ -24,63 +21,6 @@ const prune = (activity) => {
 
     return pruned;
 };
-
-describe('Check that activities.json is valid and well formed', () => {
-    it('Each line should be valid JSON', done => {
-        const line_counter = ((i = 0) => () => ++i)();
-        const rl = readline.createInterface({
-            input: fs.createReadStream('activities.json'),
-            crlfDelay: Infinity
-        });
-        let error = undefined;
-        rl.on('line', (line, lineno = line_counter()) => {
-              try {
-                  JSON.parse(line);
-              } catch (e) {
-                  e.message = "Error occured on line " + lineno + " of activities.json.\n" + e.message;
-                  error = e;
-              }
-        });
-        rl.on('close', () => done(error));
-    });
-
-    it('Each line should match the schema', done => {
-        const line_counter = ((i = 0) => () => ++i)();
-        var ajv = new Ajv({allErrors: true});
-        const schema = require('../../../activity-schema-v1.json');
-        const validate = ajv.compile(schema);
-        const rl = readline.createInterface({
-            input: fs.createReadStream('activities.json'),
-            crlfDelay: Infinity
-        });
-        let error = undefined;
-        rl.on('line', (line, lineno = line_counter()) => {
-            if (! validate(JSON.parse(line))) {
-                error = new Error("Error occured on line " + lineno + " of activities.json.\nThe following validation errors occurred:\n" + JSON.stringify(validate.errors, null, 4));
-            }
-        });
-        rl.on('close', () => done(error));
-    });
-
-    it('Each key should be unique', done => {
-        const line_counter = ((i = 0) => () => ++i)();
-        const rl = readline.createInterface({
-            input: fs.createReadStream('activities.json'),
-            crlfDelay: Infinity
-        });
-        let error = undefined;
-        let keys = new Array();
-        rl.on('line', (line, lineno = line_counter()) => {
-            const rec = JSON.parse(line);
-            if (keys.includes(rec['key'])) {
-                error = new Error("Duplicate `key` found on line " + lineno + " of activities.json.");
-            } else {
-                keys.push(rec['key']);
-            }
-        });
-        rl.on('close', () => done(error));
-    });
-});
 
 describe('Activities route should work as expected', () => {
     before(() => {
