@@ -12,4 +12,4 @@ module.exports = function() {
 	require('./error.js')(router);
 
 	return router;
-}
+};

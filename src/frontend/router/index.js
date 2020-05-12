@@ -1,11 +1,13 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(Router)
+Vue.use(Router);
 
-function loadView(view) {
-	return () => import(/* webpackChunkName: "view-[request]" */ `@/pages/${view}`);
-}
+import HomePage from '@/pages/Home';
+import AboutPage from '@/pages/About';
+import DocumentationPage from '@/pages/Documentation';
+import ContributingPage from '@/pages/Contributing';
+import ErrorPage from '@/pages/Error';
 
 const router = new Router({
 	hashbang: false,
@@ -15,34 +17,29 @@ const router = new Router({
 		{
 			path: '/',
 			name: 'Home',
-			component: loadView('Home')
+			component: HomePage
 		},
 		{
 			path: '/about',
 			name: 'About',
-			component: loadView('About')
+			component: AboutPage
 		},
 		{
 			path: '/documentation',
 			name: 'Documentation',
-			component: loadView('Documentation')
+			component: DocumentationPage
 		},
 		{
 			path: '/contributing',
 			name: 'Contributing',
-			component: loadView('Contributing')
+			component: ContributingPage
 		},
 		{
 			path: '/*',
 			name: 'Error',
-			component: loadView('Error')
+			component: ErrorPage
 		}
 	]
 });
 
-router.beforeEach((to, from, next) => {
-	// Middleware
-	next();
-});
-
-export default router
+export default router;

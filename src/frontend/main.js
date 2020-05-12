@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import Vue from 'vue';
+import App from './App';
+import router from './router';
 
-import VueResource from 'vue-resource'
-import VueNotification from 'vue-notification'
+import VueResource from 'vue-resource';
+import VueNotification from 'vue-notification';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(VueResource);
 Vue.use(VueNotification);
 

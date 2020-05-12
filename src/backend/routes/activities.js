@@ -14,9 +14,9 @@ module.exports = function(router) {
 							.filter(key => req.query[key])
 							.map(key => ({[key.substr(0, 3) === 'max' ? '$lte': '$gte']: req.query[key]}))
 					)
-				}
+				};
 			}
-		);
+			);
 
 		// Assign filters to query database with
 		const params = Object.assign(
@@ -52,4 +52,4 @@ module.exports = function(router) {
 			}
 		});
 	});
-}
+};

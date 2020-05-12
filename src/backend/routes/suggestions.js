@@ -31,9 +31,9 @@ module.exports = function(router) {
 			'activity': methods.stringSanitize(req.body.activity),
 			'type': req.body.type,
 			'participants': parseInt(req.body.participants)
-		}
+		};
 
-		Suggestion.create(params, function(err, suggestion) {
+		Suggestion.create(params, err => {
 			if (err) {
 				res.send({'error': err});
 				return;
@@ -42,4 +42,4 @@ module.exports = function(router) {
 			res.send({'message': 'Successfully created suggestion'});
 		});
 	});
-}
+};

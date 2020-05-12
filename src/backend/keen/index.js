@@ -15,10 +15,10 @@ exports.logActivity = (req, params) => {
 		'type': params.type || '',
 		'participants': params.participants || '',
 		'price': params.price || ''
-	}, (err, res) => {
+	}, err => {
 		if (err) {
 			console.log(err);
 			return;
 		}
 	});
-}
+};

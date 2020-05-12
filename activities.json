@@ -166,7 +166,7 @@
 {"activity":"Write a note of appreciation to someone","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1770521","enabled":true}
 {"activity":"Draw something interesting","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8033599","enabled":true}
 {"activity":"Learn and play a new card game","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"https://www.pagat.com","key":"9660022","enabled":true}
-{"activity":"Write a list of things you are grateful for","accessibility":0.0,"type":"relaxing","participants":1,"price":0.0,"link":"","key":"2062010","enabled":true}
+{"activity":"Write a list of things you are grateful for","accessibility":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"2062010","enabled":true}
 {"activity":"Organize a bookshelf","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6098037","enabled":true}
 {"activity":"Organize a cluttered drawer","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9714586","enabled":true}
 {"activity":"Organize your music collection","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"3151646","enabled":true}
