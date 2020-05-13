@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var SuggestionSchema = new mongoose.Schema({
+var suggestionSchema = new mongoose.Schema({
 	activity: {
 		type: String,
 		required: true
@@ -28,4 +28,4 @@ var SuggestionSchema = new mongoose.Schema({
 	collection: 'suggestions'
 });
 
-module.exports = mongoose.model('Suggestions', SuggestionSchema);
+module.exports = mongoose.model('Suggestions', suggestionSchema);

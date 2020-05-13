@@ -28,7 +28,7 @@ exports.afterEach = () => {
 exports.createActivity = (fields = {}) => {
     return new Activity({
         activity: fields.name || faker.random.words(),
-        accessibility: fields.accessibility || faker.random.number({min: 0, max: 1, precision: 0.1}) || 1,
+        availability: fields.availability || faker.random.number({min: 0, max: 1, precision: 0.1}) || 1,
         type: fields.type || faker.random.objectElement(['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork']),
         participants: fields.participants || faker.random.number({min: 0, max: 1, precision: 0.1}) || 1,
         price: fields.price || faker.random.number({min: 0, max: 1, precision: 0.1}) || 1,

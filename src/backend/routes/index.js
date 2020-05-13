@@ -7,9 +7,9 @@ module.exports = function() {
 		res.json({'message': 'Bored API'});
 	});
 
-	require('./activities.js')(router);
-	require('./suggestions.js')(router);
-	require('./error.js')(router);
+	require('./v1')(router);
+	require('./v2')(router);
+	require('./error')(router);
 
 	return router;
 };

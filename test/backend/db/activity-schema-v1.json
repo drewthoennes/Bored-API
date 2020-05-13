@@ -7,7 +7,7 @@
     "additionalProperties": false,
     "required": [
         "activity",
-        "accessibility",
+        "availability",
         "type",
         "participants",
         "price",
@@ -27,8 +27,8 @@
                 "Volunteer at your local food shelter"
             ]
         },
-        "accessibility": {
-            "$id": "#/properties/accessibility",
+        "availability": {
+            "$id": "#/properties/availability",
             "type": "number",
             "title": "How easy is the activity",
             "description": "A number between 0 and 1 indicating how easy the activity is for people to do, with 1 being 'most accessible.'",

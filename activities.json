@@ -1,197 +1,197 @@
-{"activity":"Learn Express.js","accessibility":0.25,"type":"education","participants":1,"price":0.1,"link":"https://expressjs.com/","key":"3943506","enabled":true}
-{"activity":"Learn to greet someone in a new language","accessibility":0.2,"type":"education","participants":1,"price":0.1,"link": "","key":"4704256","enabled":true}
-{"activity":"Learn how to play a new sport","accessibility":0.2,"type":"recreational","participants":1,"price":0.1,"link":"","key":"5808228","enabled":true}
-{"activity":"Text a friend you haven't talked to in a long time","accessibility":0.2,"type":"social","participants":2,"price":0.05,"link":"","key":"6081071","enabled":true}
-{"activity":"Learn a new programming language","accessibility":0.25,"type":"education","participants":1,"price":0.1,"link":"","key":"5881028","enabled":true}
-{"activity":"Learn how to fold a paper crane","accessibility":0.05,"type":"education","participants":1,"price":0.1,"link": "","key":"3136036","enabled":true}
-{"activity":"Find a DIY to do","accessibility":0.3,"type":"diy","participants":1,"price":0.4,"link":"","key":"4981819","enabled":true}
-{"activity":"Learn about the Golden Ratio","accessibility":0.2,"type":"education","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Golden_ratio","key":"2095681","enabled":true}
-{"activity":"Volunteer at a local animal shelter","accessibility":0.5,"type":"charity","participants":1,"price":0.1,"link":"","key":"1382389","enabled":true}
-{"activity":"Play a game of Monopoly","accessibility":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"1408058","enabled":true}
-{"activity":"Bake pastries for you and your neighbor","accessibility":0.3,"type":"cooking","participants":1,"price":0.4,"link":"","key":"8125168","enabled":true}
-{"activity":"Bake something you've never tried before","accessibility":0.3,"type":"cooking","participants":1,"price":0.4,"link":"","key":"5665663","enabled":true}
-{"activity":"Take your dog on a walk","accessibility":0.2,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9318514","enabled":true}
-{"activity":"Meditate for five minutes","accessibility":0.05,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"3699502","enabled":true}
-{"activity":"Start a book you've never gotten around to reading","accessibility":0.1,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"7114122","enabled":true}
-{"activity":"Take a caffeine nap","accessibility":0.08,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"5092652","enabled":true}
-{"activity":"Take a bubble bath","accessibility":0.1,"type":"relaxation","participants":1,"price":0.15,"link":"","key":"2581372","enabled":true}
-{"activity":"Go to a nail salon","accessibility":0.5,"type":"relaxation","participants":1,"price":0.4,"link":"","key":"7526324","enabled":true}
-{"activity":"Listen to your favorite album","accessibility":0.2,"type":"music","participants":1,"price":0.08,"link":"","key":"3136729","enabled":true}
-{"activity":"Learn to play a new instrument","accessibility":0.6,"type":"music","participants":1,"price":0.55,"link":"","key":"3192099","enabled":true}
-{"activity":"Teach your dog a new trick","accessibility":0.15,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"1668223","enabled":true}
-{"activity":"Make a to-do list for your week","accessibility":0.05,"type":"busywork","participants":1,"price":0.0,"link":"","key":"5920481","enabled":true}
-{"activity":"Go swimming with a friend","accessibility":0.1,"type":"social","participants":2,"price":0.1,"link":"","key":"1505028","enabled":true}
-{"activity":"Go on a long drive with no music","accessibility":0.2,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"4290333","enabled":true}
-{"activity":"Watch a movie you'd never usually watch","accessibility":0.15,"type":"relaxation","participants":1,"price":0.15,"link":"","key":"9212950","enabled":true}
-{"activity":"Go see a movie in theaters with a few friends","accessibility":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"5262759","enabled":true}
-{"activity":"Draw and color a Mandala","accessibility":0.1,"type":"relaxation","participants":1,"price":0.05,"link":"https://en.wikipedia.org/wiki/Mandala","key":"4614092","enabled":true}
-{"activity":"Rearrange and organize your room","accessibility":0.15,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6197243","enabled":true}
-{"activity":"Pot some plants and put them around your house","accessibility":0.3,"type":"relaxation","participants":1,"price":0.4,"link":"","key":"6613330","enabled":true}
-{"activity":"Plan a vacation you've always wanted to take","accessibility":0.05,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"7265395","enabled":true}
-{"activity":"Take your cat on a walk","accessibility":0.1,"type":"relaxation","participants":1,"price":0.02,"link":"","key":"5940465","enabled":true}
-{"activity":"Have a football scrimmage with some friends","accessibility":0.2,"type":"social","participants":8,"price":0,"link":"","key":"1638604","enabled":true}
-{"activity":"Fill out a basketball bracket","accessibility":0.1,"type":"recreational","participants":1,"price":0,"link":"","key":"7806284","enabled":true}
-{"activity":"Play a game of tennis with a friend","accessibility":0.4,"type":"social","participants":2,"price":0.1,"link":"","key":"1093640","enabled":true}
-{"activity":"Catch up with a friend over a lunch date","accessibility":0.15,"type":"social","participants":2,"price":0.2,"link":"","key":"5590133","enabled":true}
-{"activity":"Learn how to iceskate or rollerskate","accessibility":0.25,"type":"recreational","participants":1,"price":0.1,"link":"","key":"5947957","enabled":true}
-{"activity":"Go to a concert with local artists with some friends","accessibility":0.3,"type":"social","participants":3,"price":0.4,"link":"","key":"2211716","enabled":true}
-{"activity":"Explore the nightlife of your city","accessibility":0.32,"type":"social","participants":1,"price":0.1,"link":"","key":"2237769","enabled":true}
-{"activity":"Fix something that's broken in your house","accessibility":0.3,"type":"diy","participants":1,"price":0.1,"link":"","key":"6925988","enabled":true}
-{"activity":"Wash your car","accessibility":0.15,"type":"busywork","participants":1,"price":0.05,"link":"","key":"1017771","enabled":true}
-{"activity":"Find a charity and donate to it","accessibility":0.1,"type":"charity","participants":1,"price":0.4,"link":"","key":"1488053","enabled":true}
-{"activity":"Hold a yard sale","accessibility":0.1,"type":"social","participants":1,"price":0.0,"link":"","key":"1432113","enabled":true}
-{"activity":"Donate blood at a local blood center","accessibility":0.35,"type":"charity","participants":1,"price":0.0,"link":"https://www.redcross.org/give-blood","key":"6509779","enabled":true}
-{"activity":"Volunteer and help out at a senior center","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"3920096","enabled":true}
-{"activity":"Shop at support your local farmers market","accessibility":0.1,"type":"relaxation","participants":1,"price":0.2,"link":"","key":"8979931","enabled":true}
-{"activity":"Learn a new recipe","accessibility":0.05,"type":"cooking","participants":1,"price":0.0,"link":"","key":"6553978","enabled":true}
-{"activity":"Create a cookbook with your favorite recipes","accessibility":0.05,"type":"cooking","participants":1,"price":0.0,"link":"","key":"1947449","enabled":true}
-{"activity":"Create a compost pile","accessibility":0.15,"type":"diy","participants":1,"price":0.0,"link":"","key":"8631548","enabled":true}
-{"activity":"Volunteer at your local food bank","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"2055368","enabled":true}
-{"activity":"Create or update your resume","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9364041","enabled":true}
-{"activity":"Paint the first thing you see","accessibility":0.2,"type":"recreational","participants":1,"price":0.25,"link":"","key":"1162360","enabled":true}
-{"activity":"Start a blog for something you're passionate about","accessibility":0.1,"type":"recreational","participants":1,"price":0.05,"link":"","key":"8364626","enabled":true}
-{"activity":"Start a garden","accessibility":0.35,"type":"recreational","participants":1,"price":0.3,"link":"","key":"1934228","enabled":true}
-{"activity":"Clean out your closet and donate the clothes you've outgrown","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"9026787","enabled":true}
-{"activity":"Catch up on world news","accessibility":0.07,"type":"recreational","participants":1,"price":0.05,"link":"","key":"6596257","enabled":true}
-{"activity":"Create a personal website","accessibility":0.12,"type":"recreational","participants":1,"price":0.1,"link":"","key":"3141417","enabled":true}
-{"activity":"Listen to a new podcast","accessibility":0.12,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"4124860","enabled":true}
-{"activity":"Have a paper airplane contest with some friends","accessibility":0.05,"type":"social","participants":4,"price":0.02,"link":"","key":"8557562","enabled":true}
-{"activity":"Learn calligraphy","accessibility":0.1,"type":"education","participants":1,"price":0.1,"link":"","key":"4565537","enabled":true}
-{"activity":"Start a collection","accessibility":0.5,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1718657","enabled":true}
-{"activity":"Go to a local thrift shop","accessibility":0.2,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8503795","enabled":true}
-{"activity":"Make a couch fort","accessibility":0.08,"type":"recreational","participants":1,"price":0.0,"link":"","key":"2352669","enabled":true}
-{"activity":"Pick up litter around your favorite park","accessibility":0.05,"type":"charity","participants":1,"price":0.0,"link":"","key":"4894697","enabled":true}
-{"activity":"Buy a new house decoration","accessibility":0.3,"type":"recreational","participants":1,"price":0.4,"link":"","key":"3456114","enabled":true}
-{"activity":"Write a thank you letter to an influential person in your life","accessibility":0.1,"type":"social","participants":1,"price":0.0,"link":"","key":"4101229","enabled":true}
-{"activity":"Clean out your car","accessibility":0.08,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2896176","enabled":true}
-{"activity":"Write a short story","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6301585","enabled":true}
-{"activity":"Do something nice for someone you care about","accessibility":0.1,"type":"social","participants":1,"price":0.0,"link":"","key":"8321894","enabled":true}
-{"activity":"Think of a new business idea","accessibility":0.05,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6808057","enabled":true}
-{"activity":"Clean out your garage","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"7023703","enabled":true}
-{"activity":"Learn to sew on a button","accessibility":0.1,"type":"education","participants":1,"price":0.05,"link":"","key":"8731971","enabled":true}
-{"activity":"Learn how to french braid hair","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"8926492","enabled":true}
-{"activity":"Learn how to whistle with your fingers","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"","key":"2790297","enabled":true}
-{"activity":"Learn to write with your nondominant hand","accessibility":0.02,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1645485","enabled":true}
-{"activity":"Make bread from scratch","accessibility":0.2,"type":"cooking","participants":1,"price":0.2,"link":"","key":"4809815","enabled":true}
-{"activity":"Make a budget","accessibility":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4379552","enabled":true}
-{"activity":"Learn how to write in shorthand","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"6778219","enabled":true}
-{"activity":"Make a simple musical instrument","accessibility":0.25,"type":"music","participants":1,"price":0.4,"link":"","key":"7091374","enabled":true}
-{"activity":"Go to the gym","accessibility":0.1,"type":"recreational","participants":1,"price":0.2,"link":"","key":"4387026","enabled":true}
-{"activity":"Try a food you don't like","accessibility":0.05,"type":"recreational","participants":1,"price":0.1,"link":"","key":"6693574","enabled":true}
-{"activity":"Conquer one of your fears","accessibility":0.1,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8344539","enabled":true}
-{"activity":"Go to a concert with some friends","accessibility":0.4,"type":"social","participants":4,"price":0.6,"link":"","key":"4558850","enabled":true}
-{"activity":"Go to the library and find an interesting book","accessibility":0.2,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"8253550","enabled":true}
-{"activity":"Go to an escape room","accessibility":0.3,"type":"social","participants":4,"price":0.5,"link":"","key":"5585829","enabled":true}
-{"activity":"Go to a karaoke bar with some friends","accessibility":0.35,"type":"social","participants":4,"price":0.5,"link":"","key":"9072906","enabled":true}
-{"activity":"Repaint a room in your house","accessibility":0.4,"type":"recreational","participants":1,"price":0.3,"link":"","key":"4877086","enabled":true}
-{"activity":"Pull a harmless prank on one of your friends","accessibility":0.2,"type":"social","participants":1,"price":0.1,"link":"","key":"1288934","enabled":true}
-{"activity":"Take a spontaneous road trip with some friends","accessibility":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"2085321","enabled":true}
-{"activity":"Go stargazing","accessibility":0.1,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"8832605","enabled":true}
-{"activity":"Invite some friends over for a game night","accessibility":0.2,"type":"social","participants":4,"price":0.0,"link":"","key":"6613428","enabled":true}
-{"activity":"Make homemade ice cream","accessibility":0.2,"type":"cooking","participants":1,"price":0.2,"link":"","key":"3818400","enabled":true}
-{"activity":"Start a daily journal","accessibility":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"8779876","enabled":true}
-{"activity":"Go to a music festival with some friends","accessibility":0.2,"type":"social","participants":4,"price":0.4,"link":"","key":"6482790","enabled":true}
-{"activity":"Make a bucket list","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2735499","enabled":true}
-{"activity":"Binge watch a trending series","accessibility":0.2,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5881647","enabled":true}
-{"activity":"Learn how to make a website","accessibility":0.3,"type":"education","participants":1,"price":0.1,"link":"","key":"9924423","enabled":true}
-{"activity":"Create and follow a savings plan","accessibility":0.2,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9366464","enabled":true}
-{"activity":"Watch a classic movie","accessibility":0.1,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8081693","enabled":true}
-{"activity":"Plan a trip to another country","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"5554727","enabled":true}
-{"activity":"Learn how the internet works","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"9414706","enabled":true}
-{"activity":"Take a hike at a local park","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8724324","enabled":true}
-{"activity":"Make tie dye shirts","accessibility":0.2,"type":"diy","participants":1,"price":0.2,"link":"","key":"8092359","enabled":true}
-{"activity":"Make a scrapbook with pictures of your favorite memories","accessibility":0.1,"type":"diy","participants":1,"price":0.1,"link":"","key":"5554174","enabled":true}
-{"activity":"Have a picnic with some friends","accessibility":0.1,"type":"social","participants":3,"price":0.1,"link":"","key":"6813070","enabled":true}
-{"activity":"Have a bonfire with your close friends","accessibility":0.1,"type":"social","participants":4,"price":0.1,"link":"","key":"8442249","enabled":true}
-{"activity":"Memorize the fifty states and their capitals","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"","key":"4179309","enabled":true}
-{"activity":"Take a class at your local community center that interests you","accessibility":0.15,"type":"education","participants":1,"price":0.0,"link":"","key":"8750692","enabled":true}
-{"activity":"Resolve a problem you've been putting off","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9999999","enabled":true}
-{"activity":"Make a new friend","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1000000","enabled":true}
-{"activity":"Learn origami","accessibility":0.3,"type":"education","participants":1,"price":0.2,"link":"","key":"8394738","enabled":true}
-{"activity":"Learn how to use a french press","accessibility":0.3,"type":"recreational","participants":1,"price":0.3,"link":"https://en.wikipedia.org/wiki/French_press","key":"4522866","enabled":true}
-{"activity":"Read a formal research paper on an interesting subject","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"3352474","enabled":true}
-{"activity":"Listen to a new music genre","accessibility":0,"type":"music","participants":1,"price":0,"link":"","key":"4708863","enabled":true}
-{"activity":"Volunteer at your local food pantry","accessibility":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"1878070","enabled":true}
-{"activity":"Learn how to make an Alexa skill","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"https://developer.amazon.com/en-US/docs/alexa/custom-skills/steps-to-build-a-custom-skill.html","key":"1592381","enabled":true}
-{"activity":"Surprise your significant other with something considerate","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"6204657","enabled":true}
-{"activity":"Learn Kotlin","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"https://kotlinlang.org/","key":"3950821","enabled":true}
-{"activity":"Go for a run","accessibility":0.9,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6852505","enabled":true}
-{"activity":"Learn woodworking","accessibility":0.3,"type":"diy","participants":1,"price":0.3,"link":"","key":"9216391","enabled":true}
-{"activity":"Start a band","accessibility":0.8,"type":"music","participants":4,"price":0.3,"link":"","key":"5675880","enabled":true}
-{"activity":"Cook something together with someone","accessibility":0.8,"type":"cooking","participants":2,"price":0.3,"link":"","key":"1799120","enabled":true}
-{"activity":"Have a jam session with your friends","accessibility":0.3,"type":"music","participants":5,"price":0.1,"link":"","key":"2715253","enabled":true}
-{"activity":"Learn GraphQL","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"https://graphql.org/","key":"2167064","enabled":true}
-{"activity":"Play basketball with a group of friends","accessibility":0.7,"type":"social","participants":5,"price":0.0,"link":"","key":"8683473","enabled":true}
-{"activity":"Learn the Chinese erhu","accessibility":0.4,"type":"music","participants":1,"price":0.6,"link":"","key":"2742452","enabled":true}
-{"activity":"Start a webinar on a topic of your choice","accessibility":0.9,"type":"education","participants":1,"price":0.0,"link":"","key":"6826029","enabled":true}
-{"activity":"Learn how to use an Arduino","accessibility":0.7,"type":"education","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Arduino","key":"8264223","enabled":true}
-{"activity":"Go see a Broadway production","accessibility":0.3,"type":"recreational","participants":4,"price":0.8,"link":"","key":"4448913","enabled":true}
-{"activity":"Come up with some business ideas","accessibility":1,"type":"recreational","participants":1,"price":0,"link":"","key":"8570429","enabled":true}
-{"activity":"Learn Javascript","accessibility":0.9,"type":"education","participants":1,"price":0,"link":"","key":"3469378","enabled":true}
-{"activity":"Visit your past teachers","accessibility":0.7,"type":"social","participants":1,"price":0,"link":"","key":"8238918","enabled":true}
-{"activity":"Research a topic you're interested in","accessibility":0.9,"type":"education","participants":1,"price":0.0,"link":"","key":"3561421","enabled":true}
-{"activity":"Listen to music you haven't heard in a while","accessibility":0.9,"type":"music","participants":1,"price":0.05,"link":"","key":"4296813","enabled":true}
-{"activity":"Go on a fishing trip with some friends","accessibility":0.4,"type":"social","participants":3,"price":0.4,"link":"","key":"3149232","enabled":true}
-{"activity":"Bake a pie with some friends","accessibility":0.3,"type":"cooking","participants":3,"price":0.3,"link":"","key":"3141592","enabled":true}
-{"activity":"Do yoga","accessibility":0.9,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4688012","enabled":true}
-{"activity":"Visit a nearby museum","accessibility":0.7,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5490351","enabled":true}
-{"activity":"Have a photo session with some friends","accessibility":0.8,"type":"social","participants":4,"price":0.05,"link":"","key":"3305912","enabled":true}
-{"activity":"Watch the sunset or the sunrise","accessibility":1.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4748214","enabled":true}
-{"activity":"Play a volleyball match with some friends","accessibility":0.3,"type":"social","participants":4,"price":0.0,"link":"","key":"4306710","enabled":true}
-{"activity":"Host a movie marathon with some friends","accessibility":0.0,"type":"social","participants":3,"price":0.1,"link":"","key":"5914292","enabled":true}
-{"activity":"Hold a video game tournament with some friends","accessibility":0.1,"type":"social","participants":4,"price":0.0,"link":"","key":"2300257","enabled":true}
-{"activity":"Write a poem","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8688620","enabled":true}
-{"activity":"Take a nap","accessibility":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"6184514","enabled":true}
-{"activity":"Mow your lawn","accessibility":0.3,"type":"busywork","participants":1,"price":0.1,"link":"","key":"3590127","enabled":true}
-{"activity":"Practice coding in your favorite lanaguage","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"7096020","enabled":true}
-{"activity":"Write a song","accessibility":0.0,"type":"music","participants":1,"price":0.0,"link":"","key":"5188388","enabled":true}
-{"activity":"Play a video game","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"5534113","enabled":true}
-{"activity":"Clean out your refrigerator","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9324336","enabled":true}
-{"activity":"Study a foreign language","accessibility":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"9765530","enabled":true}
-{"activity":"Learn the NATO phonetic alphabet","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/NATO_phonetic_alphabet","key":"6706598","enabled":true}
-{"activity":"Solve a Rubik's cube","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4151544","enabled":true}
-{"activity":"Make your own LEGO creation","accessibility":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1129748","enabled":true}
-{"activity":"Plant a tree","accessibility":0.3,"type":"recreational","participants":1,"price":0.3,"link":"","key":"1942393","enabled":true}
-{"activity":"Contribute code or a monetary donation to an open-source software project","accessibility":0.0,"type":"charity","participants":1,"price":0.1,"link":"https://github.com/explore","key":"7687030","enabled":true}
-{"activity":"Uninstall unused apps from your devices","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2850593","enabled":true}
-{"activity":"Prepare a dish from a foreign culture","accessibility":0.3,"type":"cooking","participants":1,"price":0.2,"link":"","key":"8061754","enabled":true}
-{"activity":"Patronize a local independent restaurant","accessibility":0.1,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5319204","enabled":true}
-{"activity":"Give your pet ten minutes of focused attention","accessibility":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9937387","enabled":true}
-{"activity":"Explore a park you have never been to before","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8159356","enabled":true}
-{"activity":"Configure two-factor authentication on your accounts","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Multi-factor_authentication","key":"1572120","enabled":true}
-{"activity":"Create a meal plan for the coming week","accessibility":0.0,"type":"cooking","participants":1,"price":0.0,"link":"","key":"3491470","enabled":true}
-{"activity":"Watch a Khan Academy lecture on a subject of your choosing","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://www.khanacademy.org/","key":"7154873","enabled":true}
-{"activity":"Shred old documents you don't need anymore","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2430066","enabled":true}
-{"activity":"Learn about a distributed version control system such as Git","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Distributed_version_control","key":"9303608","enabled":true}
-{"activity":"Write a note of appreciation to someone","accessibility":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1770521","enabled":true}
-{"activity":"Draw something interesting","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8033599","enabled":true}
-{"activity":"Learn and play a new card game","accessibility":0.0,"type":"recreational","participants":1,"price":0.0,"link":"https://www.pagat.com","key":"9660022","enabled":true}
-{"activity":"Write a list of things you are grateful for","accessibility":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"2062010","enabled":true}
-{"activity":"Organize a bookshelf","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6098037","enabled":true}
-{"activity":"Organize a cluttered drawer","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9714586","enabled":true}
-{"activity":"Organize your music collection","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"3151646","enabled":true}
-{"activity":"Organize your movie collection","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6378359","enabled":true}
-{"activity":"Learn Morse code","accessibility":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Morse_code","key":"3646173","enabled":true}
-{"activity":"Go for a walk","accessibility":0.1,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"4286250","enabled":true}
-{"activity":"Mow your neighbor's lawn","accessibility":0.2,"type":"charity","participants":1,"price":0.0,"link":"","key":"1303906","enabled":true}
-{"activity":"Compliment someone","accessibility":0.0,"type":"social","participants":2,"price":0.0,"link":"","key":"9149470","enabled":true}
-{"activity":"Draft your living will","accessibility":0.5,"type":"busywork","participants":1,"price":0.0,"link":"https://www.investopedia.com/terms/l/livingwill.asp","key":"2360432","enabled":true}
-{"activity":"Prepare a 72-hour kit","accessibility":0.5,"type":"busywork","participants":1,"price":0.5,"link":"https://www.ready.gov/kit","key":"4266522","enabled":true}
-{"activity":"Color","accessibility":0.0,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"5322987","enabled":true}
-{"activity":"Organize your pantry","accessibility":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"3954882","enabled":true}
-{"activity":"Back up important computer files","accessibility":0.2,"type":"busywork","participants":1,"price":0.2,"link":"","key":"9081214","enabled":true}
-{"activity":"Memorize a favorite quote or poem","accessibility":0.8,"type":"education","participants":1,"price":0.0,"link":"","key":"9008639","enabled":true}
-{"activity":"Do something you used to do as a kid","accessibility":0.8,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"8827573","enabled":true}
-{"activity":"Organize your basement","accessibility":0.9,"type":"busywork","participants":1,"price":0.0,"link":"","key":"8203595","enabled":true}
-{"activity":"Sit in the dark and listen to your favorite music with no distractions","accessibility":1.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9908721","enabled":true}
-{"activity":"Do a jigsaw puzzle","accessibility":1.0,"type":"recreational","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Jigsaw_puzzle","key":"8550768","enabled":true}
-{"activity":"Look at pictures and videos of cute animals","accessibility":1.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"2565076","enabled":true}
-{"activity":"Write a handwritten letter to somebody","accessibility":0.8,"type":"social","participants":1,"price":0.1,"link":"","key":"2277801","enabled":true}
-{"activity":"Match your storage containers with their lids","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4940907","enabled":true}
-{"activity":"Start a family tree","accessibility":1.0,"type":"social","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Family_tree","key":"6825484","enabled":true}
-{"activity":"Look at your finances and find one way to save money","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"5977626","enabled":true}
-{"activity":"Organize your dresser","accessibility":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"7556665","enabled":true}
-{"activity":"Learn the periodic table","accessibility":0.6,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Periodic_table","key":"3621244","enabled":true}
-{"activity":"Improve your touch typing","accessibility":0.8,"type":"busywork","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Touch_typing","key":"2526437","enabled":true}
-{"activity":"Donate to your local food bank","accessibility":0.8,"type":"charity","participants":1,"price":0.5,"link":"","key":"4150284","enabled":true}
-{"activity":"Learn how to beatbox","accessibility":1.0,"type":"recreational","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Beatboxing","key":"8731710","enabled":true}
+{"activity":"Learn Express.js","availability":0.25,"type":"education","participants":1,"price":0.1,"link":"https://expressjs.com/","key":"3943506","enabled":true}
+{"activity":"Learn to greet someone in a new language","availability":0.2,"type":"education","participants":1,"price":0.1,"link": "","key":"4704256","enabled":true}
+{"activity":"Learn how to play a new sport","availability":0.2,"type":"recreational","participants":1,"price":0.1,"link":"","key":"5808228","enabled":true}
+{"activity":"Text a friend you haven't talked to in a long time","availability":0.2,"type":"social","participants":2,"price":0.05,"link":"","key":"6081071","enabled":true}
+{"activity":"Learn a new programming language","availability":0.25,"type":"education","participants":1,"price":0.1,"link":"","key":"5881028","enabled":true}
+{"activity":"Learn how to fold a paper crane","availability":0.05,"type":"education","participants":1,"price":0.1,"link": "","key":"3136036","enabled":true}
+{"activity":"Find a DIY to do","availability":0.3,"type":"diy","participants":1,"price":0.4,"link":"","key":"4981819","enabled":true}
+{"activity":"Learn about the Golden Ratio","availability":0.2,"type":"education","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Golden_ratio","key":"2095681","enabled":true}
+{"activity":"Volunteer at a local animal shelter","availability":0.5,"type":"charity","participants":1,"price":0.1,"link":"","key":"1382389","enabled":true}
+{"activity":"Play a game of Monopoly","availability":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"1408058","enabled":true}
+{"activity":"Bake pastries for you and your neighbor","availability":0.3,"type":"cooking","participants":1,"price":0.4,"link":"","key":"8125168","enabled":true}
+{"activity":"Bake something you've never tried before","availability":0.3,"type":"cooking","participants":1,"price":0.4,"link":"","key":"5665663","enabled":true}
+{"activity":"Take your dog on a walk","availability":0.2,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9318514","enabled":true}
+{"activity":"Meditate for five minutes","availability":0.05,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"3699502","enabled":true}
+{"activity":"Start a book you've never gotten around to reading","availability":0.1,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"7114122","enabled":true}
+{"activity":"Take a caffeine nap","availability":0.08,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"5092652","enabled":true}
+{"activity":"Take a bubble bath","availability":0.1,"type":"relaxation","participants":1,"price":0.15,"link":"","key":"2581372","enabled":true}
+{"activity":"Go to a nail salon","availability":0.5,"type":"relaxation","participants":1,"price":0.4,"link":"","key":"7526324","enabled":true}
+{"activity":"Listen to your favorite album","availability":0.2,"type":"music","participants":1,"price":0.08,"link":"","key":"3136729","enabled":true}
+{"activity":"Learn to play a new instrument","availability":0.6,"type":"music","participants":1,"price":0.55,"link":"","key":"3192099","enabled":true}
+{"activity":"Teach your dog a new trick","availability":0.15,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"1668223","enabled":true}
+{"activity":"Make a to-do list for your week","availability":0.05,"type":"busywork","participants":1,"price":0.0,"link":"","key":"5920481","enabled":true}
+{"activity":"Go swimming with a friend","availability":0.1,"type":"social","participants":2,"price":0.1,"link":"","key":"1505028","enabled":true}
+{"activity":"Go on a long drive with no music","availability":0.2,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"4290333","enabled":true}
+{"activity":"Watch a movie you'd never usually watch","availability":0.15,"type":"relaxation","participants":1,"price":0.15,"link":"","key":"9212950","enabled":true}
+{"activity":"Go see a movie in theaters with a few friends","availability":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"5262759","enabled":true}
+{"activity":"Draw and color a Mandala","availability":0.1,"type":"relaxation","participants":1,"price":0.05,"link":"https://en.wikipedia.org/wiki/Mandala","key":"4614092","enabled":true}
+{"activity":"Rearrange and organize your room","availability":0.15,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6197243","enabled":true}
+{"activity":"Pot some plants and put them around your house","availability":0.3,"type":"relaxation","participants":1,"price":0.4,"link":"","key":"6613330","enabled":true}
+{"activity":"Plan a vacation you've always wanted to take","availability":0.05,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"7265395","enabled":true}
+{"activity":"Take your cat on a walk","availability":0.1,"type":"relaxation","participants":1,"price":0.02,"link":"","key":"5940465","enabled":true}
+{"activity":"Have a football scrimmage with some friends","availability":0.2,"type":"social","participants":8,"price":0,"link":"","key":"1638604","enabled":true}
+{"activity":"Fill out a basketball bracket","availability":0.1,"type":"recreational","participants":1,"price":0,"link":"","key":"7806284","enabled":true}
+{"activity":"Play a game of tennis with a friend","availability":0.4,"type":"social","participants":2,"price":0.1,"link":"","key":"1093640","enabled":true}
+{"activity":"Catch up with a friend over a lunch date","availability":0.15,"type":"social","participants":2,"price":0.2,"link":"","key":"5590133","enabled":true}
+{"activity":"Learn how to iceskate or rollerskate","availability":0.25,"type":"recreational","participants":1,"price":0.1,"link":"","key":"5947957","enabled":true}
+{"activity":"Go to a concert with local artists with some friends","availability":0.3,"type":"social","participants":3,"price":0.4,"link":"","key":"2211716","enabled":true}
+{"activity":"Explore the nightlife of your city","availability":0.32,"type":"social","participants":1,"price":0.1,"link":"","key":"2237769","enabled":true}
+{"activity":"Fix something that's broken in your house","availability":0.3,"type":"diy","participants":1,"price":0.1,"link":"","key":"6925988","enabled":true}
+{"activity":"Wash your car","availability":0.15,"type":"busywork","participants":1,"price":0.05,"link":"","key":"1017771","enabled":true}
+{"activity":"Find a charity and donate to it","availability":0.1,"type":"charity","participants":1,"price":0.4,"link":"","key":"1488053","enabled":true}
+{"activity":"Hold a yard sale","availability":0.1,"type":"social","participants":1,"price":0.0,"link":"","key":"1432113","enabled":true}
+{"activity":"Donate blood at a local blood center","availability":0.35,"type":"charity","participants":1,"price":0.0,"link":"https://www.redcross.org/give-blood","key":"6509779","enabled":true}
+{"activity":"Volunteer and help out at a senior center","availability":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"3920096","enabled":true}
+{"activity":"Shop at support your local farmers market","availability":0.1,"type":"relaxation","participants":1,"price":0.2,"link":"","key":"8979931","enabled":true}
+{"activity":"Learn a new recipe","availability":0.05,"type":"cooking","participants":1,"price":0.0,"link":"","key":"6553978","enabled":true}
+{"activity":"Create a cookbook with your favorite recipes","availability":0.05,"type":"cooking","participants":1,"price":0.0,"link":"","key":"1947449","enabled":true}
+{"activity":"Create a compost pile","availability":0.15,"type":"diy","participants":1,"price":0.0,"link":"","key":"8631548","enabled":true}
+{"activity":"Volunteer at your local food bank","availability":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"2055368","enabled":true}
+{"activity":"Create or update your resume","availability":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9364041","enabled":true}
+{"activity":"Paint the first thing you see","availability":0.2,"type":"recreational","participants":1,"price":0.25,"link":"","key":"1162360","enabled":true}
+{"activity":"Start a blog for something you're passionate about","availability":0.1,"type":"recreational","participants":1,"price":0.05,"link":"","key":"8364626","enabled":true}
+{"activity":"Start a garden","availability":0.35,"type":"recreational","participants":1,"price":0.3,"link":"","key":"1934228","enabled":true}
+{"activity":"Clean out your closet and donate the clothes you've outgrown","availability":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"9026787","enabled":true}
+{"activity":"Catch up on world news","availability":0.07,"type":"recreational","participants":1,"price":0.05,"link":"","key":"6596257","enabled":true}
+{"activity":"Create a personal website","availability":0.12,"type":"recreational","participants":1,"price":0.1,"link":"","key":"3141417","enabled":true}
+{"activity":"Listen to a new podcast","availability":0.12,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"4124860","enabled":true}
+{"activity":"Have a paper airplane contest with some friends","availability":0.05,"type":"social","participants":4,"price":0.02,"link":"","key":"8557562","enabled":true}
+{"activity":"Learn calligraphy","availability":0.1,"type":"education","participants":1,"price":0.1,"link":"","key":"4565537","enabled":true}
+{"activity":"Start a collection","availability":0.5,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1718657","enabled":true}
+{"activity":"Go to a local thrift shop","availability":0.2,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8503795","enabled":true}
+{"activity":"Make a couch fort","availability":0.08,"type":"recreational","participants":1,"price":0.0,"link":"","key":"2352669","enabled":true}
+{"activity":"Pick up litter around your favorite park","availability":0.05,"type":"charity","participants":1,"price":0.0,"link":"","key":"4894697","enabled":true}
+{"activity":"Buy a new house decoration","availability":0.3,"type":"recreational","participants":1,"price":0.4,"link":"","key":"3456114","enabled":true}
+{"activity":"Write a thank you letter to an influential person in your life","availability":0.1,"type":"social","participants":1,"price":0.0,"link":"","key":"4101229","enabled":true}
+{"activity":"Clean out your car","availability":0.08,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2896176","enabled":true}
+{"activity":"Write a short story","availability":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6301585","enabled":true}
+{"activity":"Do something nice for someone you care about","availability":0.1,"type":"social","participants":1,"price":0.0,"link":"","key":"8321894","enabled":true}
+{"activity":"Think of a new business idea","availability":0.05,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6808057","enabled":true}
+{"activity":"Clean out your garage","availability":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"7023703","enabled":true}
+{"activity":"Learn to sew on a button","availability":0.1,"type":"education","participants":1,"price":0.05,"link":"","key":"8731971","enabled":true}
+{"activity":"Learn how to french braid hair","availability":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"8926492","enabled":true}
+{"activity":"Learn how to whistle with your fingers","availability":0.0,"type":"education","participants":1,"price":0.0,"link":"","key":"2790297","enabled":true}
+{"activity":"Learn to write with your nondominant hand","availability":0.02,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1645485","enabled":true}
+{"activity":"Make bread from scratch","availability":0.2,"type":"cooking","participants":1,"price":0.2,"link":"","key":"4809815","enabled":true}
+{"activity":"Make a budget","availability":0.1,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4379552","enabled":true}
+{"activity":"Learn how to write in shorthand","availability":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"6778219","enabled":true}
+{"activity":"Make a simple musical instrument","availability":0.25,"type":"music","participants":1,"price":0.4,"link":"","key":"7091374","enabled":true}
+{"activity":"Go to the gym","availability":0.1,"type":"recreational","participants":1,"price":0.2,"link":"","key":"4387026","enabled":true}
+{"activity":"Try a food you don't like","availability":0.05,"type":"recreational","participants":1,"price":0.1,"link":"","key":"6693574","enabled":true}
+{"activity":"Conquer one of your fears","availability":0.1,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8344539","enabled":true}
+{"activity":"Go to a concert with some friends","availability":0.4,"type":"social","participants":4,"price":0.6,"link":"","key":"4558850","enabled":true}
+{"activity":"Go to the library and find an interesting book","availability":0.2,"type":"relaxation","participants":1,"price":0.05,"link":"","key":"8253550","enabled":true}
+{"activity":"Go to an escape room","availability":0.3,"type":"social","participants":4,"price":0.5,"link":"","key":"5585829","enabled":true}
+{"activity":"Go to a karaoke bar with some friends","availability":0.35,"type":"social","participants":4,"price":0.5,"link":"","key":"9072906","enabled":true}
+{"activity":"Repaint a room in your house","availability":0.4,"type":"recreational","participants":1,"price":0.3,"link":"","key":"4877086","enabled":true}
+{"activity":"Pull a harmless prank on one of your friends","availability":0.2,"type":"social","participants":1,"price":0.1,"link":"","key":"1288934","enabled":true}
+{"activity":"Take a spontaneous road trip with some friends","availability":0.3,"type":"social","participants":4,"price":0.2,"link":"","key":"2085321","enabled":true}
+{"activity":"Go stargazing","availability":0.1,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"8832605","enabled":true}
+{"activity":"Invite some friends over for a game night","availability":0.2,"type":"social","participants":4,"price":0.0,"link":"","key":"6613428","enabled":true}
+{"activity":"Make homemade ice cream","availability":0.2,"type":"cooking","participants":1,"price":0.2,"link":"","key":"3818400","enabled":true}
+{"activity":"Start a daily journal","availability":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"8779876","enabled":true}
+{"activity":"Go to a music festival with some friends","availability":0.2,"type":"social","participants":4,"price":0.4,"link":"","key":"6482790","enabled":true}
+{"activity":"Make a bucket list","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2735499","enabled":true}
+{"activity":"Binge watch a trending series","availability":0.2,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5881647","enabled":true}
+{"activity":"Learn how to make a website","availability":0.3,"type":"education","participants":1,"price":0.1,"link":"","key":"9924423","enabled":true}
+{"activity":"Create and follow a savings plan","availability":0.2,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9366464","enabled":true}
+{"activity":"Watch a classic movie","availability":0.1,"type":"recreational","participants":1,"price":0.1,"link":"","key":"8081693","enabled":true}
+{"activity":"Plan a trip to another country","availability":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"5554727","enabled":true}
+{"activity":"Learn how the internet works","availability":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"9414706","enabled":true}
+{"activity":"Take a hike at a local park","availability":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8724324","enabled":true}
+{"activity":"Make tie dye shirts","availability":0.2,"type":"diy","participants":1,"price":0.2,"link":"","key":"8092359","enabled":true}
+{"activity":"Make a scrapbook with pictures of your favorite memories","availability":0.1,"type":"diy","participants":1,"price":0.1,"link":"","key":"5554174","enabled":true}
+{"activity":"Have a picnic with some friends","availability":0.1,"type":"social","participants":3,"price":0.1,"link":"","key":"6813070","enabled":true}
+{"activity":"Have a bonfire with your close friends","availability":0.1,"type":"social","participants":4,"price":0.1,"link":"","key":"8442249","enabled":true}
+{"activity":"Memorize the fifty states and their capitals","availability":0.0,"type":"education","participants":1,"price":0.0,"link":"","key":"4179309","enabled":true}
+{"activity":"Take a class at your local community center that interests you","availability":0.15,"type":"education","participants":1,"price":0.0,"link":"","key":"8750692","enabled":true}
+{"activity":"Resolve a problem you've been putting off","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9999999","enabled":true}
+{"activity":"Make a new friend","availability":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1000000","enabled":true}
+{"activity":"Learn origami","availability":0.3,"type":"education","participants":1,"price":0.2,"link":"","key":"8394738","enabled":true}
+{"activity":"Learn how to use a french press","availability":0.3,"type":"recreational","participants":1,"price":0.3,"link":"https://en.wikipedia.org/wiki/French_press","key":"4522866","enabled":true}
+{"activity":"Read a formal research paper on an interesting subject","availability":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"3352474","enabled":true}
+{"activity":"Listen to a new music genre","availability":0,"type":"music","participants":1,"price":0,"link":"","key":"4708863","enabled":true}
+{"activity":"Volunteer at your local food pantry","availability":0.1,"type":"charity","participants":1,"price":0.0,"link":"","key":"1878070","enabled":true}
+{"activity":"Learn how to make an Alexa skill","availability":0.1,"type":"education","participants":1,"price":0.0,"link":"https://developer.amazon.com/en-US/docs/alexa/custom-skills/steps-to-build-a-custom-skill.html","key":"1592381","enabled":true}
+{"activity":"Surprise your significant other with something considerate","availability":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"6204657","enabled":true}
+{"activity":"Learn Kotlin","availability":0.8,"type":"education","participants":1,"price":0.0,"link":"https://kotlinlang.org/","key":"3950821","enabled":true}
+{"activity":"Go for a run","availability":0.9,"type":"recreational","participants":1,"price":0.0,"link":"","key":"6852505","enabled":true}
+{"activity":"Learn woodworking","availability":0.3,"type":"diy","participants":1,"price":0.3,"link":"","key":"9216391","enabled":true}
+{"activity":"Start a band","availability":0.8,"type":"music","participants":4,"price":0.3,"link":"","key":"5675880","enabled":true}
+{"activity":"Cook something together with someone","availability":0.8,"type":"cooking","participants":2,"price":0.3,"link":"","key":"1799120","enabled":true}
+{"activity":"Have a jam session with your friends","availability":0.3,"type":"music","participants":5,"price":0.1,"link":"","key":"2715253","enabled":true}
+{"activity":"Learn GraphQL","availability":0.8,"type":"education","participants":1,"price":0.0,"link":"https://graphql.org/","key":"2167064","enabled":true}
+{"activity":"Play basketball with a group of friends","availability":0.7,"type":"social","participants":5,"price":0.0,"link":"","key":"8683473","enabled":true}
+{"activity":"Learn the Chinese erhu","availability":0.4,"type":"music","participants":1,"price":0.6,"link":"","key":"2742452","enabled":true}
+{"activity":"Start a webinar on a topic of your choice","availability":0.9,"type":"education","participants":1,"price":0.0,"link":"","key":"6826029","enabled":true}
+{"activity":"Learn how to use an Arduino","availability":0.7,"type":"education","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Arduino","key":"8264223","enabled":true}
+{"activity":"Go see a Broadway production","availability":0.3,"type":"recreational","participants":4,"price":0.8,"link":"","key":"4448913","enabled":true}
+{"activity":"Come up with some business ideas","availability":1,"type":"recreational","participants":1,"price":0,"link":"","key":"8570429","enabled":true}
+{"activity":"Learn Javascript","availability":0.9,"type":"education","participants":1,"price":0,"link":"","key":"3469378","enabled":true}
+{"activity":"Visit your past teachers","availability":0.7,"type":"social","participants":1,"price":0,"link":"","key":"8238918","enabled":true}
+{"activity":"Research a topic you're interested in","availability":0.9,"type":"education","participants":1,"price":0.0,"link":"","key":"3561421","enabled":true}
+{"activity":"Listen to music you haven't heard in a while","availability":0.9,"type":"music","participants":1,"price":0.05,"link":"","key":"4296813","enabled":true}
+{"activity":"Go on a fishing trip with some friends","availability":0.4,"type":"social","participants":3,"price":0.4,"link":"","key":"3149232","enabled":true}
+{"activity":"Bake a pie with some friends","availability":0.3,"type":"cooking","participants":3,"price":0.3,"link":"","key":"3141592","enabled":true}
+{"activity":"Do yoga","availability":0.9,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4688012","enabled":true}
+{"activity":"Visit a nearby museum","availability":0.7,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5490351","enabled":true}
+{"activity":"Have a photo session with some friends","availability":0.8,"type":"social","participants":4,"price":0.05,"link":"","key":"3305912","enabled":true}
+{"activity":"Watch the sunset or the sunrise","availability":1.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4748214","enabled":true}
+{"activity":"Play a volleyball match with some friends","availability":0.3,"type":"social","participants":4,"price":0.0,"link":"","key":"4306710","enabled":true}
+{"activity":"Host a movie marathon with some friends","availability":0.0,"type":"social","participants":3,"price":0.1,"link":"","key":"5914292","enabled":true}
+{"activity":"Hold a video game tournament with some friends","availability":0.1,"type":"social","participants":4,"price":0.0,"link":"","key":"2300257","enabled":true}
+{"activity":"Write a poem","availability":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8688620","enabled":true}
+{"activity":"Take a nap","availability":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"6184514","enabled":true}
+{"activity":"Mow your lawn","availability":0.3,"type":"busywork","participants":1,"price":0.1,"link":"","key":"3590127","enabled":true}
+{"activity":"Practice coding in your favorite lanaguage","availability":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"7096020","enabled":true}
+{"activity":"Write a song","availability":0.0,"type":"music","participants":1,"price":0.0,"link":"","key":"5188388","enabled":true}
+{"activity":"Play a video game","availability":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"5534113","enabled":true}
+{"activity":"Clean out your refrigerator","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9324336","enabled":true}
+{"activity":"Study a foreign language","availability":0.1,"type":"education","participants":1,"price":0.0,"link":"","key":"9765530","enabled":true}
+{"activity":"Learn the NATO phonetic alphabet","availability":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/NATO_phonetic_alphabet","key":"6706598","enabled":true}
+{"activity":"Solve a Rubik's cube","availability":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"4151544","enabled":true}
+{"activity":"Make your own LEGO creation","availability":0.1,"type":"recreational","participants":1,"price":0.0,"link":"","key":"1129748","enabled":true}
+{"activity":"Plant a tree","availability":0.3,"type":"recreational","participants":1,"price":0.3,"link":"","key":"1942393","enabled":true}
+{"activity":"Contribute code or a monetary donation to an open-source software project","availability":0.0,"type":"charity","participants":1,"price":0.1,"link":"https://github.com/explore","key":"7687030","enabled":true}
+{"activity":"Uninstall unused apps from your devices","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2850593","enabled":true}
+{"activity":"Prepare a dish from a foreign culture","availability":0.3,"type":"cooking","participants":1,"price":0.2,"link":"","key":"8061754","enabled":true}
+{"activity":"Patronize a local independent restaurant","availability":0.1,"type":"recreational","participants":1,"price":0.2,"link":"","key":"5319204","enabled":true}
+{"activity":"Give your pet ten minutes of focused attention","availability":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9937387","enabled":true}
+{"activity":"Explore a park you have never been to before","availability":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8159356","enabled":true}
+{"activity":"Configure two-factor authentication on your accounts","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Multi-factor_authentication","key":"1572120","enabled":true}
+{"activity":"Create a meal plan for the coming week","availability":0.0,"type":"cooking","participants":1,"price":0.0,"link":"","key":"3491470","enabled":true}
+{"activity":"Watch a Khan Academy lecture on a subject of your choosing","availability":0.0,"type":"education","participants":1,"price":0.0,"link":"https://www.khanacademy.org/","key":"7154873","enabled":true}
+{"activity":"Shred old documents you don't need anymore","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"2430066","enabled":true}
+{"activity":"Learn about a distributed version control system such as Git","availability":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Distributed_version_control","key":"9303608","enabled":true}
+{"activity":"Write a note of appreciation to someone","availability":0.0,"type":"social","participants":1,"price":0.0,"link":"","key":"1770521","enabled":true}
+{"activity":"Draw something interesting","availability":0.0,"type":"recreational","participants":1,"price":0.0,"link":"","key":"8033599","enabled":true}
+{"activity":"Learn and play a new card game","availability":0.0,"type":"recreational","participants":1,"price":0.0,"link":"https://www.pagat.com","key":"9660022","enabled":true}
+{"activity":"Write a list of things you are grateful for","availability":0.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"2062010","enabled":true}
+{"activity":"Organize a bookshelf","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6098037","enabled":true}
+{"activity":"Organize a cluttered drawer","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"9714586","enabled":true}
+{"activity":"Organize your music collection","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"3151646","enabled":true}
+{"activity":"Organize your movie collection","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"6378359","enabled":true}
+{"activity":"Learn Morse code","availability":0.0,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Morse_code","key":"3646173","enabled":true}
+{"activity":"Go for a walk","availability":0.1,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"4286250","enabled":true}
+{"activity":"Mow your neighbor's lawn","availability":0.2,"type":"charity","participants":1,"price":0.0,"link":"","key":"1303906","enabled":true}
+{"activity":"Compliment someone","availability":0.0,"type":"social","participants":2,"price":0.0,"link":"","key":"9149470","enabled":true}
+{"activity":"Draft your living will","availability":0.5,"type":"busywork","participants":1,"price":0.0,"link":"https://www.investopedia.com/terms/l/livingwill.asp","key":"2360432","enabled":true}
+{"activity":"Prepare a 72-hour kit","availability":0.5,"type":"busywork","participants":1,"price":0.5,"link":"https://www.ready.gov/kit","key":"4266522","enabled":true}
+{"activity":"Color","availability":0.0,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"5322987","enabled":true}
+{"activity":"Organize your pantry","availability":0.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"3954882","enabled":true}
+{"activity":"Back up important computer files","availability":0.2,"type":"busywork","participants":1,"price":0.2,"link":"","key":"9081214","enabled":true}
+{"activity":"Memorize a favorite quote or poem","availability":0.8,"type":"education","participants":1,"price":0.0,"link":"","key":"9008639","enabled":true}
+{"activity":"Do something you used to do as a kid","availability":0.8,"type":"relaxation","participants":1,"price":0.1,"link":"","key":"8827573","enabled":true}
+{"activity":"Organize your basement","availability":0.9,"type":"busywork","participants":1,"price":0.0,"link":"","key":"8203595","enabled":true}
+{"activity":"Sit in the dark and listen to your favorite music with no distractions","availability":1.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"9908721","enabled":true}
+{"activity":"Do a jigsaw puzzle","availability":1.0,"type":"recreational","participants":1,"price":0.1,"link":"https://en.wikipedia.org/wiki/Jigsaw_puzzle","key":"8550768","enabled":true}
+{"activity":"Look at pictures and videos of cute animals","availability":1.0,"type":"relaxation","participants":1,"price":0.0,"link":"","key":"2565076","enabled":true}
+{"activity":"Write a handwritten letter to somebody","availability":0.8,"type":"social","participants":1,"price":0.1,"link":"","key":"2277801","enabled":true}
+{"activity":"Match your storage containers with their lids","availability":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"4940907","enabled":true}
+{"activity":"Start a family tree","availability":1.0,"type":"social","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Family_tree","key":"6825484","enabled":true}
+{"activity":"Look at your finances and find one way to save money","availability":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"5977626","enabled":true}
+{"activity":"Organize your dresser","availability":1.0,"type":"busywork","participants":1,"price":0.0,"link":"","key":"7556665","enabled":true}
+{"activity":"Learn the periodic table","availability":0.6,"type":"education","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Periodic_table","key":"3621244","enabled":true}
+{"activity":"Improve your touch typing","availability":0.8,"type":"busywork","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Touch_typing","key":"2526437","enabled":true}
+{"activity":"Donate to your local food bank","availability":0.8,"type":"charity","participants":1,"price":0.5,"link":"","key":"4150284","enabled":true}
+{"activity":"Learn how to beatbox","availability":1.0,"type":"recreational","participants":1,"price":0.0,"link":"https://en.wikipedia.org/wiki/Beatboxing","key":"8731710","enabled":true}

@@ -1,8 +1,8 @@
-const {Suggestion} = require('../models');
-const methods = require('../utils/methods.js');
+const {Suggestion} = require('@b/models');
+const utilsController = require('@b/controllers/utils');
 
 module.exports = function(router) {
-	router.post('/api/suggestion', (req, res) => {
+	router.post(['/api/suggestion/', '/api/v1/suggestion/'], (req, res) => {
 		let defaultTypes = ['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork'];
 
 		if (!req.body.activity || !req.body.type || !req.body.participants) {
@@ -28,7 +28,7 @@ module.exports = function(router) {
 
 		let params = {
 			'enabled': true,
-			'activity': methods.stringSanitize(req.body.activity),
+			'activity': utilsController.stringSanitize(req.body.activity),
 			'type': req.body.type,
 			'participants': parseInt(req.body.participants)
 		};

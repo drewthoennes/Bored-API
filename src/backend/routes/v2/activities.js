@@ -1,8 +1,20 @@
-const {Activity} = require('../models');
-const {logActivity} = require('../keen');
+const {logActivity} = require('@b/keen');
+const activitiesController = require('@b/controllers/activities');
+const {unmaskActivity, maskActivity} = require('@b/routes/v2/masks');
 
 module.exports = function(router) {
-	router.get('/api/activity/', (req, res) => {
+	router.get('/api/v2/activities(/:key)?', (req, res) => {
+		// Transform query data to be used on database
+		req.query = unmaskActivity(req.query);
+
+		if (req.params.key) {
+			return activitiesController.findActivity({'key': req.params.key}).then(activity => {
+				res.json({'activity': maskActivity(activity)});
+			}).catch(err => {
+				res.json({'error': err});
+			});
+		}
+
 		// Aggregate the mins and maxes
 		const ranges = ['price', 'participants', 'accessibility']
 			.filter(range => req.query[`min${range}`] || req.query[`max${range}`]) // Filter out ranges that aren't specified
@@ -16,12 +28,12 @@ module.exports = function(router) {
 					)
 				};
 			}
-			);
+		);
 
-		// Assign filters to query database with
+		// Assign filters to query database
 		const params = Object.assign(
 			{'enabled': true},
-			...['key', 'type', 'participants', 'price', 'accessibility']
+			...['type', 'participants', 'price', 'accessibility']
 				.filter(key => req.query[key])
 				.map(key => ({[key]: req.query[key]})),
 			...ranges // Ranges override concrete values (e.g., minprice overrides price)
@@ -29,20 +41,8 @@ module.exports = function(router) {
 
 		logActivity(req, params);
 
-		Activity.countDocuments(params).then(count => {
-			if (!count || count === 0) throw new Error('No activities found with the specified parameters');
-
-			return Activity.findOne(params).skip(Math.floor(Math.random() * count));
-		}).then(activity => {
-			if (!activity) throw new Error('No activity found');
-
-			let formatted = Object.assign(
-				{},
-				...['activity', 'accessibility', 'type', 'participants', 'price', 'link', 'key']
-					.map(key => ({[key]: activity[key] || ''}))
-			);
-
-			res.json(formatted);
+		activitiesController.findRandomActivity(params).then(activity => {
+			res.json({'activity': maskActivity(activity)});
 		}).catch(err => {
 			if (err.name === 'CastError') {
 				res.json({'error': 'Failed to query due to error in arguments'});

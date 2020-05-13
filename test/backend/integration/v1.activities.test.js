@@ -5,22 +5,32 @@ const chaiHttp = require('chai-http');
 const expect = chai.expect;
 const faker = require('faker');
 
-const server = require('../utils/server');
-const mongo = require('../utils/mongo');
+const server = require('@t/backend/utils/server');
+const mongo = require('@t/backend/utils/mongo');
 
 let app;
 
 chai.use(chaiAsPromised);
 chai.use(chaiHttp);
 
-const prune = (activity) => {
+const prune = activity => {
     let pruned = activity.toObject();
+
     delete pruned._id;
     delete pruned.__v;
     delete pruned.enabled;
 
     return pruned;
 };
+
+const unmask = activity => {
+    let unmasked = Object.assign({}, activity);
+
+    unmasked.availability = unmasked.accessibility;
+    delete unmasked.accessibility;
+
+    return unmasked;
+}
 
 describe('Activities route should work as expected', () => {
     before(() => {
@@ -45,7 +55,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get('/api/activity');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -59,7 +70,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?key=${activity.key}`);
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -68,12 +80,13 @@ describe('Activities route should work as expected', () => {
     it('/api/activity?type={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({type: 'educational'}), mongo.createActivity({type: 'recreational'}), mongo.createActivity({type: 'social'})]).then(created => {
+        Promise.all([mongo.createActivity({type: 'education'}), mongo.createActivity({type: 'recreational'}), mongo.createActivity({type: 'social'})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get(`/api/activity?type=${activity.type}`);
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -87,7 +100,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?participants=${activity.participants}`);
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -101,7 +115,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?price=${activity.price}`);
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -115,7 +130,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get('/api/activity?minprice=0.7');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -129,7 +145,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get('/api/activity?maxprice=0.1');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -153,7 +170,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get('/api/activity?minprice=0.2&maxprice=0.5');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -167,7 +185,8 @@ describe('Activities route should work as expected', () => {
 
             return chai.request(app).get('/api/activity?price=0.1&minprice=0.2&maxprice=0.5');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -176,12 +195,13 @@ describe('Activities route should work as expected', () => {
     it('/api/activity?accessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({accessibility: 0.1}), mongo.createActivity({accessibility: 0.5}), mongo.createActivity({accessibility: 0.7})]).then(created => {
+        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.5}), mongo.createActivity({availability: 0.7})]).then(created => {
             activity = prune(created[0]);
 
-            return chai.request(app).get(`/api/activity?accessibility=${activity.accessibility}`);
+            return chai.request(app).get(`/api/activity?accessibility=${activity.availability}`);
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -190,12 +210,13 @@ describe('Activities route should work as expected', () => {
     it('/api/activity?minaccessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({accessibility: 0.1}), mongo.createActivity({accessibility: 0.2}), mongo.createActivity({accessibility: 0.7})]).then(created => {
+        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.2}), mongo.createActivity({availability: 0.7})]).then(created => {
             activity = prune(created[2]);
 
             return chai.request(app).get('/api/activity?minaccessibility=0.6');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -204,12 +225,13 @@ describe('Activities route should work as expected', () => {
     it('/api/activity?maxaccessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({accessibility: 0.1}), mongo.createActivity({accessibility: 0.2}), mongo.createActivity({accessibility: 0.7})]).then(created => {
+        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.2}), mongo.createActivity({availability: 0.7})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get('/api/activity?maxaccessibility=0.1');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -228,12 +250,13 @@ describe('Activities route should work as expected', () => {
     it('/api/activity?minaccessibility={}&maxaccessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({accessibility: 0.1}), mongo.createActivity({accessibility: 0.3}), mongo.createActivity({accessibility: 0.7})]).then(created => {
+        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.3}), mongo.createActivity({availability: 0.7})]).then(created => {
             activity = prune(created[1]);
 
             return chai.request(app).get('/api/activity?minaccessibility=0.2&maxaccessibility=0.5');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -242,12 +265,13 @@ describe('Activities route should work as expected', () => {
     it('/api/activity?accessibility={}&minaccessibility={}&maxaccessibility={} GET should allow the range to override the specified value', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({accessibility: 0.1}), mongo.createActivity({accessibility: 0.3}), mongo.createActivity({accessibility: 0.7})]).then(created => {
+        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.3}), mongo.createActivity({availability: 0.7})]).then(created => {
             activity = prune(created[1]);
 
             return chai.request(app).get('/api/activity?accessibility=0.1&minaccessibility=0.2&maxaccessibility=0.5');
         }).then(res => {
-            expect(res.body).to.eql(activity);
+            expect(res.body).to.have.property('activity');
+            expect(unmask(res.body.activity)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
