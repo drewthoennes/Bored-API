@@ -1,9 +1,7 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://boredapi.com/activity-schema-v1.json",
     "type": "object",
     "title": "Activity Schema",
-    "description": "This describes a BoredAPI activity in JSON format",
+    "description": "This describes a Bored API activity in JSON format",
     "additionalProperties": false,
     "required": [
         "activity",

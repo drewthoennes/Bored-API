@@ -32,7 +32,7 @@ const unmask = activity => {
     return unmasked;
 }
 
-describe('Activities route should work as expected', () => {
+describe('Activities routes should work as expected', () => {
     before(() => {
         app = server.getNewApp();
     });

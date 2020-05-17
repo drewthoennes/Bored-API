@@ -1,5 +1,3 @@
-
-
 exports.unmaskActivity = activity => {
     return !activity ? {} : Object.assign(
         {},

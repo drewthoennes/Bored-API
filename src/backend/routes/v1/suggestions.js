@@ -1,4 +1,4 @@
-const {Suggestion} = require('@b/models');
+const {ActivitySuggestion} = require('@b/models');
 const utilsController = require('@b/controllers/utils');
 
 module.exports = function(router) {
@@ -26,14 +26,18 @@ module.exports = function(router) {
 			return;
 		}
 
-		let params = {
-			'enabled': true,
-			'activity': utilsController.stringSanitize(req.body.activity),
-			'type': req.body.type,
-			'participants': parseInt(req.body.participants)
+		let suggestion = {
+			profile: {
+				agent: req.header('user-agent')
+			},
+			activity: {
+				activity: utilsController.stringSanitize(req.body.activity),
+				type: req.body.type,
+				participants: parseInt(req.body.participants)
+			}
 		};
 
-		Suggestion.create(params, err => {
+		ActivitySuggestion.create(suggestion, err => {
 			if (err) {
 				res.send({'error': err});
 				return;

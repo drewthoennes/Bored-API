@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var activitySchema = new mongoose.Schema({
+const activitySchema = new mongoose.Schema({
 	activity: {
 		type: String,
 		trim: true,
