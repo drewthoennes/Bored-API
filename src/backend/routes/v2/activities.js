@@ -7,14 +7,6 @@ module.exports = function(router) {
 		// Transform query data to be used on database
 		req.query = unmaskActivity(req.query);
 
-		if (req.params.key) {
-			return activitiesController.findActivity({'key': req.params.key}).then(activity => {
-				res.json({'activity': maskActivity(activity)});
-			}).catch(err => {
-				res.json({'error': err});
-			});
-		}
-
 		// Aggregate the mins and maxes
 		const ranges = ['price', 'participants', 'accessibility']
 			.filter(range => req.query[`min${range}`] || req.query[`max${range}`]) // Filter out ranges that aren't specified
@@ -40,6 +32,15 @@ module.exports = function(router) {
 		);
 
 		logActivity(req, params);
+
+		if (req.params.key) {
+			return activitiesController.findActivity({'key': req.params.key}).then(activity => {
+				res.json({'activity': maskActivity(activity)});
+			}).catch(err => {
+				console.log(err);
+				res.json({'error': err});
+			});
+		}
 
 		activitiesController.findRandomActivity(params).then(activity => {
 			res.json({'activity': maskActivity(activity)});

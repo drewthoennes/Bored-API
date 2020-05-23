@@ -5,20 +5,21 @@ const client = new Keen({
 	writeKey: process.env.KEEN_WRITE_KEY
 });
 
+// TODO: Redo instrumentation
+
 exports.logActivity = (req, params) => {
 	if (process.env.NODE_ENV === 'dev') return;
 
+	const {protocol, key, accessibility, type, participants, price} = params || {};
+
 	return client.recordEvent('endpoints', {
-		'protocol': req.protocol || '',
-		'key': params.key || '',
-		'accessibility': params.accessibility || '',
-		'type': params.type || '',
-		'participants': params.participants || '',
-		'price': params.price || ''
+		protocol,
+		key,
+		accessibility,
+		type,
+		participants,
+		price
 	}, err => {
-		if (err) {
-			console.log(err);
-			return;
-		}
+		if (err) console.log(err);
 	});
 };

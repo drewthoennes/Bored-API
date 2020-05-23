@@ -7,6 +7,10 @@ const factSchema = new mongoose.Schema({
 	},
 	source: {
 		type: String
+	},
+	key: {
+		type: String,
+		required: true
 	}
 }, {
 	collection: 'facts'

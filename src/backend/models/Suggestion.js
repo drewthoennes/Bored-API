@@ -12,7 +12,7 @@ const suggestionSchema = new mongoose.Schema({
 
 const suggestionModel = mongoose.model('Suggestion', suggestionSchema);
 
-const activitySuggestion = suggestionModel.discriminator('ActivitySuggestion', new mongoose.Schema({
+const ActivitySuggestion = suggestionModel.discriminator('ActivitySuggestion', new mongoose.Schema({
 	activity: {
 		activity: {
 			type: String,
@@ -27,7 +27,7 @@ const activitySuggestion = suggestionModel.discriminator('ActivitySuggestion', n
 	}
 }));
 
-const factSuggestion = suggestionModel.discriminator('FactSuggestion', new mongoose.Schema({
+const FactSuggestion = suggestionModel.discriminator('FactSuggestion', new mongoose.Schema({
 	fact: {
 		fact: {
 			type: String,
@@ -39,7 +39,7 @@ const factSuggestion = suggestionModel.discriminator('FactSuggestion', new mongo
 	},
 }));
 
-const riddleSuggestion = suggestionModel.discriminator('RiddleSuggestion', new mongoose.Schema({
+const RiddleSuggestion = suggestionModel.discriminator('RiddleSuggestion', new mongoose.Schema({
 	riddle: {
 		question: {
 			type: String,
@@ -55,7 +55,7 @@ const riddleSuggestion = suggestionModel.discriminator('RiddleSuggestion', new m
 	}
 }));
 
-const websiteSuggestion = suggestionModel.discriminator('WebsiteSuggestion', new mongoose.Schema({
+const WebsiteSuggestion = suggestionModel.discriminator('WebsiteSuggestion', new mongoose.Schema({
 	website: {
 		url: {
 			type: String,
@@ -69,8 +69,8 @@ const websiteSuggestion = suggestionModel.discriminator('WebsiteSuggestion', new
 }));
 
 module.exports = {
-	ActivitySuggestion: activitySuggestion,
-	FactSuggestion: factSuggestion,
-	RiddleSuggestion: riddleSuggestion,
-	WebsiteSuggestion: websiteSuggestion
+	ActivitySuggestion,
+	FactSuggestion,
+	RiddleSuggestion,
+	WebsiteSuggestion
 }
