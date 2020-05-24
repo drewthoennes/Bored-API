@@ -1,6 +1,9 @@
 const faker = require('faker');
 const {
-    Activity
+    Activity,
+    Fact,
+    Riddle,
+    Website
 } = require('@b/models');
 
 exports.createV1Activity = params => {
@@ -32,4 +35,35 @@ exports.createV2Activity = params => {
     }, params);
 
     return new Activity(activity).save();
+};
+
+exports.createV2Fact = params => {
+    const fact = Object.assign({
+        fact: faker.random.words(),
+        source: faker.internet.url(),
+        key: faker.random.number({min: 1000000, max: 9999999})
+    }, params);
+
+    return new Fact(fact).save();
+};
+
+exports.createV2Riddle = params => {
+    const riddle = Object.assign({
+        question: faker.random.words(),
+        answer: faker.random.words(),
+        source: faker.internet.url(),
+        key: faker.random.number({min: 1000000, max: 9999999})
+    }, params);
+
+    return new Riddle(riddle).save();
+};
+
+exports.createV2Website = params => {
+    const website = Object.assign({
+        url: faker.internet.url(),
+        description: faker.random.words(),
+        key: faker.random.number({min: 1000000, max: 9999999})
+    }, params);
+
+    return new Website(website).save();
 };

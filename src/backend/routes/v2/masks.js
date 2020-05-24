@@ -43,5 +43,38 @@ exports.maskActivity = activity => {
     );
 }
 
+exports.maskFact = fact => {
+    if (!fact) return {};
+
+    let masked = fact.toObject();
+
+    delete masked._id;
+    delete masked.__v;
+
+    return masked;
+};
+
+exports.maskRiddle = riddle => {
+    if (!riddle) return {};
+
+    let masked = riddle.toObject();
+
+    delete masked._id;
+    delete masked.__v;
+
+    return masked;
+};
+
+exports.maskWebsite = website => {
+    if (!website) return {};
+
+    let masked = website.toObject();
+
+    delete masked._id;
+    delete masked.__v;
+
+    return masked;
+};
+
 exports.unmaskActivityPrice = unmaskPrice;
 exports.maskActivityPrice = maskPrice;
