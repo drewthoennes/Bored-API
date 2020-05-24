@@ -37,7 +37,7 @@ module.exports = function(router) {
 			return activitiesController.findActivity({'key': req.params.key, ...params}).then(activity => {
 				res.json({'activity': maskActivity(activity)});
 			}).catch(err => {
-				res.json({'error': err.message || 'There was an error querying for activity'});
+				res.error(err.message || 'There was an error querying for activity');
 			});
 		}
 
@@ -45,10 +45,10 @@ module.exports = function(router) {
 			res.json({'activity': maskActivity(activity)});
 		}).catch(err => {
 			if (err.name === 'CastError') {
-				res.json({'error': 'Failed to query due to error in arguments'});
+				res.error('Failed to query due to error in arguments');
 			}
 			else {
-				res.json({'error': err.message || 'There was an error querying for activity'});
+				res.error(err.message || 'There was an error querying for activity');
 			}
 		});
 	});

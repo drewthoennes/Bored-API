@@ -61,7 +61,7 @@ module.exports = function(router) {
 
 		model.create(suggestion, err => {
 			if (err) {
-				res.send({'error': err});
+				res.error(err);
 				return;
 			}
 

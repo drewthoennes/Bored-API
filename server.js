@@ -30,7 +30,7 @@ app.use(require('./src/backend/routes')());
 // Catch any errors
 app.use((err, req, res, next) => {
 	if (err) {
-		res.json({'error': 'There was an error parsing the request: ' + err});
+		res.error(`There was an error parsing the request: ${err}`);
 		return;
 	}
 

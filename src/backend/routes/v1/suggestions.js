@@ -27,7 +27,7 @@ module.exports = function(router) {
 
 		ActivitySuggestion.create(suggestion, err => {
 			if (err) {
-				res.send({'error': err});
+				res.error(err);
 				return;
 			}
 
