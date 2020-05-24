@@ -8,7 +8,7 @@ module.exports = function(router) {
 		req.query = unmaskActivity(req.query);
 
 		// Aggregate the mins and maxes
-		const ranges = ['price', 'participants', 'accessibility']
+		const ranges = ['price', 'participants', 'availability']
 			.filter(range => req.query[`min${range}`] || req.query[`max${range}`]) // Filter out ranges that aren't specified
 			.map(range => {
 				return {
@@ -25,7 +25,7 @@ module.exports = function(router) {
 		// Assign filters to query database
 		const params = Object.assign(
 			{'enabled': true},
-			...['type', 'participants', 'price', 'accessibility']
+			...['type', 'participants', 'price', 'availability']
 				.filter(key => req.query[key])
 				.map(key => ({[key]: req.query[key]})),
 			...ranges // Ranges override concrete values (e.g., minprice overrides price)
@@ -34,11 +34,10 @@ module.exports = function(router) {
 		logActivity(req, params);
 
 		if (req.params.key) {
-			return activitiesController.findActivity({'key': req.params.key}).then(activity => {
+			return activitiesController.findActivity({'key': req.params.key, ...params}).then(activity => {
 				res.json({'activity': maskActivity(activity)});
 			}).catch(err => {
-				console.log(err);
-				res.json({'error': err});
+				res.json({'error': err.message || 'There was an error querying for activity'});
 			});
 		}
 

@@ -21,7 +21,7 @@ const createSuggestion = () => {
     }
 };
 
-describe('Suggestions routes should work as expected', () => {
+describe('Suggestions v1 routes should work as expected', () => {
     before(() => {
         app = server.getNewApp();
     });

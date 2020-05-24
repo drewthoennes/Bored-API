@@ -3,8 +3,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const chaiHttp = require('chai-http');
 const expect = chai.expect;
-const faker = require('faker');
-
+const models = require('@t/backend/utils/models');
 const server = require('@t/backend/utils/server');
 const mongo = require('@t/backend/utils/mongo');
 
@@ -32,7 +31,7 @@ const unmask = activity => {
     return unmasked;
 }
 
-describe('Activities routes should work as expected', () => {
+describe('Activities v1 routes should work as expected', () => {
     before(() => {
         app = server.getNewApp();
     });
@@ -50,7 +49,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity GET should work as expected', done => {
         let activity;
 
-        mongo.createActivity().then(created => {
+        models.createV1Activity().then(created => {
             activity = prune(created);
 
             return chai.request(app).get('/api/activity');
@@ -65,7 +64,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?key={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity(), mongo.createActivity(), mongo.createActivity()]).then(created => {
+        Promise.all([models.createV1Activity(), models.createV1Activity(), models.createV1Activity()]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get(`/api/activity?key=${activity.key}`);
@@ -80,7 +79,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?type={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({type: 'education'}), mongo.createActivity({type: 'recreational'}), mongo.createActivity({type: 'social'})]).then(created => {
+        Promise.all([models.createV1Activity({type: 'education'}), models.createV1Activity({type: 'recreational'}), models.createV1Activity({type: 'social'})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get(`/api/activity?type=${activity.type}`);
@@ -95,7 +94,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?participants={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({participants: 1}), mongo.createActivity({participants: 2}), mongo.createActivity({participants: 3})]).then(created => {
+        Promise.all([models.createV1Activity({participants: 1}), models.createV1Activity({participants: 2}), models.createV1Activity({participants: 3})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get(`/api/activity?participants=${activity.participants}`);
@@ -110,7 +109,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?price={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({price: 0.1}), mongo.createActivity({price: 0.5}), mongo.createActivity({price: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({price: 0.1}), models.createV1Activity({price: 0.5}), models.createV1Activity({price: 0.7})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get(`/api/activity?price=${activity.price}`);
@@ -125,7 +124,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?minprice={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({price: 0.1}), mongo.createActivity({price: 0.2}), mongo.createActivity({price: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({price: 0.1}), models.createV1Activity({price: 0.2}), models.createV1Activity({price: 0.7})]).then(created => {
             activity = prune(created[2]);
 
             return chai.request(app).get('/api/activity?minprice=0.7');
@@ -140,7 +139,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?maxprice={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({price: 0.1}), mongo.createActivity({price: 0.2}), mongo.createActivity({price: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({price: 0.1}), models.createV1Activity({price: 0.2}), models.createV1Activity({price: 0.7})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get('/api/activity?maxprice=0.1');
@@ -153,7 +152,7 @@ describe('Activities routes should work as expected', () => {
     });
 
     it('/api/activity?minprice={}&maxprice={} GET should return error if range is invalid', done => {
-        Promise.all([mongo.createActivity(), mongo.createActivity(), mongo.createActivity()]).then(created => {
+        Promise.all([models.createV1Activity(), models.createV1Activity(), models.createV1Activity()]).then(created => {
             return chai.request(app).get('/api/activity?minprice=0.9&maxprice=0.1');
         }).then(res => {
             expect(res.body).to.have.property('error');
@@ -165,7 +164,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?minprice={}&maxprice={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({price: 0.1}), mongo.createActivity({price: 0.3}), mongo.createActivity({price: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({price: 0.1}), models.createV1Activity({price: 0.3}), models.createV1Activity({price: 0.7})]).then(created => {
             activity = prune(created[1]);
 
             return chai.request(app).get('/api/activity?minprice=0.2&maxprice=0.5');
@@ -180,7 +179,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?price={}&minprice={}&maxprice={} GET should allow the range to override the specified value', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({price: 0.1}), mongo.createActivity({price: 0.3}), mongo.createActivity({price: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({price: 0.1}), models.createV1Activity({price: 0.3}), models.createV1Activity({price: 0.7})]).then(created => {
             activity = prune(created[1]);
 
             return chai.request(app).get('/api/activity?price=0.1&minprice=0.2&maxprice=0.5');
@@ -195,7 +194,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?accessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.5}), mongo.createActivity({availability: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({availability: 0.1}), models.createV1Activity({availability: 0.5}), models.createV1Activity({availability: 0.7})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get(`/api/activity?accessibility=${activity.availability}`);
@@ -210,7 +209,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?minaccessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.2}), mongo.createActivity({availability: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({availability: 0.1}), models.createV1Activity({availability: 0.2}), models.createV1Activity({availability: 0.7})]).then(created => {
             activity = prune(created[2]);
 
             return chai.request(app).get('/api/activity?minaccessibility=0.6');
@@ -225,7 +224,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?maxaccessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.2}), mongo.createActivity({availability: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({availability: 0.1}), models.createV1Activity({availability: 0.2}), models.createV1Activity({availability: 0.7})]).then(created => {
             activity = prune(created[0]);
 
             return chai.request(app).get('/api/activity?maxaccessibility=0.1');
@@ -238,7 +237,7 @@ describe('Activities routes should work as expected', () => {
     });
 
     it('/api/activity?minaccessibility={}&maxaccessibility={} GET should return error if range is invalid', done => {
-        Promise.all([mongo.createActivity(), mongo.createActivity(), mongo.createActivity()]).then(created => {
+        Promise.all([models.createV1Activity(), models.createV1Activity(), models.createV1Activity()]).then(created => {
             return chai.request(app).get('/api/activity?minaccessibility=0.9&maxaccessibility=0.1');
         }).then(res => {
             expect(res.body).to.have.property('error');
@@ -250,7 +249,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?minaccessibility={}&maxaccessibility={} GET should work as expected', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.3}), mongo.createActivity({availability: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({availability: 0.1}), models.createV1Activity({availability: 0.3}), models.createV1Activity({availability: 0.7})]).then(created => {
             activity = prune(created[1]);
 
             return chai.request(app).get('/api/activity?minaccessibility=0.2&maxaccessibility=0.5');
@@ -265,7 +264,7 @@ describe('Activities routes should work as expected', () => {
     it('/api/activity?accessibility={}&minaccessibility={}&maxaccessibility={} GET should allow the range to override the specified value', done => {
         let activity;
 
-        Promise.all([mongo.createActivity({availability: 0.1}), mongo.createActivity({availability: 0.3}), mongo.createActivity({availability: 0.7})]).then(created => {
+        Promise.all([models.createV1Activity({availability: 0.1}), models.createV1Activity({availability: 0.3}), models.createV1Activity({availability: 0.7})]).then(created => {
             activity = prune(created[1]);
 
             return chai.request(app).get('/api/activity?accessibility=0.1&minaccessibility=0.2&maxaccessibility=0.5');
