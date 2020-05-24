@@ -1,7 +1,7 @@
 const Riddle = require('@b/models/Riddle');
 
-exports.findRiddleByKey = key => {
-    return Riddle.findOne({'key': key}).then(riddle => {
+exports.findRiddle = params => {
+    return Riddle.findOne(params).then(riddle => {
         if (!riddle) {
             throw new Error('No riddles found with the specified parameters');
         }
@@ -10,13 +10,13 @@ exports.findRiddleByKey = key => {
     });
 };
 
-exports.findRandomRiddle = () => {
-    return Riddle.countDocuments().then(count => {
-        if (!count || count === 0) throw new Error('No riddles found');
+exports.findRandomRiddle = params => {
+    return Riddle.countDocuments(params).then(count => {
+        if (!count || count === 0) throw new Error('No riddles found with the specified query');
 
-        return Riddle.findOne().skip(Math.floor(Math.random() * count));
+        return Riddle.findOne(params).skip(Math.floor(Math.random() * count));
     }).then(riddle => {
-        if (!riddle) throw new Error('No riddles found');
+        if (!riddle) throw new Error('No riddles found with the specified query');
 
         return riddle;
     });

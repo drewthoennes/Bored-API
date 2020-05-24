@@ -6,15 +6,23 @@ module.exports = function(router) {
 	router.get('/api/v2/riddles(/:key)?', (req, res) => {
 		// logActivity(req, params);
 
+		// Assign filters to query database
+		const params = Object.assign(
+			{},
+			...['difficulty']
+				.filter(key => req.query[key])
+				.map(key => ({[key]: req.query[key]})),
+		);
+
 		if (req.params.key) {
-			return riddlesController.findRiddleByKey(req.params.key).then(riddle => {
+			return riddlesController.findRiddle({'key': req.params.key, ...params}).then(riddle => {
 				res.json({'riddle': maskRiddle(riddle)});
 			}).catch(err => {
 				res.error(err);
 			});
 		}
 
-		riddlesController.findRandomRiddle().then(riddle => {
+		riddlesController.findRandomRiddle(params).then(riddle => {
 			res.json({'riddle': maskRiddle(riddle)});
 		}).catch(err => {
 			if (err.name === 'CastError') {

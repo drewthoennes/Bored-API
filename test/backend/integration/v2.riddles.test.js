@@ -65,4 +65,33 @@ describe('Riddles v2 routes should work as expected', () => {
             done();
         }).catch(err => done(err));
     });
+
+    it('/api/v2/riddles?difficulty={} GET should return an error if the difficulty is invalid', done => {
+        let riddle;
+
+        Promise.all([models.createV2Riddle({'difficulty': 'easy'}), models.createV2Riddle({'difficulty': 'normal'}), models.createV2Riddle({'difficulty': 'hard'})]).then(created => {
+            riddle = prune(created[0]);
+
+            return chai.request(app).get(`/api/v2/riddle?difficulty=invalid`);
+        }).then(res => {
+            expect(res.body).to.have.property('error');
+
+            done();
+        }).catch(err => done(err));
+    });
+
+    it('/api/v2/riddles?difficulty={} GET should work as expected', done => {
+        let riddle;
+
+        Promise.all([models.createV2Riddle({'difficulty': 'easy'}), models.createV2Riddle({'difficulty': 'normal'}), models.createV2Riddle({'difficulty': 'hard'})]).then(created => {
+            riddle = prune(created[0]);
+
+            return chai.request(app).get(`/api/v2/riddles?difficulty=${riddle.difficulty}`);
+        }).then(res => {
+            expect(res.body).to.have.property('riddle');
+            expect(res.body.riddle).to.eql(riddle);
+
+            done();
+        }).catch(err => done(err));
+    });
 });

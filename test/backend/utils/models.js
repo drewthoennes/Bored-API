@@ -51,6 +51,7 @@ exports.createV2Riddle = params => {
     const riddle = Object.assign({
         question: faker.random.words(),
         answer: faker.random.words(),
+        difficulty: faker.random.objectElement(['easy', 'normal', 'hard']),
         source: faker.internet.url(),
         key: faker.random.number({min: 1000000, max: 9999999})
     }, params);

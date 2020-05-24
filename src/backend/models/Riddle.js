@@ -9,6 +9,12 @@ const riddleSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	difficulty: {
+		type: String,
+		enum: ['easy', 'normal', 'hard'],
+		default: 'normal',
+		required: true
+	},
 	source: {
 		type: String
 	},
