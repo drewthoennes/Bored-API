@@ -20,7 +20,7 @@ describe('Check that activities are valid and well formatted', () => {
     let activities;
 
     before(() => {
-        unchangedFacts = fs.readFileSync(path.join(__dirname, '../../../db/activities.json'), 'utf8')
+        unchangedFacts = fs.readFileSync(path.join(__dirname, '../../db/activities.json'), 'utf8')
             .split(/\r?\n/)
             .filter(activity => activity.length > 0);
     });

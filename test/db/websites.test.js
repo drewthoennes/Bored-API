@@ -13,7 +13,7 @@ describe('Check that websites are valid and well formatted', () => {
     let websites;
 
     before(() => {
-        unchangedWebsites = fs.readFileSync(path.join(__dirname, '../../../db/websites.json'), 'utf8')
+        unchangedWebsites = fs.readFileSync(path.join(__dirname, '../../db/websites.json'), 'utf8')
             .split(/\r?\n/)
             .filter(website => website.length > 0);
     });

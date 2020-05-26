@@ -9,7 +9,7 @@
     "start": "export NODE_ENV=production; npm run build && node server.js",
     "clean": "rm -r dist/*",
     "test-i": "mocha test/backend/integration --timeout 60000",
-    "test-db": "mocha test/backend/db --timeout 60000",
+    "test-db": "mocha test/db --timeout 60000",
     "test": "npm run test-i && npm run test-db"
   },
   "license": "MIT",
