@@ -21,7 +21,6 @@ const prune = activity => {
 
     delete pruned._id;
     delete pruned.__v;
-    delete pruned.enabled;
 
     return pruned;
 };

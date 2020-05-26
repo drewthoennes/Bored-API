@@ -25,25 +25,24 @@ const activitySchema = new mongoose.Schema({
 	},
 	accessibility: {
 		type: String,
-		enum: ['No challenges', 'Minor challenges', 'Major challenges']
+		enum: ['Few to no challenges', 'Minor challenges', 'Major challenges']
 	},
 	duration: {
 		type: String,
-		enum: ['minutes', 'hours', 'days', 'weeks']
+		enum: ['minutes', 'hours', 'days', 'weeks'],
+		default: 'minutes',
+		required: true
+	},
+	kidFieldly: {
+		type: Boolean,
+		default: false,
+		required: true
 	},
 	link: { // URL to resource
 		type: String
 	},
-	kidFieldly: {
-		type: Boolean
-	},
 	key: {
 		type: String,
-		required: true
-	},
-	enabled: {
-		type: Boolean,
-		default: true,
 		required: true
 	}
 }, {

@@ -1,71 +1,95 @@
 const fs = require('fs');
-const readline = require('readline');
-const Ajv = require('ajv');
+const path = require('path');
+const joi = require('@hapi/joi');
 
-let testfailed = false;
+const activitySchema = joi.object().keys({
+    activity: joi.string().required(),
+    type: joi.string().allow('charity', 'cooking', 'music', 'diy', 'education', 'social', 'busywork', 'recreational', 'relaxation').required(),
+    participants: joi.number().min(1).required(),
+    price: joi.number().min(0).max(1).required(),
+    availability: joi.number().min(0).max(1).required(),
+    accessibility: joi.string().allow('Few to no challenges', 'Minor challenges', 'Major challenges').required(),
+    duration: joi.string().allow('minutes', 'hours', 'days', 'weeks').required(),
+    kidFriendly: joi.boolean().required(),
+    link: joi.string().uri().allow('').optional(),
+    key: joi.string().length(7).required()
+}).required();
 
-describe('Check that activities.json is valid and well formed', () => {
-    beforeEach( () => {
-        if (testfailed) {
-            throw new Error("Aborting prematurely because earlier test failed.");
-        }
+describe('Check that activities are valid and well formatted', () => {
+    let unchangedFacts;
+    let activities;
+
+    before(() => {
+        unchangedFacts = fs.readFileSync(path.join(__dirname, '../../../db/activities.json'), 'utf8')
+            .split(/\r?\n/)
+            .filter(activity => activity.length > 0);
     });
+
+    beforeEach(() => activities = unchangedFacts);
 
 
     it('Each line should be valid JSON', done => {
-        const line_counter = ((i = 0) => () => ++i)();
-        const rl = readline.createInterface({
-            input: fs.createReadStream('activities.json'),
-            crlfDelay: Infinity
-        });
-        let error = undefined;
-        rl.on('line', (line, lineno = line_counter()) => {
-              try {
-                  JSON.parse(line);
-              } catch (e) {
-                  testfailed = true;
-                  e.message = "Error occured on line " + lineno + " of activities.json.\n" + e.message;
-                  error = e;
-              }
-        });
-        rl.on('close', () => done(error));
+        for (let index in activities) {
+            let activity = activities[index];
+
+            try {
+                JSON.parse(activity);
+            } catch (err) {
+                err.message = `Error on line ${++index}: ${err.message}`;
+                done(err);
+                return;
+            }
+        }
+
+        done();
     });
 
     it('Each line should match the schema', done => {
-        const line_counter = ((i = 0) => () => ++i)();
-        var ajv = new Ajv({allErrors: true});
-        const schema = require('./activity-schema-v1.json');
-        const validate = ajv.compile(schema);
-        const rl = readline.createInterface({
-            input: fs.createReadStream('activities.json'),
-            crlfDelay: Infinity
-        });
-        let error = undefined;
-        rl.on('line', (line, lineno = line_counter()) => {
-            if (! validate(JSON.parse(line))) {
-                testfailed = true;
-                error = new Error("Error occured on line " + lineno + " of activities.json.\nThe following validation errors occurred:\n" + JSON.stringify(validate.errors, null, 4));
+        for (let index in activities) {
+            let activity;
+
+            try {
+                activity = JSON.parse(activities[index]);
+            } catch (err) {
+                err.message = `Error on line ${++index}: ${err.message}`;
+                done(err);
+                return;
             }
-        });
-        rl.on('close', () => done(error));
+
+            let err = activitySchema.validate(activity).error;
+
+            if (err) {
+                err.message = `Error on line ${++index}: ${err.message}`;
+                done(err);
+                return;
+            }
+        }
+
+        done();
     });
 
     it('Each key should be unique', done => {
-        const line_counter = ((i = 0) => () => ++i)();
-        const rl = readline.createInterface({
-            input: fs.createReadStream('activities.json'),
-            crlfDelay: Infinity
-        });
-        let error = undefined;
-        let keys = new Array();
-        rl.on('line', (line, lineno = line_counter()) => {
-            const rec = JSON.parse(line);
-            if (keys.includes(rec['key'])) {
-                error = new Error("Duplicate `key` found on line " + lineno + " of activities.json.");
-            } else {
-                keys.push(rec['key']);
+        let keys = [];
+
+        for (let index in activities) {
+            let activity;
+
+            try {
+                activity = JSON.parse(activities[index]);
+            } catch (err) {
+                err.message = `Error on line ${++index}: ${err.message}`;
+                done(err);
+                return;
             }
-        });
-        rl.on('close', () => done(error));
+
+            if (keys.includes(activity.key)) {
+                done(new Error(`Error on line ${++index}: Duplicate key`));
+                return;
+            }
+
+            keys.push(activity.key);
+        }
+
+        done();
     });
 });

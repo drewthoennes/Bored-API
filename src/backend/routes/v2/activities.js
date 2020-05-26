@@ -24,7 +24,7 @@ module.exports = function(router) {
 
 		// Assign filters to query database
 		const params = Object.assign(
-			{'enabled': true},
+			{},
 			...['type', 'participants', 'price', 'availability']
 				.filter(key => req.query[key])
 				.map(key => ({[key]: req.query[key]})),
