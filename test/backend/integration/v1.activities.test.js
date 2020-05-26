@@ -55,8 +55,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -70,8 +69,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?key=${activity.key}`);
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -85,8 +83,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?type=${activity.type}`);
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -100,8 +97,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?participants=${activity.participants}`);
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -115,8 +111,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?price=${activity.price}`);
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -130,8 +125,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?minprice=0.7');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -145,8 +139,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?maxprice=0.1');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -170,8 +163,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?minprice=0.2&maxprice=0.5');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -185,8 +177,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?price=0.1&minprice=0.2&maxprice=0.5');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -200,8 +191,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get(`/api/activity?accessibility=${activity.availability}`);
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -215,8 +205,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?minaccessibility=0.6');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -230,8 +219,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?maxaccessibility=0.1');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -255,8 +243,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?minaccessibility=0.2&maxaccessibility=0.5');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));
@@ -270,8 +257,7 @@ describe('Activities v1 routes should work as expected', () => {
 
             return chai.request(app).get('/api/activity?accessibility=0.1&minaccessibility=0.2&maxaccessibility=0.5');
         }).then(res => {
-            expect(res.body).to.have.property('activity');
-            expect(unmask(res.body.activity)).to.eql(activity);
+            expect(unmask(res.body)).to.eql(activity);
 
             done();
         }).catch(err => done(err));

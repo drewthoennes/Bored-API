@@ -34,7 +34,7 @@ module.exports = function(router) {
 		logActivity(req, params);
 
 		activitiesController.findRandomActivity(params).then(activity => {
-			res.json({'activity': maskActivity(activity)});
+			res.json(maskActivity(activity));
 		}).catch(err => {
 			if (err.name === 'CastError') {
 
