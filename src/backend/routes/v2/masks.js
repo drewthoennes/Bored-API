@@ -11,7 +11,6 @@ exports.unmaskActivity = activity => {
         {},
         ...[
             'activity',
-            'accessibility',
             'availability',
             'minavailability',
             'maxavailability',
@@ -21,13 +20,13 @@ exports.unmaskActivity = activity => {
             'maxparticipants',
             'link',
             'key'
-        ].filter(key => activity[key])
+        ].filter(key => activity[key] !== undefined)
             .map(key => ({[key]: activity[key]})),
         ...[
             {name: 'price', action: () => unmaskPrice(activity, 'price')},
             {name: 'minprice', action: () => unmaskPrice(activity, 'minprice')},
             {name: 'maxprice', action: () => unmaskPrice(activity, 'maxprice')}
-        ].filter(key => activity[key.filter || key.name])
+        ].filter(key => activity[key.filter || key.name] !== undefined)
             .map(field => ({[field.name]: field.action() || '0'}))
     );
 }
@@ -35,7 +34,7 @@ exports.unmaskActivity = activity => {
 exports.maskActivity = activity => {
     return !activity ? {} : Object.assign(
         {},
-        ...['activity', 'availability', 'availability', 'type', 'participants', 'link', 'key']
+        ...['activity', 'accessibility', 'type', 'participants', 'link', 'key']
             .map(key => ({[key]: activity[key] ? activity[key] : activity[key] === 0 ? '0' : ''})),
         ...[
             {name: 'price', action: () => maskPrice(activity, 'price')}
