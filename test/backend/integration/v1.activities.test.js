@@ -17,6 +17,8 @@ const prune = activity => {
 
     delete pruned._id;
     delete pruned.__v;
+    delete pruned.duration;
+    delete pruned.kidFriendly;
 
     return pruned;
 };

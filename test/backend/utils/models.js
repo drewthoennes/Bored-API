@@ -13,6 +13,8 @@ exports.createV1Activity = params => {
         type: faker.random.objectElement(['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork']),
         participants: faker.random.number({min: 1, max: 5}),
         price: faker.random.number({min: 0.1, max: 1, precision: 0.1}),
+        duration: faker.random.objectElement(['minutes', 'hours', 'days', 'weeks']),
+        kidFriendly: faker.random.boolean(),
         link: faker.internet.url(),
         key: faker.random.number({min: 1000000, max: 9999999})
     }, params);
@@ -28,6 +30,8 @@ exports.createV2Activity = params => {
         type: faker.random.objectElement(['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork']),
         participants: faker.random.number({min: 1, max: 5}),
         price: faker.random.number({min: 0.1, max: 1, precision: 0.1}),
+        duration: faker.random.objectElement(['minutes', 'hours', 'days', 'weeks']),
+        kidFriendly: faker.random.boolean(),
         link: faker.internet.url(),
         key: faker.random.number({min: 1000000, max: 9999999})
     }, params);

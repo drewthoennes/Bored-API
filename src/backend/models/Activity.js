@@ -33,7 +33,7 @@ const activitySchema = new mongoose.Schema({
 		default: 'minutes',
 		required: true
 	},
-	kidFieldly: {
+	kidFriendly: {
 		type: Boolean,
 		default: false,
 		required: true
