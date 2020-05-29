@@ -3,7 +3,11 @@ const {
     Activity,
     Fact,
     Riddle,
-    Website
+    Website,
+	ActivitySuggestion,
+	FactSuggestion,
+	RiddleSuggestion,
+	WebsiteSuggestion
 } = require('@b/models');
 
 exports.createV1Activity = params => {
@@ -70,3 +74,52 @@ exports.createV2Website = params => {
 
     return new Website(website).save();
 };
+
+exports.createV2Suggestion = (type, params = {}, dry) => {
+    let defaultValues;
+    let suggestionModel;
+
+    switch (type) {
+        case 'activity':
+            defaultValues = Object.assign({
+                activity: faker.random.words(),
+                type: faker.random.objectElement(['education', 'recreational', 'social', 'diy', 'charity', 'cooking', 'relaxation', 'music', 'busywork']),
+                participants: faker.random.number({min: 1, max: 10})
+            });
+            suggestionModel = ActivitySuggestion;
+            break;
+
+        case 'fact':
+            defaultValues = Object.assign({
+                fact: faker.random.words(),
+                source: faker.internet.url()
+            });
+            suggestionModel = FactSuggestion;
+            break;
+
+        case 'riddle':
+            defaultValues = Object.assign({
+                question: faker.random.words(),
+                answer: faker.random.words(),
+                source: faker.internet.url()
+            });
+            suggestionModel = RiddleSuggestion;
+            break;
+
+        case 'website':
+            defaultValues = Object.assign({
+                url: faker.internet.url(),
+                description: faker.random.words()
+            });
+            suggestionModel = WebsiteSuggestion;
+            break;
+
+        default:
+            throw new Error(`createV2Suggestion: Invalid type '${type}'`);
+    }
+
+    const suggestion = Object.assign(defaultValues, params);
+
+    if (dry) return {[type]: suggestion};
+    return new suggestionModel({[type]: suggestion}).save();
+}

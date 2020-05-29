@@ -18,15 +18,15 @@ const suggestionSchema = joi.object().keys({
 	}),
 	fact: joi.object().keys({
 		fact: joi.string().required(),
-		source: joi.string().required()
+		source: joi.string().uri().required()
 	}),
 	riddle: joi.object().keys({
 		question: joi.string().required(),
 		answer: joi.string().required(),
-		source: joi.string().required()
+		source: joi.string().uri().required()
 	}),
 	website: joi.object().keys({
-		url: joi.string().required(),
+		url: joi.string().uri().required(),
 		description: joi.string().required()
 	})
 }).xor('activity', 'fact', 'riddle', 'website').required();
