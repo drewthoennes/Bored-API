@@ -1,21 +1,42 @@
 const mongoose = require('mongoose');
 
-var ActivitySchema = new mongoose.Schema({
+const activitySchema = new mongoose.Schema({
 	activity: {
 		type: String,
+		trim: true,
 		required: true
 	},
-	accessibility: { // 0.0 - 1.0
-		type: Number
-	},
-	type: { // Sport, education, entertainment, social, ...
-		type: String
+	type: {
+		type: String,
+		enum: ['charity', 'cooking', 'music', 'diy', 'education', 'social', 'busywork', 'recreational', 'relaxation'],
+		required: true
 	},
 	participants: { // 1 - n
-		type: Number
+		type: Number,
+		required: true
 	},
 	price: { // 0.0 - 1.0
-		type: Number
+		type: Number,
+		required: true
+	},
+	availability: { // 0.0 - 1.0
+		type: Number,
+		required: true
+	},
+	accessibility: {
+		type: String,
+		enum: ['Few to no challenges', 'Minor challenges', 'Major challenges']
+	},
+	duration: {
+		type: String,
+		enum: ['minutes', 'hours', 'days', 'weeks'],
+		default: 'minutes',
+		required: true
+	},
+	kidFriendly: {
+		type: Boolean,
+		default: false,
+		required: true
 	},
 	link: { // URL to resource
 		type: String
@@ -23,13 +44,9 @@ var ActivitySchema = new mongoose.Schema({
 	key: {
 		type: String,
 		required: true
-	},
-	enabled: {
-		type: Boolean,
-		required: true
 	}
 }, {
 	collection: 'activities'
 });
 
-module.exports = mongoose.model('Activity', ActivitySchema);
+module.exports = mongoose.model('Activity', activitySchema);

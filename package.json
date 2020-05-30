@@ -9,7 +9,7 @@
     "start": "export NODE_ENV=production; npm run build && node server.js",
     "clean": "rm -r dist/*",
     "test-i": "mocha test/backend/integration --timeout 60000",
-    "test-db": "mocha test/backend/db --timeout 60000",
+    "test-db": "mocha test/db --timeout 60000",
     "test": "npm run test-i && npm run test-db"
   },
   "license": "MIT",
@@ -21,6 +21,7 @@
     "@s": "./scripts"
   },
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "body-parser": "^1.19.0",
     "chalk": "^4.0.0",
     "dotenv": "^8.2.0",

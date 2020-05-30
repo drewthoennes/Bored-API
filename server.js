@@ -27,6 +27,16 @@ app.get('/favicon.ico', (req, res) => {
 // Backend API routes
 app.use(require('./src/backend/routes')());
 
+// Catch any errors
+app.use((err, req, res, next) => {
+	if (err) {
+		res.error(`There was an error parsing the request: ${err}`);
+		return;
+	}
+
+	next();
+});
+
 // Frontend endpoints
 app.use(express.static(__dirname + '/dist'));
 app.use('/', express.static(__dirname + '/dist'));

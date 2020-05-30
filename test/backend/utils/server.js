@@ -14,7 +14,7 @@ const createApp = () => {
 
     app.use(function(err, req, res, next) {
         if (err instanceof SyntaxError) {
-            res.json({'error': 'Invalid JSON'});
+            res.error('Invalid JSON');
             return;
         }
 

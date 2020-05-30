@@ -1,31 +1,76 @@
 const mongoose = require('mongoose');
 
-var SuggestionSchema = new mongoose.Schema({
-	activity: {
-		type: String,
-		required: true
-	},
-	accessibility: {
-		type: Number
-	},
-	type: {
-		type: String
-	},
-	participants: { // 1 - n
-		type: Number
-	},
-	price: { // 0.0 - 1.0
-		type: Number
-	},
-	enabled: {
-		type: Boolean,
-		required: true
-	},
-	name: {
-		type: String
+const suggestionSchema = new mongoose.Schema({
+	profile: {
+		agent: {
+			type: String
+		}
 	}
 }, {
 	collection: 'suggestions'
 });
 
-module.exports = mongoose.model('Suggestions', SuggestionSchema);
+const suggestionModel = mongoose.model('Suggestion', suggestionSchema);
+
+const ActivitySuggestion = suggestionModel.discriminator('ActivitySuggestion', new mongoose.Schema({
+	activity: {
+		activity: {
+			type: String,
+			required: true
+		},
+		type: {
+			type: String
+		},
+		participants: {
+			type: Number
+		}
+	}
+}));
+
+const FactSuggestion = suggestionModel.discriminator('FactSuggestion', new mongoose.Schema({
+	fact: {
+		fact: {
+			type: String,
+			required: true
+		},
+		source: {
+			type: String
+		}
+	},
+}));
+
+const RiddleSuggestion = suggestionModel.discriminator('RiddleSuggestion', new mongoose.Schema({
+	riddle: {
+		question: {
+			type: String,
+			required: true
+		},
+		answer: {
+			type: String,
+			required: true
+		},
+		source: {
+			type: String
+		}
+	}
+}));
+
+const WebsiteSuggestion = suggestionModel.discriminator('WebsiteSuggestion', new mongoose.Schema({
+	website: {
+		url: {
+			type: String,
+			required: true
+		},
+		description: {
+			type: String,
+			required: true
+		}
+	}
+}));
+
+module.exports = {
+	ActivitySuggestion,
+	FactSuggestion,
+	RiddleSuggestion,
+	WebsiteSuggestion
+}

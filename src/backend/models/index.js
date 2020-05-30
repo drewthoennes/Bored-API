@@ -1,7 +1,21 @@
 const Activity = require('./Activity');
-const Suggestion = require('./Suggestion');
+const Fact = require('./Fact');
+const Riddle = require('./Riddle');
+const Website = require('./Website');
+const {
+	ActivitySuggestion,
+	FactSuggestion,
+	RiddleSuggestion,
+	WebsiteSuggestion
+} = require('./Suggestion');
 
 module.exports = {
 	Activity,
-	Suggestion
+	ActivitySuggestion,
+	FactSuggestion,
+	RiddleSuggestion,
+	WebsiteSuggestion,
+	Fact,
+	Riddle,
+	Website
 };

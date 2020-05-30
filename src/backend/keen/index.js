@@ -5,20 +5,13 @@ const client = new Keen({
 	writeKey: process.env.KEEN_WRITE_KEY
 });
 
-exports.logActivity = (req, params) => {
+exports.logQuery = (type, query) => {
 	if (process.env.NODE_ENV === 'dev') return;
 
-	return client.recordEvent('endpoints', {
-		'protocol': req.protocol || '',
-		'key': params.key || '',
-		'accessibility': params.accessibility || '',
-		'type': params.type || '',
-		'participants': params.participants || '',
-		'price': params.price || ''
+	return client.recordEvent('query', {
+		type,
+		query
 	}, err => {
-		if (err) {
-			console.log(err);
-			return;
-		}
+		if (err) console.log(err);
 	});
 };
