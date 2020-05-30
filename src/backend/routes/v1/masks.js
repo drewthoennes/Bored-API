@@ -28,7 +28,7 @@ exports.maskActivity = activity => {
     return !activity ? {} : Object.assign(
         {},
         ...['activity', 'type', 'participants', 'price', 'link', 'key']
-            .map(key => ({[key]: activity[key] || ''})),
+            .map(key => ({[key]: activity[key] !== undefined ? activity[key] : ''})),
         ...[
             {name: 'accessibility', filter: 'availability', action: () => {return activity.availability}}
         ].filter(key => activity[key.filter] !== undefined)
