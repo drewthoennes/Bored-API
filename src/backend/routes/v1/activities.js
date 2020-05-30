@@ -1,9 +1,11 @@
-const {logActivity} = require('@b/keen');
+const {logQuery} = require('@b/keen');
 const activitiesController = require('@b/controllers/activities');
 const {unmaskActivity, maskActivity} = require('@b/routes/v1/masks');
 
 module.exports = function(router) {
 	router.get(['/api/activity/', '/api/v1/activity/'], (req, res) => {
+		logQuery('activity', req.query);
+
 		// Transform query data to be used on database
 		req.query = unmaskActivity(req.query);
 
@@ -30,8 +32,6 @@ module.exports = function(router) {
 				.map(key => ({[key]: req.query[key]})),
 			...ranges // Ranges override concrete values (e.g., minprice overrides price)
 		);
-
-		logActivity(req, params);
 
 		activitiesController.findRandomActivity(params).then(activity => {
 			res.json(maskActivity(activity));

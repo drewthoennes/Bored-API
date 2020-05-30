@@ -1,10 +1,10 @@
-// const {logActivity} = require('@b/keen');
+const {logQuery} = require('@b/keen');
 const factsController = require('@b/controllers/facts');
 const {maskFact} = require('@b/routes/v2/masks');
 
 module.exports = function(router) {
 	router.get('/api/v2/facts(/:key)?', (req, res) => {
-		// logActivity(req, params);
+		logQuery('fact', req.query);
 
 		if (req.params.key) {
 			return factsController.findFactByKey(req.params.key).then(fact => {

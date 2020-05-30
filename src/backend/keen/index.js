@@ -5,20 +5,12 @@ const client = new Keen({
 	writeKey: process.env.KEEN_WRITE_KEY
 });
 
-// TODO: Redo instrumentation
-
-exports.logActivity = (req, params) => {
+exports.logQuery = (type, query) => {
 	if (process.env.NODE_ENV === 'dev') return;
 
-	const {protocol, key, accessibility, type, participants, price} = params || {};
-
-	return client.recordEvent('endpoints', {
-		protocol,
-		key,
-		accessibility,
+	return client.recordEvent('query', {
 		type,
-		participants,
-		price
+		query
 	}, err => {
 		if (err) console.log(err);
 	});
