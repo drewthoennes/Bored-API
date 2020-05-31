@@ -1,0 +1,22 @@
+@import "~@theme";
+
+.endpoint-demo {
+    text-align: center;
+    background: $secondaryColor;
+
+    .card {
+        width: 250px; /* TODO: Scale this across device sizes */
+        display: inline-block;
+        margin: 20px;
+        background: $primaryColor;
+        cursor: pointer;
+
+        h5 {
+            color: white;
+        }
+
+        &:hover {
+
+        }
+    }
+}

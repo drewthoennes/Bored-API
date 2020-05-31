@@ -1,65 +1,86 @@
+const webpack = require('webpack');
 const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-function resolve (dir) {
-	return path.join(__dirname, '..', dir)
+require('dotenv').config({path: path.resolve(__dirname, '../.env')});
+
+function resolve(dir) {
+  return path.join(__dirname, '../', dir);
 }
 
 module.exports = {
-	entry: {
-		app: './src/frontend/main.js'
-	},
+  entry: {
+    app: './src/frontend/index.js'
+  },
 	output: {
-		path: resolve('dist'),
-		filename: '[name].js'
+    filename: '[name].bundle.[hash].js',
+    chunkFilename: '[name].bundle.[hash].js',
+		path: resolve('dist')
 	},
-	resolve: {
-		extensions: ['.js', '.vue', '.json'],
-		alias: {
-			'vue$': 'vue/dist/vue.esm.js',
-			'@': resolve('src/frontend'),
-		}
-	},
-	module: {
-		rules: [
-			{
-				test: /\.vue$/,
-				loader: 'vue-loader'
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						babelrc: false,
-						presets: [
-							'@babel/preset-env'
-						],
-						cacheDirectory: true
-					}
-				}
-			},
-			{
-				test: /\.css$/,
-				use: [
-						'vue-style-loader',
-						{
-							loader: 'css-loader'
-						}
-				]
-			}
-		]
-	},
-	plugins: [
-		new VueLoaderPlugin(),
-		new CopyWebpackPlugin([
-			{
-				from: resolve('static'),
-				to: resolve('dist'),
-				ignore: ['.*']
-			}
-		])
-	]
-}
+  devServer: {
+    contentBase: resolve('dist'),
+    compress: true
+  },
+  resolve: {
+    extensions: ['.js', '.json', '.scss'],
+    alias: {
+        '@f': resolve('src/frontend'),
+        '@theme': resolve('src/frontend/assets/scss/_theme.scss'),
+        'jquery': 'jquery/dist/jquery.slim.js'
+    }
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendor',
+          chunks: 'initial',
+          test: /[\\/]node_modules[\\/]/,
+          enforce: true
+        }
+      }
+    }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ],
+            plugins: [
+              '@babel/plugin-proposal-class-properties'
+            ],
+            cacheDirectory: true
+          }
+        }
+      },
+      {
+        test:/\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './static/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+      }
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery/dist/jquery.slim.js',
+      jQuery: 'jquery/dist/jquery.slim.js',
+      Button: 'exports-loader?Button!bootstrap/js/dist/button',
+      Modal: 'exports-loader?Modal!bootstrap/js/dist/modal'
+    })
+  ]
+};

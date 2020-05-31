@@ -1,0 +1,23 @@
+@import "~@theme";
+
+.landing-page {
+    background: $tertiaryColor;
+
+    .header-section {
+        padding: 60px 50px; /* TODO: Scale this across device sizes */
+        background: $primaryColor;
+        color: white;
+    }
+
+    .about-section {
+        padding: 60px 50px; /* TODO: Scale this across device sizes */
+
+        & > .column {
+            max-width: 25%;
+        }
+    }
+
+    .endpoint-demo {
+        margin: 0px 50px; /* TODO: Scale this across device sizes */
+    }
+}

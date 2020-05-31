@@ -1,0 +1,16 @@
+@import "~@theme";
+
+.topbar {
+    min-height: 40px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+    background: $secondaryColor;
+
+    .topbar-item {
+        padding: 10px 20px;
+        cursor: pointer;
+
+        a {
+            color: white;
+        }
+    }
+}
