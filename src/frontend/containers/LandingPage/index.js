@@ -3,6 +3,7 @@ import './styles';
 
 import Topbar from '@f/components/Topbar';
 import EndpointDemo from '@f/components/EndpointDemo';
+import Footer from '@f/components/Footer';
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class LandingPage extends React.Component {
         return (
             <div className="landing-page">
                 <Topbar/>
+
                 <div className="header-section">
                     <div className="column column-center">
                         <div className="row row-center">
@@ -41,7 +43,9 @@ class LandingPage extends React.Component {
                     </div>
                 </div>
 
-                <EndpointDemo/>
+                <div className="endpoint-demo-section"><EndpointDemo/></div>
+
+                <Footer/>
             </div>
         );
     }

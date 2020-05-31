@@ -1,0 +1,15 @@
+@import "~@theme";
+
+.footer {
+    padding: 60px 50px;
+    background: $primaryColor;
+    color: white;
+
+    & > .column {
+        padding-right: 150px;
+    }
+
+    a {
+        color: white;
+    }
+}
