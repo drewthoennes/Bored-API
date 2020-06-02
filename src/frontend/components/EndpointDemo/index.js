@@ -9,7 +9,7 @@ class EndpointDemo extends React.Component {
 
         this.state = {
             ouput: null,
-            version: 2
+            version: '2'
         };
 
         this.renderCard = this.renderCard.bind(this);
@@ -20,11 +20,13 @@ class EndpointDemo extends React.Component {
     }
 
     renderCard(name, onClick) {
+        const {version} = this.state;
+
         return (
             <div className="card" key={name.toLowerCase()} onClick={onClick}>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <Link to={`/documentation?v=${this.state.version}&t=${name.toLowerCase()}`}>Documentation</Link>
+                    <Link to={`/docs/v${version}/${name.toLowerCase()}`}>Documentation</Link>
                 </div>
             </div>
         );
@@ -83,19 +85,19 @@ class EndpointDemo extends React.Component {
     render() {
         const cards = [
             {
-                name: 'Activity',
+                name: 'Activities',
                 onClick: this.loadV2Activity
             },
             {
-                name: 'Fact',
+                name: 'Facts',
                 onClick: this.loadV2Fact
             },
             {
-                name: 'Riddle',
+                name: 'Riddles',
                 onClick: this.loadV2Riddle
             },
             {
-                name: 'Website',
+                name: 'Websites',
                 onClick: this.loadV2Website
             }
         ].map(c => this.renderCard(c.name, c.onClick));

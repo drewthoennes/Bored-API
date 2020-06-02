@@ -1,0 +1,76 @@
+@import "~@theme";
+
+/* TODO: Scale this across device sizes */
+$navigationWidth: 25%;
+$documentationWidth: 100% - $navigationWidth;
+
+$getColor: #73b8f5;
+
+.documentation-page {
+    .navigation-column {
+        width: $navigationWidth;
+        padding: 0px 40px 40px 40px;
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+        background: $tertiaryColor;
+
+        .navigation-group {
+            height: fit-content;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            padding-top: 40px;
+        }
+
+        h5 {
+            color: rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    .documentation-column {
+        width: $documentationWidth;
+        padding: 40px;
+    }
+
+    .endpoint {
+        padding-top: 40px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+        .header-type {
+            &.get {
+                color: $getColor;
+            }
+        }
+
+        .header-name, .endpoint-anchor {
+            margin-left: 10px;
+        }
+
+        .header-name a {
+            color: black;
+            text-decoration: none;
+        }
+
+        &-url {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        &-response {
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            background: $primaryColor;
+            color: white;
+            font-size: 14px;
+        }
+    }
+}

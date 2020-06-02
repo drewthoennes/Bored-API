@@ -21,7 +21,7 @@ class Topbar extends React.Component {
         </div>
         <div className="resources-section column column-start">
             <h5>Resources</h5>
-            <Link to="/documentation">Documentation</Link>
+            <Link to="/docs">Documentation</Link>
             <Link to="/contributing">Contributing</Link>
             <a href="https://github.com/drewthoennes/Bored-API">GitHub</a>
         </div>

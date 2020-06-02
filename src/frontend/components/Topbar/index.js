@@ -21,7 +21,7 @@ class Topbar extends React.Component {
         </div>
         <div className="row">
             <div className="topbar-item column justify-content-center">
-                <Link to="/documentation">Documentation</Link>
+                <Link to="/docs">Documentation</Link>
             </div>
             <div className="topbar-item column justify-content-center">
                 <Link to="/contributing">Contributing</Link>
