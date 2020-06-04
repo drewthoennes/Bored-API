@@ -1,7 +1,5 @@
-function toKebabCase(str) {
-    return str.toLowerCase().split(/\ /).filter(part => part && part.length).join('-');
-}
+import documentation from './documentation';
 
 export {
-    toKebabCase
+    documentation
 };

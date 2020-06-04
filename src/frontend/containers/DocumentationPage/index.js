@@ -2,7 +2,7 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import './styles';
 
-import {map as pageMap} from './pages';
+import {map as pageMap} from '@f/documentation';
 
 class DocumentationPage extends React.Component {
     constructor(props) {
@@ -24,6 +24,7 @@ class DocumentationPage extends React.Component {
 
     componentDidUpdate() {
         // Do this to update documentation during browser history changes
+        window.scrollTo(0, 0);
         this.setPageByURL();
     }
 
@@ -40,6 +41,7 @@ class DocumentationPage extends React.Component {
 
     loadPage(type) {
         this.props.history.push(`/docs/${this.state.version}/${type}`);
+        window.scrollTo(0, 0);
         this.setState({type: type ? type : 'activities'});
     }
 
