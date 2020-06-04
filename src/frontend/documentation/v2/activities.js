@@ -1,4 +1,5 @@
 import React from 'react';
+import '@f/documentation/styles';
 import c from '@f/constants/documentation';
 import {
     generateEndpoint,
@@ -17,20 +18,20 @@ export default (
             <h3>Fields Explained</h3>
             <p>There are many values associated with the activity endpoints fo this API. Some fields are bounded in their values while others are more open ended. All of the fields one can receive from a request to any of the activity endpoints are outlined below.</p>
 
-            {/* <table>
+            <table className="fields-table">
                 <thead>
                     {generateTableHeader('Name', 'Description', 'Value Type', 'Constraints')}
                 </thead>
                 <tbody>
-                    {generateTableRow('Activity', 'The description of the queried activity', 'Enum', '[]')}
-                    {generateTableRow('Accessibility', 'The accessibility of this activity is for the elderly or those with physical disabilities', 'String', '')}
-                    {generateTableRow('Type', 'The category this activity falls into', 'Enum', '[]')}
+                    {generateTableRow('Activity', 'The description of the queried activity', 'String', '')}
+                    {generateTableRow('Accessibility', 'The accessibility of this activity is for the elderly or those with physical disabilities', 'Enum', '["Few to no challenges", "Minor challenges", "Major challenges"]')}
+                    {generateTableRow('Type', 'The category this activity falls into', 'Enum', '["charity", "cooking", "music", "diy", "education", "social", "busywork", "recreational", "relaxation"]')}
                     {generateTableRow('Participants', 'The number of participants this activity', 'Integer', '1 - n')}
                     {generateTableRow('Link', 'An optional related link', 'String', '')}
-                    {generateTableRow('Price', 'A relative price for this activity', 'String', 'Composed of dollar signs')}
-                    {generateTableRow('Key', 'A unique activity identifier', 'String', 'Composed of digits')}
+                    {generateTableRow('Price', 'A relative price for this activity', 'String', '/^\${1,5}$/')}
+                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\d{6}$')}
                 </tbody>
-            </table> */}
+            </table>
         </div>
 
         <div className="endpoints-section">

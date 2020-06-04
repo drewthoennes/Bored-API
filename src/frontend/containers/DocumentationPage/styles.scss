@@ -4,8 +4,6 @@
 $navigationWidth: 25%;
 $documentationWidth: 100% - $navigationWidth;
 
-$getColor: #73b8f5;
-
 .documentation-page {
     .navigation-column {
         width: $navigationWidth;
@@ -34,43 +32,5 @@ $getColor: #73b8f5;
     .documentation-column {
         width: $documentationWidth;
         padding: 40px;
-    }
-
-    .endpoint {
-        padding-top: 40px;
-        margin-top: 40px;
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
-
-        .header-type {
-            &.get {
-                color: $getColor;
-            }
-        }
-
-        .header-name, .endpoint-anchor {
-            margin-left: 10px;
-        }
-
-        .header-name a {
-            color: black;
-            text-decoration: none;
-        }
-
-        &-url {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(0, 0, 0, 0.15);
-            border-radius: 5px;
-            background: rgba(0, 0, 0, 0.04);
-        }
-
-        &-response {
-            padding: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.15);
-            border-radius: 5px;
-            background: $primaryColor;
-            color: white;
-            font-size: 14px;
-        }
     }
 }

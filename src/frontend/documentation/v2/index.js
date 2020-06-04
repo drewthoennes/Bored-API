@@ -1,21 +1,24 @@
-import v2ActivitiesPage from './activities';
-import v2FactsPage from './facts';
-import v2RiddlesPage from './riddles';
-import v2WebsitesPage from './websites';
+import introductionPage from './introduction';
+import activitiesPage from './activities';
+import factsPage from './facts';
+import riddlesPage from './riddles';
+import websitesPage from './websites';
 
 const v2Map = {
     v2: {
-        activities: v2ActivitiesPage,
-        facts: v2FactsPage,
-        riddles: v2RiddlesPage,
-        websites: v2WebsitesPage
+        introduction: introductionPage,
+        activities: activitiesPage,
+        facts: factsPage,
+        riddles: riddlesPage,
+        websites: websitesPage
     }
 };
 
 export {
-    v2ActivitiesPage,
-    v2FactsPage,
-    v2RiddlesPage,
-    v2WebsitesPage,
+    introductionPage,
+    activitiesPage,
+    factsPage,
+    riddlesPage,
+    websitesPage,
     v2Map
 };

@@ -1,0 +1,62 @@
+@import "~@theme";
+
+$getColor: #73b8f5;
+
+div[class$="-doc"] {
+    .fields-section, .endpoint {
+        padding-top: 40px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .header-type {
+        &.get {
+            color: $getColor;
+        }
+    }
+
+    .header-name, .endpoint-anchor {
+        margin-left: 10px;
+    }
+
+    .header-name a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .endpoint-url {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.04);
+    }
+
+    .endpoint-response {
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        background: $primaryColor;
+        color: white;
+        font-size: 14px;
+    }
+
+    table.fields-table {
+        border-collapse: collapse;
+        border: 1px solid black;
+
+        th, td {
+            padding: 5px 10px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        th {
+            background: $primaryColor;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+}

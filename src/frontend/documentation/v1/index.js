@@ -1,12 +1,15 @@
-import v1ActivitiesPage from './activities';
+import introductionPage from './introduction';
+import activitiesPage from './activities';
 
 const v1Map = {
     v1: {
-        activities: v1ActivitiesPage
+        introduction: introductionPage,
+        activities: activitiesPage
     }
 };
 
 export {
-    v1ActivitiesPage,
+    introductionPage,
+    activitiesPage,
     v1Map
 };

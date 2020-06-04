@@ -8,7 +8,7 @@ class EndpointDemo extends React.Component {
         super(props);
 
         this.state = {
-            ouput: null,
+            output: null,
             version: '2'
         };
 

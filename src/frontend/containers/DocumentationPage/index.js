@@ -46,8 +46,7 @@ class DocumentationPage extends React.Component {
     }
 
     render() {
-
-        let navigation = ['Activities', 'Facts', 'Riddles', 'Websites'].map(section => {
+        let navigation = ['Introduction', 'Activities', 'Facts', 'Riddles', 'Websites'].map(section => {
             return (<h5 key={section} onClick={() => this.loadPage(section.toLowerCase())}>{section}</h5>);
         });
 

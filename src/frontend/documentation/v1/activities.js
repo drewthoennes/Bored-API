@@ -1,4 +1,5 @@
 import React from 'react';
+import '@f/documentation/styles';
 import c from '@f/constants/documentation';
 import {
     generateEndpoint,
