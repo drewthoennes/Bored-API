@@ -1,4 +1,6 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faLink} from '@fortawesome/free-solid-svg-icons';
 
 function toKebabCase(str) {
     return str.toLowerCase().split(/\ /).filter(part => part && part.length).join('-');
@@ -27,13 +29,15 @@ function generateEndpoint(type, name, endpoint, example, args = {}) {
                     <h4><a href={endpoint}>{name}</a></h4>
                 </div>
 
-                <div className="endpoint-anchor">
-                    <a href={`#${anchor}`}>Anchor</a>
+                <div className="endpoint-anchor column column-center">
+                    <a href={`#${anchor}`}>
+                        <FontAwesomeIcon icon={faLink}/>
+                    </a>
                 </div>
             </div>
             <div className="endpoint-url">{endpoint}</div>
 
-            {argTable ? (<table class="args-table">{argTable}</table>) : ''}
+            {argTable ? (<table className="args-table">{argTable}</table>) : ''}
 
             <h5><b>Example</b></h5>
             <div className="endpoint-url">{example.url}</div>

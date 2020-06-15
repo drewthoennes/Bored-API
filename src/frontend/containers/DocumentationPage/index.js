@@ -1,6 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 import './styles';
+import {capitalize} from '@f/utils';
 
 import {map as pageMap} from '@f/documentation';
 
@@ -10,7 +11,7 @@ class DocumentationPage extends React.Component {
 
         this.state = {
             version: 'v2',
-            type: 'activities'
+            type: 'introduction'
         };
 
         this.setPageByURL = this.setPageByURL.bind(this);
@@ -31,6 +32,9 @@ class DocumentationPage extends React.Component {
     setPageByURL() {
         const {type, version} = this.props.match.params;
 
+        if (!pageMap[version]) {
+            this.props.history.push('/docs/v2');
+        }
         if (type && type !== this.state.type) {
             this.setState({version, type});
         }
@@ -42,12 +46,14 @@ class DocumentationPage extends React.Component {
     loadPage(type) {
         this.props.history.push(`/docs/${this.state.version}/${type}`);
         window.scrollTo(0, 0);
-        this.setState({type: type ? type : 'activities'});
+        this.setState({type: type ? type : 'introduction'});
     }
 
     render() {
-        let navigation = ['Introduction', 'Activities', 'Facts', 'Riddles', 'Websites'].map(section => {
-            return (<h5 key={section} onClick={() => this.loadPage(section.toLowerCase())}>{section}</h5>);
+        if (!pageMap[this.state.version]) return (<div className="documentation-page"></div>);
+
+        const navigation = Object.keys(pageMap[this.state.version]).map(section => {
+            return (<h5 key={section} onClick={() => this.loadPage(section)}>{capitalize(section)}</h5>);
         });
 
         // Retrieve the document from the imported document map

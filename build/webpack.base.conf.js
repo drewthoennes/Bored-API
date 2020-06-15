@@ -81,7 +81,8 @@ module.exports = {
       $: 'jquery/dist/jquery.slim.js',
       jQuery: 'jquery/dist/jquery.slim.js',
       Button: 'exports-loader?Button!bootstrap/js/dist/button',
-      Modal: 'exports-loader?Modal!bootstrap/js/dist/modal'
+      Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
+      Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel'
     })
   ]
 };

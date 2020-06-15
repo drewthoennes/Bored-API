@@ -3,7 +3,7 @@
 $getColor: #73b8f5;
 
 div[class$="-doc"] {
-    .fields-section, .endpoint {
+    .content-section, .fields-section, .endpoint {
         padding-top: 40px;
         margin-top: 40px;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -17,6 +17,10 @@ div[class$="-doc"] {
 
     .header-name, .endpoint-anchor {
         margin-left: 10px;
+
+        a {
+            color: $accentColor;
+        }
     }
 
     .header-name a {
@@ -42,6 +46,7 @@ div[class$="-doc"] {
     }
 
     table.fields-table {
+        width: 100%;
         border-collapse: collapse;
         border: 1px solid black;
 

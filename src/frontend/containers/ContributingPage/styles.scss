@@ -1,0 +1,96 @@
+@import "~@theme";
+
+$carouselHeight: 500px;
+
+.contributing-page {
+    background: $tertiaryColor;
+
+    .header-section {
+        padding: 100px 120px;
+    }
+
+    .contributing-section {
+        padding: 0px 120px 100px 120px;
+    }
+
+    .submission-modal {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        visibility: hidden;
+        z-index: 1;
+
+        &-box {
+            height: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0px 25%;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &-box p {
+            text-align: center;
+        }
+    }
+
+    // TODO: Use $primaryColor on carousel and edit this border
+    .carousel {
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+    }
+
+    .carousel-indicators {
+        filter: invert(50%);
+    }
+
+    .carousel-inner {
+        min-height: $carouselHeight;
+    }
+
+    .carousel-item {
+        height: $carouselHeight;
+        background: white;
+        padding: 20px;
+
+        h3 {
+            height: 10%;
+            text-align: center;
+        }
+
+        form {
+            height: 90%;
+
+            button {
+                width: 100%;
+                background: $primaryColor;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+
+                &:hover, &:active {
+                    background: darken($primaryColor, 10%);
+                }
+            }
+        }
+
+        .row > .column {
+            width: 70%;
+        }
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        filter: invert(50%);
+    }
+
+    .showing-modal {
+        .submission-modal {
+            visibility: visible;
+        }
+
+        .carousel-item {
+            filter: brightness(0.7);
+        }
+    }
+}
