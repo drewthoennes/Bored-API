@@ -34,7 +34,7 @@ exports.unmaskActivity = activity => {
 exports.maskActivity = activity => {
     return !activity ? {} : Object.assign(
         {},
-        ...['activity', 'accessibility', 'type', 'participants', 'link', 'key']
+        ...['activity', 'accessibility', 'type', 'participants', 'link', 'key', 'duration', 'kidFriendly']
             .map(key => ({[key]: activity[key] ? activity[key] : activity[key] === 0 ? '0' : ''})),
         ...[
             {name: 'price', action: () => maskPrice(activity, 'price')}
