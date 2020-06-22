@@ -32,5 +32,6 @@ $documentationWidth: 100% - $navigationWidth;
     .documentation-column {
         width: $documentationWidth;
         padding: 40px;
+        background: white;
     }
 }

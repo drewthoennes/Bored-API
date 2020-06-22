@@ -1,9 +1,12 @@
+@import "~@theme";
+
 #app, html {
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
 body {
+    background: $secondaryColor;
     height: 100%;
     margin: 0px;
 }
