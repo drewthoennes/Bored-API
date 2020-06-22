@@ -27,7 +27,7 @@ export default (
                     {generateTableRow('Answer', 'The answer to the riddle', 'String', '')}
                     {generateTableRow('Difficulty', 'A general difficulty rating for the riddle', 'Enum', '["easy", "normal", "hard"]')}
                     {generateTableRow('Source', 'The source URL of the riddle', 'String', '')}
-                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\d{6}$')}
+                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\\d{6}$')}
                 </tbody>
             </table>
         </div>

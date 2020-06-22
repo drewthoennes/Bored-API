@@ -25,7 +25,7 @@ export default (
                 <tbody>
                     {generateTableRow('Fact', 'The fact itself', 'String', '')}
                     {generateTableRow('Source', 'The source URL of the fact', 'String', '')}
-                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\d{6}$')}
+                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\\d{6}$')}
                 </tbody>
             </table>
         </div>

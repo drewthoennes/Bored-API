@@ -29,7 +29,7 @@ export default (
                     {generateTableRow('Participants', 'The number of participants this activity', 'Integer', '1 - n')}
                     {generateTableRow('Link', 'An optional related link', 'String', '')}
                     {generateTableRow('Price', 'A relative price for this activity', 'String', '/^\${1,5}$/')}
-                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\d{6}$')}
+                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\\d{6}$')}
                 </tbody>
             </table>
         </div>

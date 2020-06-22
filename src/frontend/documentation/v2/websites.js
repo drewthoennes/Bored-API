@@ -25,7 +25,7 @@ export default (
                 <tbody>
                     {generateTableRow('URL', 'The website URL', 'String', '')}
                     {generateTableRow('Description', 'A description of the website', 'String', '')}
-                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\d{6}$')}
+                    {generateTableRow('Key', 'A unique activity identifier', 'String', '^[1-9]\\d{6}$')}
                 </tbody>
             </table>
         </div>
