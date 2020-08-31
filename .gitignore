@@ -13,3 +13,5 @@ dist/
 *.njsproj
 *.sln
 .env
+sonartoken
+.scannerwork/
