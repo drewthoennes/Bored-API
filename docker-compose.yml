@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    mongo:
+      image: mongo:latest
+      container_name: "mongo"
+      environment:
+        - MONGO_DATA_DIR=/data/db
+        - MONGO_LOG_DIR=/dev/null
+      volumes:
+        - ./db:/data/db
+      ports:
+        - "27017:27017"
+
+    bored-api:
+      build: .
+      environment:
+        - NODE_ENV=production
+        - MONGODB_URI=mongodb://localhost:27017/boredapi
+        - PORT=3000
+      ports:
+        - "3000:3000"
+      links:
+        - mongo
+      depends_on: 
+        - mongo
