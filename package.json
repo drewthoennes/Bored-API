@@ -10,7 +10,8 @@
     "clean": "rm -r dist/*",
     "test-i": "mocha test/backend/integration --timeout 60000",
     "test-db": "mocha test/db --timeout 60000",
-    "test": "npm run test-i && npm run test-db"
+    "test": "npm run test-i && npm run test-db",
+    "scan":  "sonar-scanner -Dsonar.projectKey=boredapi -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
   },
   "license": "MIT",
   "_moduleAliases": {
@@ -48,8 +49,10 @@
     "eslint": "^7.0.0",
     "faker": "^4.1.0",
     "html-webpack-plugin": "^4.2.0",
+    "mocha": "^8.1.3",
     "mongodb-memory-server": "^6.5.2",
     "sinon": "^9.0.2",
+    "sonarqube-scanner": "^2.7.0",
     "vue-loader": "^15.9.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
