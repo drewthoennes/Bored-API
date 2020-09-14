@@ -10,7 +10,9 @@ pipeline {
             }
         }
         stage('Unit Tests') {
-
+            steps {
+                echo "pass unit tests at the moment"
+            }
         }
         stage('Acceptance Tests') {
             steps {
