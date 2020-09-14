@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    environment {
+    //environment {
         //SONAR_TOKEN = credentials('jenkins-sonarqube-token')
-    }
+    //}
 
     tools {nodejs "nodejs"}
 
