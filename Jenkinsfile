@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        SONARQUBE_TOKEN = credentials('jenkins-sonarqube-token')
+    }
+
     tools {nodejs "nodejs"}
 
     stages {
@@ -16,7 +20,11 @@ pipeline {
         }
         stage('SonarQube') {
             steps {
-                sh "-npm run scan"
+                try {
+                    sh "npm run scan"
+                } catch (err) {
+                    echo err.getMessage()
+                }
             }
         }
         stage('Unit Tests') {
