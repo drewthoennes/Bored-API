@@ -19,13 +19,11 @@ pipeline {
             }
         }
         stage('SonarQube') {
-            steps {
                 try {
                     sh "npm run scan"
                 } catch (err) {
                     echo err.getMessage()
                 }
-            }
         }
         stage('Unit Tests') {
             steps {
