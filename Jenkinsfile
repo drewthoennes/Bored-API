@@ -14,9 +14,9 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage('SonarQuebe'){
+        stage('SonarQube') {
             steps {
-
+                sh "npm run scan"
             }
         }
         stage('Unit Tests') {
