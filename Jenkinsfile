@@ -14,6 +14,11 @@ pipeline {
                 sh "npm run build"
             }
         }
+        stage('SonarQuebe'){
+            steps {
+
+            }
+        }
         stage('Unit Tests') {
             steps {
                 echo "pass unit tests at the moment"
@@ -27,7 +32,8 @@ pipeline {
     }
     post {
         always {
-            junit 'test-results.xml'
+            junit 'test/integration-test-results.xml'
+            junit 'test/db-test-results.xml'
         }
     }
 }
