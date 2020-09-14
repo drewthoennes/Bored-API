@@ -9,10 +9,18 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage('Test') {
+        stage('Unit Tests') {
+
+        }
+        stage('Acceptance Tests') {
             steps {
                 sh "npm run test"
             }
+        }
+    }
+    post {
+        always {
+            junit './test-results.xml'
         }
     }
 }

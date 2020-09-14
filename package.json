@@ -8,8 +8,8 @@
     "start-dev": "export NODE_ENV=development; npm run build-dev && node server.js",
     "start": "export NODE_ENV=production; npm run build && node server.js",
     "clean": "rm -r dist/*",
-    "test-i": "mocha test/backend/integration --timeout 60000",
-    "test-db": "mocha test/db --timeout 60000",
+    "test-i": "mocha test/backend/integration --timeout 60000 --reporter mocha-junit-reporter",
+    "test-db": "mocha test/db --timeout 60000 --reporter mocha-junit-reporter",
     "test": "npm run test-i && npm run test-db",
     "scan": "sonar-scanner -Dsonar.projectKey=boredapi -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
   },
@@ -50,6 +50,7 @@
     "faker": "^4.1.0",
     "html-webpack-plugin": "^4.2.0",
     "mocha": "^8.1.3",
+    "mocha-junit-reporter": "^2.0.0",
     "mongodb-memory-server": "^6.5.2",
     "sinon": "^9.0.2",
     "sonarqube-scanner": "^2.7.0",
