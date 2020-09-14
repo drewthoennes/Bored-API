@@ -11,7 +11,7 @@
     "test-i": "mocha test/backend/integration --timeout 60000",
     "test-db": "mocha test/db --timeout 60000",
     "test": "npm run test-i && npm run test-db",
-    "scan":  "sonar-scanner -Dsonar.projectKey=boredapi -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
+    "scan": "sonar-scanner -Dsonar.projectKey=boredapi -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
   },
   "license": "MIT",
   "_moduleAliases": {
