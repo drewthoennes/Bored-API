@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    //environment {
-        //SONAR_TOKEN = credentials('jenkins-sonarqube-token')
-    //}
+    environment {
+        SONAR_TOKEN = credentials('sonarqube-token')
+    }
 
     tools {nodejs "nodejs"}
 
@@ -20,8 +20,7 @@ pipeline {
         }
         stage('SonarQube') {
             steps {
-                //sh "npm run scan"
-                echo "pass sonar qube at the moment"
+                sh "npm run scan"
             }   
         }
         stage('Unit Tests') {
