@@ -15,3 +15,6 @@ dist/
 .env
 sonartoken
 .scannerwork/
+
+test/integration-test-results.xml
+test/db-test-results.xml

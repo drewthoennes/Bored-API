@@ -4,14 +4,14 @@
   "description": "A simple and free API to find things to do when you're bored",
   "scripts": {
     "build-dev": "npm run clean; webpack  --inline --progress --color --config build/webpack.dev.conf.js",
-    "build": "npm run clean; webpack  --inline --progress --color --config build/webpack.prod.conf.js",
+    "build": "webpack  --inline --progress --color --config build/webpack.prod.conf.js",
     "start-dev": "export NODE_ENV=development; npm run build-dev && node server.js",
     "start": "export NODE_ENV=production; npm run build && node server.js",
     "clean": "rm -r dist/*",
-    "test-i": "mocha test/backend/integration --timeout 60000 --reporter mocha-junit-reporter",
-    "test-db": "mocha test/db --timeout 60000 --reporter mocha-junit-reporter",
+    "test-i": "mocha test/backend/integration --timeout 60000 --reporter mocha-junit-reporter --reporter-options mochaFile=./test/integration-test-results.xml",
+    "test-db": "mocha test/db --timeout 60000 --reporter mocha-junit-reporter --reporter-options mochaFile=./test/db-test-results.xml",
     "test": "npm run test-i && npm run test-db",
-    "scan": "sonar-scanner -Dsonar.projectKey=boredapi -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
+    "scan": "sonar-scanner -Dsonar.projectKey=bored-api -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
   },
   "license": "MIT",
   "_moduleAliases": {
