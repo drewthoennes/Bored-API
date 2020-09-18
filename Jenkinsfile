@@ -18,7 +18,7 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage('SonarQube') {
+        stage('Static Code Analysis') {
             steps {
                 sh "npm run scan"
             }   
