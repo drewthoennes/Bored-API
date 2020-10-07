@@ -17,7 +17,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('https://sonar:9000/'){
-                    sh './gradlew sonarqube'
+                    sh "npm run sonar"
                 }
                 timeout(time:10, unit: 'MINUTES'){
                     waitForQualityGate abortPipeline: true
@@ -40,5 +40,16 @@ pipeline {
             junit 'test/integration-test-results.xml'
             junit 'test/db-test-results.xml'
         }
+        success {
+            notifyTeams("Pipeline was successful", "SUCCESS")
+        }
+        failure {
+            notifyTeams("Pipeline failed", "FAILURE")
+        }
     }
+}
+
+
+def notifyTeams(msg, status) {
+    office365ConnectorSend message: "${msg}", status:"${status}", webhookUrl:'${webhookUrl}' 
 }
