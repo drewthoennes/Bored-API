@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        SONAR_TOKEN = credentials('sonarqube-token')
-    }
-
     tools {nodejs "nodejs"}
 
     stages {
@@ -18,9 +14,14 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage('Static Code Analysis') {
+        stage('SonarQube Analysis') {
             steps {
-                sh "npm run scan"
+                withSonarQubeEnv('https://sonar:9000/'){
+                    sh './gradlew sonarqube'
+                }
+                timeout(time:10, unit: 'MINUTES'){
+                    waitForQualityGate abortPipeline: true
+                }
             }   
         }
         stage('Unit Tests') {
