@@ -11,8 +11,8 @@
     "test-i": "mocha test/backend/integration --timeout 60000 --reporter mocha-junit-reporter --reporter-options mochaFile=./test/integration-test-results.xml",
     "test-db": "mocha test/db --timeout 60000 --reporter mocha-junit-reporter --reporter-options mochaFile=./test/db-test-results.xml",
     "test": "npm run test-i && npm run test-db",
-    "scan": "sonar-scanner -Dsonar.projectKey=bored-api -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN",
-    "sonar": "sonar-scanner -Dsonar.projectKey=bored-api"
+    "sonar": "sonar-scanner -Dsonar.projectKey=bored-api",
+    "seed": "node scripts/overwriteDBCollection.js activities db/activities.json"
   },
   "license": "MIT",
   "_moduleAliases": {
