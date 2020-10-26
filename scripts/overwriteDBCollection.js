@@ -23,7 +23,15 @@ if (process.argv.length < 4) {
 	return;
 };
 
-exec(`mongoimport -h ${MONGODB_HOST} -d ${MONGODB_DB} -c ${process.argv[2]} -u ${MONGODB_USERNAME} -p ${MONGODB_PASSWORD} --file ${process.argv[3]} --drop`).then((stdout, stderr) => {
+let execStr;
+
+if (MONGODB_USERNAME === "" && MONGODB_PASSWORD === "") {
+	execStr = `mongoimport -h ${MONGODB_HOST} -d ${MONGODB_DB} -c ${process.argv[2]} --file ${process.argv[3]} --drop`
+} else {
+	execStr =`mongoimport -h ${MONGODB_HOST} -d ${MONGODB_DB} -c ${process.argv[2]} -u ${MONGODB_USERNAME} -p ${MONGODB_PASSWORD} --file ${process.argv[3]} --drop`
+}
+
+exec(execStr).then((stdout, stderr) => {
 	if (stderr && stderr !== '') throw new Error(stderr);
 
 	console.log(chalk.green(`Successfully overwrote collection`));
