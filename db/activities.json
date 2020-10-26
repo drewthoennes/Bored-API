@@ -194,3 +194,4 @@
 {"activity":"Improve your touch typing","availability":0.8,"type":"busywork","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"hours","kidFriendly":false,"link":"https://en.wikipedia.org/wiki/Touch_typing","key":"2526437"}
 {"activity":"Donate to your local food bank","availability":0.8,"type":"charity","participants":1,"price":0.5,"accessibility":"Few to no challenges","duration":"minutes","kidFriendly":true,"link":"","key":"4150284"}
 {"activity":"Learn how to beatbox","availability":1.0,"type":"recreational","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"hours","kidFriendly":true,"link":"https://en.wikipedia.org/wiki/Beatboxing","key":"8731710"}
+{"activity":"Test Activity","availability":1.0,"type":"testtype","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"hours","kidFriendly":true,"link":"https://foo.bar","key":"873171345"}
