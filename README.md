@@ -4,7 +4,7 @@ A free and simple API to help you find something better to do
 ![Bored API Website](./.docs/website.png)
 
 ## About
-This project is an MEVN (MongoDB, Express.js, Vue.js, and Node.js) web app that has a goal of creating a simple way to find things to do. You <u>do not need an API key</u> to use this API, just query the endpoint to get data. All activities served by the API can be found [here](./activities.json).
+This project is an MEVN (MongoDB, Express.js, Vue.js, and Node.js) web app that has a goal of creating a simple way to find things to do. You <u>do not need an API key</u> to use this API, just query the endpoint to get data. All activities served by the API can be found [here](./db/activities.json).
 
 ---
 ## Endpoints
