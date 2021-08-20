@@ -5,7 +5,7 @@
 		</div>
 
 		<div class="content">
-			<h4>Hm looks like your lost... Maybe try heading <router-link :to="{ name: 'Home' }">home</router-link>?</h4>
+			<h4>Hm, looks like you're lost... Maybe try heading <router-link :to="{ name: 'Home' }">home</router-link>?</h4>
 		</div>
 
 		<div class="bottombar-div">
