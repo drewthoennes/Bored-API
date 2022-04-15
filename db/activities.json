@@ -142,7 +142,7 @@
 {"activity":"Write a poem","availability":0.0,"type":"recreational","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"minutes","kidFriendly":true,"link":"","key":"8688620"}
 {"activity":"Take a nap","availability":0.0,"type":"relaxation","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"minutes","kidFriendly":true,"link":"","key":"6184514"}
 {"activity":"Mow your lawn","availability":0.3,"type":"busywork","participants":1,"price":0.1,"accessibility":"Minor challenges","duration":"minutes","kidFriendly":true,"link":"","key":"3590127"}
-{"activity":"Practice coding in your favorite lanaguage","availability":0.1,"type":"recreational","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"minutes","kidFriendly":true,"link":"","key":"7096020"}
+{"activity":"Practice coding in your favorite language","availability":0.1,"type":"recreational","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"minutes","kidFriendly":true,"link":"","key":"7096020"}
 {"activity":"Write a song","availability":0.0,"type":"music","participants":1,"price":0.0,"accessibility":"Few to no challenges'","duration":"minutes","kidFriendly":true,"link":"","key":"5188388"}
 {"activity":"Play a video game","availability":0.0,"type":"recreational","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"hours","kidFriendly":true,"link":"","key":"5534113"}
 {"activity":"Clean out your refrigerator","availability":0.0,"type":"busywork","participants":1,"price":0.0,"accessibility":"Few to no challenges","duration":"minutes","kidFriendly":true,"link":"","key":"9324336"}
